@@ -12,45 +12,47 @@ odoo.define('school_base.session.inherit', require => {
         /* This returns a promise */
         start() {
             const res = this._super(...arguments);
+            if (session.user_district_codes !== undefined && session.user_school_codes  !== undefined){
 
-            const state = $.bbq.getState();
+                const state = $.bbq.getState();
 
-            // District codes
-            const current_district_code_id = session.user_district_codes.current_district_code.id;
-            if (!state.districtCodeIds) {
-                state.districtCodeIds = utils.get_cookie('districtCodeIds') !== null ? utils.get_cookie('districtCodeIds') : String(current_district_code_id);
+                // District codes
+                const current_district_code_id = session.user_district_codes.current_district_code.id;
+                if (!state.districtCodeIds) {
+                    state.districtCodeIds = utils.get_cookie('districtCodeIds') !== null ? utils.get_cookie('districtCodeIds') : String(current_district_code_id);
+                }
+
+                let stateDistrictCodeIDS = _.map(state.districtCodeIds.split(','), cid => parseInt(cid));
+                const userDistrictCodeIDS = _.map(session.user_district_codes.allowed_district_codes, dc => dc.id);
+                // Check that the user has access to all the companies
+                if (!_.isEmpty(_.difference(stateDistrictCodeIDS, userDistrictCodeIDS))) {
+                    state.districtCodeIds = String(current_district_code_id);
+                    stateDistrictCodeIDS = [current_district_code_id]
+                }
+
+
+                // School codes
+                const current_school_code_id = session.user_school_codes.current_school_code.id;
+                if (!state.schoolCodeIds) {
+                    state.schoolCodeIds = utils.get_cookie('schoolCodeIds') !== null ? utils.get_cookie('schoolCodeIds') : String(current_school_code_id);
+                }
+
+                let stateSchoolCodeIDS = _.map(state.schoolCodeIds.split(','), cid => parseInt(cid));
+                const userSchoolCodeIDS = _.map(session.user_school_codes.allowed_school_codes, dc => dc.id);
+                // Check that the user has access to all the companies
+                if (!_.isEmpty(_.difference(stateSchoolCodeIDS, userSchoolCodeIDS))) {
+                    state.schoolCodeIds = String(current_school_code_id);
+                    stateSchoolCodeIDS = [current_school_code_id]
+                }
+                session.user_context.allowed_district_code_ids = stateDistrictCodeIDS;
+                session.user_context.allowed_school_code_ids = stateSchoolCodeIDS;
+
+                $.bbq.pushState({
+                    "districtCodeIds": String(stateDistrictCodeIDS),
+                    "schoolCodeIds": String(stateSchoolCodeIDS),
+                });
             }
 
-            let stateDistrictCodeIDS = _.map(state.districtCodeIds.split(','), cid => parseInt(cid));
-            const userDistrictCodeIDS = _.map(session.user_district_codes.allowed_district_codes, dc => dc.id);
-            // Check that the user has access to all the companies
-            if (!_.isEmpty(_.difference(stateDistrictCodeIDS, userDistrictCodeIDS))) {
-                state.districtCodeIds = String(current_district_code_id);
-                stateDistrictCodeIDS = [current_district_code_id]
-            }
-
-
-            // School codes
-            const current_school_code_id = session.user_school_codes.current_school_code.id;
-            if (!state.schoolCodeIds) {
-                state.schoolCodeIds = utils.get_cookie('schoolCodeIds') !== null ? utils.get_cookie('schoolCodeIds') : String(current_school_code_id);
-            }
-
-            let stateSchoolCodeIDS = _.map(state.schoolCodeIds.split(','), cid => parseInt(cid));
-            const userSchoolCodeIDS = _.map(session.user_school_codes.allowed_school_codes, dc => dc.id);
-            // Check that the user has access to all the companies
-            if (!_.isEmpty(_.difference(stateSchoolCodeIDS, userSchoolCodeIDS))) {
-                state.schoolCodeIds = String(current_school_code_id);
-                stateSchoolCodeIDS = [current_school_code_id]
-            }
-            session.user_context.allowed_district_code_ids = stateDistrictCodeIDS;
-            session.user_context.allowed_school_code_ids = stateSchoolCodeIDS;
-
-            $.bbq.pushState({
-                "districtCodeIds": String(stateDistrictCodeIDS),
-                "schoolCodeIds": String(stateSchoolCodeIDS),
-            });
-            
             return res;
         },
 
