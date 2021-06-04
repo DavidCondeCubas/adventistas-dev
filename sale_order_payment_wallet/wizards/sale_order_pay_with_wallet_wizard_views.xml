@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sale_order_pay_with_wallet_wizard_view_form" model="ir.ui.view">
+        <field name="name">sale.order.pay.with.wallet.view.form</field>
+        <field name="model">sale.order.pay.with.wallet.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Pay with Wallet">
+                <field name="partner_id" invisible="1" />
+                <field name="wallet_ids" invisible="1" />
+                <field name="used_wallet_ids" invisible="1" />
+
+                <h1>Wallet Credit</h1>
+
+                <h3>Wallet Balances</h3>
+                <field name="wallet_balances" />
+                
+                <field name="line_ids" widget="one2many">
+                    <tree editable="bottom" create="1">
+                        <field name="wallet_id" domain="[ ('id', 'in', parent.wallet_ids), ('id', 'not in', parent.used_wallet_ids) ]" />
+                        <field name="partner_amount" />
+                        <field name="amount" />
+                    </tree>
+                </field>
+
+                <footer>
+                    <button string="Apply" class="btn-primary" name="action_pay_with_wallet" type="object" />
+                    <button string="Cancel" class="btn-danger" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_pay_with_wallet_wizard" model="ir.actions.act_window">
+        <field name="name">Pay With Wallet</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sale.order.pay.with.wallet.wizard</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="sale_order_payment_wallet.sale_order_pay_with_wallet_wizard_view_form" />
+        <field name="target">new</field>
+    </record>
+</odoo>

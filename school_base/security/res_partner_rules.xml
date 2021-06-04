@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+      <record id="school_partner_filter_rule" model="ir.rule">
+        <field name="name">school.partner.filter.rule</field>
+        <field name="model_id" ref="base.model_res_partner"/>
+        <field name="global" eval="True"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="True"/>
+        <field name="perm_create" eval="True"/>
+        <field name="perm_unlink" eval="True"/>
+        <field name="domain_force">['|', ('school_code_ids', 'in', school_code_ids), ('school_code_ids', '=', False)]</field>
+    </record>
+
+</odoo>

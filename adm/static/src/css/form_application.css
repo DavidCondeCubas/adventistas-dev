@@ -1,0 +1,98 @@
+.progressbar {
+	position: relative;
+}
+.progressbar progress{
+	display: block;
+	/*top: calc(50% - 10px);*/
+	top: 0;
+	position: absolute;
+	width: 100%;
+	/*transform: translateY(-50%);*/
+	height: 32px;
+	-webkit-appearance: none;
+	appearance: none;
+	background-color: #eaeaea;
+	color: #55b776;
+	border-radius: 100vh;
+	box-shadow: none;
+	border: 0;
+}
+
+progress::-webkit-progress-bar {
+	border-radius: 100vh;
+	background: #eaeaea;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+	box-shadow: 0;
+}
+progress::-webkit-progress-value {
+	border-radius: 100vh;
+	background: #55b776;
+}
+
+progress::-moz-progress-bar {
+	background-color: #55b776;
+	border-radius: 100vh;
+	box-shadow: 0;
+}
+
+.progressbar ul {
+	counter-reset: step;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.progressbar ul li {
+	list-style-type: none;
+	position: relative;
+}
+
+.progressbar li:first-child:after {
+	content: none;
+}
+
+.progressbar ul li.active::before {
+	border-color: #417653;
+}
+
+.progressbar ul li::before {
+	display: flex;
+	content: counter(step);
+	counter-increment: step;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+	border: 4px solid black;
+	border-radius: 100vh;
+	width: 30px;
+	height: 30px;
+	background: white;
+}
+/*.card-header{
+    background-color: #1a4176;
+    color: white;
+    font-family: Montserrat, sans-serif;
+    text-align: center;
+
+}*/
+.text-color-howard{
+    color: #1a4176;
+}
+
+.bg-ia-pan{
+    background-color: #1a4176;
+    color:white;
+}
+
+.bg-ia-pan-secondary{
+    background-color: #afafaf;
+    color:white;
+}
+
+.text-secondary {
+    color: #808284 !important;
+}

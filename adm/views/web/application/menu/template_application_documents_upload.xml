@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="adm.template_application_documents_upload">
+        <t t-call="adm.template_application_form_commons">
+            <t t-set="head">
+                <t t-call-assets="adm.assets_application_documents" defer_load="True" />
+                <link rel="stylesheet" href="/adm/static/src/css/main.css"/>
+            </t>
+            <t t-set="title">Upload Documents</t>
+
+            <t t-set="url_prev" t-value="'/admission/applications/%s/medical-info' % application_id.id"/>
+            <t t-set="url_next" t-value="'/admission/applications/%s/signature' % application_id.id"/>
+
+            <form class="container-fluid" data-adm-model-fields="1" >
+                <div class="row">
+                    <div class="col-12 col-md-6 ">
+                        <label> Birth Certificate:
+                            <span class="text-danger"
+                                  t-if="is_required('birth_certificate_attachment_ids')">*</span>
+                        </label>
+                        <input type="file"
+                               t-att-required="is_required('birth_certificate_attachment_ids')"
+                               class="filepond"
+                               name="filepond"
+                               multiple="multiple"
+                               data-allow-reorder="true"
+                               t-att-data-adm-file-att-ids="application_id.birth_certificate_attachment_ids.ids or []"
+                               data-adm-field="birth_certificate_attachment_ids"
+                               data-max-file-size="20MB"/>
+                    </div>
+
+                    <div class="col-12 col-md-6 ">
+                        <label> Immunization records:
+                            <span class="text-danger"
+                                  t-if="is_required('immunization_records_attachment_ids')">*</span>
+                        </label>
+                        <input type="file"
+                               t-att-required="is_required('immunization_records_attachment_ids')"
+                               class="filepond"
+                               multiple="multiple"
+                               data-allow-reorder="true"
+                               t-att-data-adm-file-att-ids="application_id.immunization_records_attachment_ids.ids or []"
+                               data-adm-field="immunization_records_attachment_ids"
+                               data-max-file-size="20MB"/>
+                    </div>
+
+                    <div class="col-12 col-md-6 ">
+                        <label> Court/Custody documents:
+                            <span class="text-danger"
+                                  t-if="is_required('custody_documents_attachment_ids')">*</span>
+                        </label>
+                        <input type="file"
+                               t-att-required="is_required('custody_documents_attachment_ids')"
+                               class="filepond"
+                               multiple="multiple"
+                               data-allow-reorder="true"
+                               t-att-data-adm-file-att-ids="application_id.custody_documents_attachment_ids.ids or []"
+                               data-adm-field="custody_documents_attachment_ids"
+                               data-max-file-size="20MB"/>
+                    </div>
+
+                    <div class="col-12 col-md-6 ">
+                        <label> Current report card:
+                            <span class="text-danger"
+                                  t-if="is_required('current_report_card_attachment_ids')">*</span>
+                        </label>
+                        <input type="file"
+                               t-att-required="is_required('current_report_card_attachment_ids')"
+                               class="filepond"
+                               multiple="multiple"
+                               data-allow-reorder="true"
+                               t-att-data-adm-file-att-ids="application_id.current_report_card_attachment_ids.ids or []"
+                               data-adm-field="current_report_card_attachment_ids"
+                               data-max-file-size="20MB"/>
+                    </div>
+
+                    <div class="col-12 col-md-6 ">
+                        <label> Standardized Test:
+                            <span class="text-danger"
+                                  t-if="is_required('standardized_test_attachment_ids')">*</span>
+                        </label>
+                        <input type="file"
+                               t-att-required="is_required('standardized_test_attachment_ids')"
+                               class="filepond"
+                               multiple="multiple"
+                               data-allow-reorder="true"
+                               t-att-data-adm-file-att-ids="application_id.standardized_test_attachment_ids.ids or []"
+                               data-adm-field="standardized_test_attachment_ids"
+                               data-max-file-size="20MB"/>
+                    </div>
+                </div>
+            </form>
+
+            <!-- We'll transform this input into a pond -->
+
+          <!-- Turn all file input elements into ponds -->
+        </t>
+    </template>
+</odoo>

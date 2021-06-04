@@ -1,0 +1,5 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+access_sale_order_payment_account,access.sale.order.payment,model_sale_order_payment,account.group_account_invoice,1,1,1,1
+access_sale_order_payment_reconcile_account,access.sale.order.payment.reconcile,model_sale_order_payment_reconcile,account.group_account_invoice,1,1,1,1
+access_sale_order_payment_sale,access.sale.order.payment,model_sale_order_payment,sales_team.group_sale_salesman,1,1,1,1
+access_sale_order_payment_reconcile_sale,access.sale.order.payment.reconcile,model_sale_order_payment_reconcile,sales_team.group_sale_salesman,1,1,1,1

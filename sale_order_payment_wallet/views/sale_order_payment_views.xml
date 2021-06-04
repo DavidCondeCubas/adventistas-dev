@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sale_order_payment_view_tree_inherit" model="ir.ui.view">
+        <field name="name">sale.order.payment.view.tree.inherit</field>
+        <field name="model">sale.order.payment</field>
+        <field name="inherit_id" ref="sale_order_payment.sale_order_payment_view_tree" />
+        <field name="arch" type="xml">
+            <field name="journal_id" position="after">
+                <field name="wallet_id" />
+            </field>
+        </field>
+    </record>
+
+    <record id="sale_order_payment_view_form_inherit" model="ir.ui.view">
+        <field name="name">sale.order.payment.view.form.inherit</field>
+        <field name="model">sale.order.payment</field>
+        <field name="inherit_id" ref="sale_order_payment.sale_order_payment_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='reconciled_payment_ids']/tree/field[@name='date_reconciled']" position="before">
+                <field name="credit_note_id" />
+            </xpath>
+        </field>
+    </record>
+</odoo>

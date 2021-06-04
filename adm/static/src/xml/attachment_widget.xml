@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates>
+    <t t-inherit="web.FieldBinaryFileUploader" t-inherit-mode="extension">
+        <xpath expr="//input[@name='id' and @type]" position="replace">
+            <t t-if="widget.model === 'adm.application'">
+                <input type="hidden" name="id" t-att-value="widget.res_id"/>
+            </t>
+            <input t-else="" type="hidden" name="id" value="0"/>
+        </xpath>
+    </t>
+</templates>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sincro_data_base_log_view_tree" model="ir.ui.view">
+        <field name="name">sincro_data_base.log.view.tree</field>
+        <field name="model">sincro_data_base.log</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="url"/>
+                <field name="status_code"/>
+                <field name="method"/>
+                <field name="created_date"/>
+                <field name="request"/>
+                <field name="response"/>
+                <field name="old_value"/>
+                <field name="new_value"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="sincro_data_base_log_view_form" model="ir.ui.view">
+        <field name="name">sincro_data_base.log.view.form</field>
+        <field name="model">sincro_data_base.log</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group>
+                        <field name="url"/>
+                        <field name="status_code"/>
+                        <field name="item_id"/>
+                        <field name="method"/>
+                        <field name="created_date"/>
+                    </group>
+                    <group>
+                        <field name="model"/>
+                        <field name="request"/>
+                        <field name="response"/>
+                        <field name="old_value"/>
+                        <field name="new_value"/>
+                    </group>
+                </group>
+            </form>
+        </field>
+    </record>
+</odoo>

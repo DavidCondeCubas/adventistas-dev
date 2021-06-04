@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="pos_payment_report_view_tree_inherit" model="ir.ui.view">
+        <field name="name">pos.payment.report.view.tree.inherit</field>
+        <field name="model">pos.payment.report</field>
+        <field name="inherit_id" ref="pos_payment_report.pos_payment_report_view_tree" />
+        <field name="arch" type="xml">
+            <field name="payment_id" position="after">
+                <field name="invoice_payment_id" widget="many2onebutton" />
+            </field>
+        </field>
+    </record>
+
+    <record id="pos_payment_report_view_search_inherit" model="ir.ui.view">
+        <field name="name">pos.payment.report.view.search.inherit</field>
+        <field name="model">pos.payment.report</field>
+        <field name="inherit_id" ref="pos_payment_report.pos_payment_report_view_search" />
+        <field name="arch" type="xml">
+            <field name="payment_id" position="after">
+                <field name="invoice_payment_id"/>
+            </field>
+
+            <filter name="regular_payment" position="after">
+                <filter string="Invoice Payment" name="invoice_payment" domain="[('payment_type', '=', 'invoice')]" />
+            </filter>
+
+            <group position="inside">
+                <filter string="Invoice Payment" name="group_by_invoice_payment" domain="[]" context="{'group_by': 'invoice_payment_id'}" />
+            </group>
+        </field>
+    </record>
+</odoo>

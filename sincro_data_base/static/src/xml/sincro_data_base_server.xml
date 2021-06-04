@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="assets_backend" name="custom assets" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <link rel="stylesheet" href="/sincro_data_base/static/src/css/sincro_data_base_server.css"/>
+        </xpath>
+    </template>
+</odoo>

@@ -1,0 +1,14 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+sincro_data_base_configuration_panel_access,sincro_data_base_configuration_panel_access,sincro_data_base.model_sincro_data_base_configuration_panel,,1,1,1,1
+sincro_data_base_webservice_configurator_access,sincro_data_base_webservice_configurator_access,sincro_data_base.model_sincro_data_base_webservice_configurator,,1,1,1,1
+
+access_sincro_data_base_server,access.sincro_data_base.server,model_sincro_data_base_server,base.group_system,1,1,1,1
+access_sincro_data_base_api,access.sincro_data_base.api,model_sincro_data_base_api,base.group_system,1,1,1,1
+access_sincro_data_base_header,access.sincro_data_base.header,model_sincro_data_base_header,base.group_system,1,1,1,1
+access_sincro_data_base_parameter,access.sincro_data_base.parameter,model_sincro_data_base_parameter,base.group_system,1,1,1,1
+access_sincro_data_base_log,access.sincro_data_base.log,model_sincro_data_base_log,base.group_system,1,1,1,1
+access_sincro_data_base_mapped,access.sincro_data_base.mapped,model_sincro_data_base_mapped,base.group_system,1,1,1,1
+
+
+
+access_sincro_data_base_telegram_bot,access.sincro_data_telegram_bot.log,model_sincro_data_base_telegram_bot,base.group_system,1,1,1,1

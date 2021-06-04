@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- How hear about us -->
+    <record id="adm_application_question_how_hear_about_us_view_tree" model="ir.ui.view">
+        <field name="name">adm.application.option.how.hear.about.us.view.tree</field>
+        <field name="model">adm.application.option.how.hear.about.us</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="sequence" widget="handle" />
+                <field name="name" />
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_application_how_hear_about_us">
+        <field name="name">How did you hear about us</field>
+        <field name="res_model">adm.application.option.how.hear.about.us</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <menuitem id="adm_menu_how_hear_about_us"
+              action="action_application_how_hear_about_us"
+              parent="adm_menu_question_parameters"
+              name="How hearing about us" />
+
+    <!-- Medical condition -->
+    <record id="adm_application_option_medical_conditions_view_tree" model="ir.ui.view">
+        <field name="name">adm.application.option.medical.conditions.view.tree</field>
+        <field name="model">adm.application.option.medical.conditions</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="sequence" widget="handle" />
+                <field name="name" />
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_application_option_medical_conditions">
+        <field name="name">Medical conditions options</field>
+        <field name="res_model">adm.application.option.medical.conditions</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <menuitem id="adm_menu_option_medical_conditions"
+              action="action_application_option_medical_conditions"
+              parent="adm_menu_question_parameters"
+              name="Medical conditions options" />
+
+    <!-- Medical Allergies -->
+    <record id="adm_application_option_medical_allergies_view_tree" model="ir.ui.view">
+        <field name="name">adm.application.option.medical.allergies.view.tree</field>
+        <field name="model">adm.application.option.medical.allergies</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="sequence" widget="handle" />
+                <field name="name" />
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_application_option_medical_allergies">
+        <field name="name">Medical allergies options</field>
+        <field name="res_model">adm.application.option.medical.allergies</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <menuitem id="adm_menu_option_medical_allergies"
+              action="action_application_option_medical_allergies"
+              parent="adm_menu_question_parameters"
+              name="Medical allergies options" />
+
+    <!-- Medical condition -->
+    <record id="adm_application_option_medical_medications_view_tree" model="ir.ui.view">
+        <field name="name">adm.application.option.medical.medications.view.tree</field>
+        <field name="model">adm.application.option.medical.medications</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="sequence" widget="handle" />
+                <field name="name" />
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_application_option_medical_medications">
+        <field name="name">Medical medications options</field>
+        <field name="res_model">adm.application.option.medical.medications</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <menuitem id="adm_menu_option_medical_medications"
+              action="action_application_option_medical_medications"
+              parent="adm_menu_question_parameters"
+              name="Medical medications options" />
+
+</odoo>

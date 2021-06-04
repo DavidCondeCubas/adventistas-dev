@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="adm_application_user_access_view_form" model="ir.ui.view">
+        <field name="name">adm.application.user.access.view.form</field>
+        <field name="model">adm.application.user.access</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <field name="user_id"/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="adm_application_user_access_view_tree" model="ir.ui.view">
+        <field name="name">adm.application.user.access.view.tree</field>
+        <field name="model">adm.application.user.access</field>
+        <field name="arch" type="xml">
+            <tree>
+
+            </tree>
+        </field>
+    </record>
+
+</odoo>

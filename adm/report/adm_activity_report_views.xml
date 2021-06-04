@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="adm_activity_report_view_graph" model="ir.ui.view">
+        <field name="name">adm.activity.report.graph</field>
+        <field name="model">adm.activity.report</field>
+        <field name="arch" type="xml">
+            <graph string="Activities Analysis" stacked="True">
+                <field name="mail_activity_type_id" type="col"/>
+                <field name="date" interval="month" type="row"/>
+            </graph>
+        </field>
+    </record>
+
+    <record id="adm_activity_report_view_pivot" model="ir.ui.view">
+        <field name="name">adm.activity.report.pivot</field>
+        <field name="model">adm.activity.report</field>
+        <field name="arch" type="xml">
+            <pivot string="Activities Analysis" disable_linking="True">
+                <field name="mail_activity_type_id" type="col"/>
+                <field name="date" interval="month" type="row"/>
+            </pivot>
+        </field>
+    </record>
+
+    <record id="adm_activity_report_view_tree" model="ir.ui.view">
+        <field name="name">adm.activity.report.tree</field>
+        <field name="model">adm.activity.report</field>
+        <field name="arch" type="xml">
+            <tree default_order="date desc">
+                <field name="date"/>
+                <field name="author_id"/>
+                <field name="mail_activity_type_id"/>
+                <field name="body"/>
+                <!-- <field name="company_id" groups="base.group_multi_company"/> -->
+            </tree>
+        </field>
+    </record>
+
+    <record id="adm_activity_report_view_search" model="ir.ui.view">
+        <field name="name">adm.activity.report.search</field>
+        <field name="model">adm.activity.report</field>
+        <field name="arch" type="xml">
+            <search string="Activities Analysis">
+                <field name="mail_activity_type_id" string="Activity Type"/>
+                <field name="application_id" string="Applicatiom"/>
+                <!--                    <field name="user_id" string="Salesperson"/>-->
+                <field name="author_id" string="Assigned To"/>
+                <filter string="Done" name="done" domain="[('status_id.type_id', '=', 'done')]"/>
+                <separator/>
+                <filter string="Completed Last 365 Days" name="completion_date" domain="[
+                        ('date', '>=', (datetime.datetime.combine(context_today() + relativedelta(days=-365), datetime.time(0,0,0)).to_utc()).strftime('%Y-%m-%d %H:%M:%S')),
+                        ('date', '&lt;', (datetime.datetime.combine(context_today(), datetime.time(0,0,0)).to_utc()).strftime('%Y-%m-%d %H:%M:%S'))]"/>
+                <separator/>
+                <!--                    <filter string="Archived" name="inactive" domain="[('active', '=', False)]"/>-->
+                <group expand="1" string="Group By">
+                    <filter string="Activity" name="group_by_activity_type"
+                            context="{'group_by': 'mail_activity_type_id'}"/>
+                    <filter string="Type" name="group_by_subtype" context="{'group_by': 'subtype_id'}"/>
+                    <filter string="Assigned To" name="group_by_author_id" context="{'group_by': 'author_id'}"/>
+                    <filter string="Completion Date" name="group_by_completion_date"
+                            context="{'group_by': 'date:month'}"/>
+                    <separator/>
+                    <!--                        <filter string="Salesperson" name="group_by_user_id" context="{'group_by': 'user_id'}"/>-->
+                    <!--                        <filter string="Sales Team" name="saleschannel" context="{'group_by': 'team_id'}"/>-->
+                    <filter string="Stage" name="stage" context="{'group_by': 'status_id'}"/>
+                    <!--                        <filter string="Company" name="company" context="{'group_by': 'company_id'}" groups="base.group_multi_company"/>-->
+                    <!--                        <filter string="Creation Date" name="group_by_lead_date_creation" context="{'group_by': 'lead_create_date'}"/>-->
+                    <!--                        <filter string="Expected Closing" name="group_by_date_deadline" context="{'group_by': 'date_deadline'}"/>-->
+                    <!--                        <filter string="Closed Date" name="group_by_date_closed" context="{'group_by': 'date_closed'}"/>-->
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <template id="adm_application_view_tracking_field_table">
+        <table class="table">
+            <tr>
+                <th class="text-center w-50">Field</th>
+                <th class="text-center w-50">Value</th>
+            </tr>
+            <t t-foreach="field_settings_ids" t-as="field_setting_id">
+                <t t-set="field_id" t-value="field_setting_id.field_id"/>
+                <tr t-attf-class="{{ not record[field_id.name] and 'text-danger' or '' }}">
+                    <td class="w-50">
+                        <t t-esc="field_id.field_description"/>
+                    </td>
+                    <td class="w-50">
+                        <t t-if="field_id.ttype == 'many2one'">
+                            <span t-esc="record[field_id.name].display_name"/>
+                        </t>
+                        <t t-elif="field_id.ttype in ['many2many','one2many']">
+                            <span t-esc="', '.join(record[field_id.name].mapped('display_name'))"/>
+                        </t>
+                        <t t-else="">
+                            <t t-set="value" t-value="record[field_id.name]"/>
+                            <t t-if="field_id.ttype in ['integer','float','monetary']">
+                                <span style="display:block;" class="text-right"
+                                      t-esc="value if field_id.ttype == 'integer' else '%.2f' % value"/>
+                            </t>
+                            <t t-else="">
+                                <span t-esc="value"/>
+                            </t>
+                        </t>
+                    </td>
+                </tr>
+            </t>
+        </table>
+    </template>
+
+    <record id="adm_application_view_tracking" model="ir.ui.view">
+        <field name="name">adm.application.view.tracking</field>
+        <field name="model">adm.application</field>
+        <field name="type">adm_tracking_fields</field>
+        <field name="arch" type="xml">
+            <div class="container mt-4">
+                <div class="row">
+                    <div class="col-6">
+                        <button type="button" class="btn btn-primary js_adm_collapse"
+                                data-target=".collapse" data-toggle-to="hide">
+                            Collapse all
+                        </button>
+                        <button type="button" class="btn btn-primary js_adm_collapse"
+                                data-target=".collapse" data-toggle-to="show">
+                            Expand all
+                        </button>
+                    </div>
+                </div>
+                <t t-foreach="records" t-as="record">
+                    <div class="row bg-white mt-4 pb-4">
+                        <div class="col-12">
+                            <div class="card mt-4">
+                                <div class="card-header">
+                                    <div class="row w-100">
+                                        <div class="col-2">
+                                            <img t-attf-src="/web/image/res.partner/{{ record.partner_id.id }}/image_128"
+                                                 t-att-title="record.partner_id.name" t-att-alt="record.partner_id.name"/>
+                                        </div>
+                                        <div class="col-8">
+                                            <button class="btn btn-link w-100 h-100" data-toggle="collapse"
+                                                    t-attf-data-target="#application-card-body-{{ record.id }}">
+                                                <t t-esc="record.name"/>
+                                            </button>
+                                        </div>
+                                        <div class="col-2">
+                                            <button class="btn btn-link w-100 h-100 see_application"
+                                                    t-att-data-application-id="record.id">
+                                                Go to application
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="collapse show" t-attf-id="application-card-body-{{ record.id }}">
+                                    <div class="card-body">
+                                        <p>
+                                            <h3>Required fields</h3>
+                                            <t t-set="field_settings_ids" t-value="record.get_required_fields()"/>
+                                            <t t-call="adm.adm_application_view_tracking_field_table"/>
+                                        </p>
+                                        <br/>
+                                        <p>
+                                            <h3>Optional fields</h3>
+                                            <t t-set="field_settings_ids" t-value="record.get_optional_fields()"/>
+                                            <t t-call="adm.adm_application_view_tracking_field_table"/>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </div>
+        </field>
+    </record>
+
+    <!-- Actions -->
+    <record id="adm_activity_report_action" model="ir.actions.act_window">
+        <field name="name">Pipeline Activities</field>
+        <field name="res_model">adm.activity.report</field>
+        <field name="view_mode">graph,pivot,tree</field>
+        <field name="context">{
+            'search_default_completion_date': 1,
+            'pivot_column_groupby': ['subtype_id', 'mail_activity_type_id'],
+            'pivot_row_groupby': ['date:month'],
+            'graph_mode': 'bar',
+            'graph_groupbys': ['date:month', 'subtype_id'],
+            }</field>
+        <field name="domain">[]</field>
+    </record>
+
+    <record id="adm_application_view_tracking_action" model="ir.actions.act_window">
+        <field name="name">Tracking</field>
+        <field name="res_model">adm.application</field>
+        <field name="view_mode">adm_tracking_fields,search</field>
+        <field name="view_id" ref="adm.adm_application_view_tracking"/>
+    </record>
+
+    <!-- Menuitems -->
+    <menuitem
+            id="adm_activity_report_menu"
+            name="Activities"
+            groups="adm.admission_group_manager"
+            parent="adm.adm_menu_reporting"
+            action="adm_activity_report_action"
+            sequence="3"/>
+    <menuitem
+            id="adm_tracking_report_menu"
+            name="Tracking"
+            groups="adm.admission_group_manager"
+            parent="adm.adm_menu_reporting"
+            action="adm.adm_application_view_tracking_action"/>
+
+</odoo>

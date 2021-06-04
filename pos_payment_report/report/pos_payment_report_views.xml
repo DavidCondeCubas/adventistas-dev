@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="pos_payment_report_view_tree" model="ir.ui.view">
+        <field name="name">pos.payment.report.view.tree</field>
+        <field name="model">pos.payment.report</field>
+        <field name="arch" type="xml">
+            <tree string="Payments">
+                <field name="name" />
+                <field name="partner_id" widget="many2onebutton" />
+                <field name="payment_type" />
+                <field name="payment_date" />
+                <field name="payment_method_id" widget="many2onebutton" />
+                <field name="payment_id" widget="many2onebutton" />
+                <field name="amount" sum="Total Amount" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="pos_payment_report_view_search" model="ir.ui.view">
+        <field name="name">pos.payment.report.view.search</field>
+        <field name="model">pos.payment.report</field>
+        <field name="arch" type="xml">
+            <search string="Payments">
+                <field name="payment_id" />
+                <field name="partner_id" />
+                <field name="payment_type" />
+                <field name="payment_method_id" />
+                <field name="pos_order_id" />
+                
+                <filter string="Regular Payment" name="regular_payment" domain="[('payment_type', '=', 'regular')]" />
+
+                <group expand="0" string="Group By">
+                    <filter string="Type" name="group_by_payment_type" domain="[]" context="{'group_by': 'payment_type'}" />
+                    <filter string="Customer" name="group_by_partner" domain="[]" context="{'group_by': 'partner_id'}" />
+                    <filter string="Payment Method" name="group_by_payment_method" domain="[]" context="{'group_by': 'payment_method_id'}" />
+                    <filter string="Order" name="group_by_pos_order" domain="[]" context="{'group_by': 'pos_order_id'}" />
+                    <filter string="Payment" name="group_by_payment" domain="[]" context="{'group_by': 'payment_id'}" />
+                </group>
+            </search>
+        </field>
+    </record>
+</odoo>

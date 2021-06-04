@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="application_page_student_info" model="adm.application.page">
+        <field name="name">Student information</field>
+        <field name="url">info</field>
+        <field name="view_template_id" ref="adm.template_application_student_info"/>
+    </record>
+
+    <record id="application_page_school_information" model="adm.application.page">
+        <field name="name">Academic Information</field>
+        <field name="url">academic-info</field>
+        <field name="view_template_id" ref="adm.template_application_schools_information_webpage"/>
+    </record>
+
+    <record id="application_page_family_parent" model="adm.application.page">
+        <field name="name">Family</field>
+    </record>
+
+    <record id="application_page_family_info" model="adm.application.page">
+        <field name="name">Information</field>
+        <field name="url">family/info</field>
+        <field name="parent_id" ref="adm.application_page_family_parent"/>
+        <field name="view_template_id" ref="adm.template_application_family_info"/>
+    </record>
+
+    <record id="application_page_family_relationships" model="adm.application.page">
+        <field name="name">Relationships</field>
+        <field name="url">family/relationships</field>
+        <field name="parent_id" ref="adm.application_page_family_parent"/>
+        <field name="view_template_id" ref="adm.template_application_family_relationships"/>
+    </record>
+
+    <record id="application_page_family_finance" model="adm.application.page">
+        <field name="name">Finance</field>
+        <field name="url">family/finance</field>
+        <field name="parent_id" ref="adm.application_page_family_parent"/>
+        <field name="view_template_id" ref="adm.template_application_family_finance"/>
+    </record>
+
+    <record id="application_page_medical_info" model="adm.application.page">
+        <field name="name">Medical information</field>
+        <field name="url">medical-info</field>
+        <field name="view_template_id" ref="adm.template_application_menu_medical_info"/>
+    </record>
+
+    <record id="application_page_documents" model="adm.application.page">
+        <field name="name">Documents</field>
+        <field name="url">documents</field>
+        <field name="view_template_id" ref="adm.template_application_documents_upload"/>
+    </record>
+
+    <record id="application_page_tuition_plan" model="adm.application.page">
+        <field name="name">Tuition plan</field>
+        <field name="url">tuition-plan</field>
+        <field name="view_template_id" ref="adm.template_application_menu_tuition_plan"/>
+    </record>
+
+</odoo>

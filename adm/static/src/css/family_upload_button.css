@@ -1,0 +1,35 @@
+.form-upload label.label-upload {
+  display: inline-block;
+  color: white;
+  background: indigo;
+  padding: 0.5rem;
+  font-family: sans-serif;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+.form-upload input[type=file] {
+  display: none;
+}
+
+.card-sticky-save {
+  position: sticky;
+}
+@media (min-height: 720px) {
+  .card-sticky-save {
+    top: 50%;
+  }
+}
+@media (max-height: 719px) {
+  .card-sticky-save {
+    bottom: 0;
+  }
+}
+
+.filepond--root .filepond--credits {
+  display: none !important;
+}
+.filepond--root [aria-hidden=true], .filepond--root [aria-hidden="1"] {
+  display: block !important;
+}
+
+/*# sourceMappingURL=family_upload_button.css.map */

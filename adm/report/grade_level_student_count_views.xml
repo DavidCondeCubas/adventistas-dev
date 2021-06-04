@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+	<record id="grade_student_count_graph_view" model="ir.ui.view">
+		<field name="name">adm.grade.student.count.graph.view</field>
+		<field name="model">grade.level.student.count.report</field>
+		<field name="arch" type="xml">
+			<graph string="Next School Year Remaining Slots" stacked="False">
+				<field name="next_grade_level_id" type="row"/>
+				<field name="student_count_type" type="row"/>
+
+				<field name="student_count" type="measure"/>
+			</graph>
+		</field>
+	</record>
+
+	<record id="adm_grade_student_count_dashboard_view" model="ir.ui.view">
+		<field name="name">adm.grade.student.count.dashboard.view</field>
+		<field name="model">grade.level.student.count.report</field>
+		<field name="mode">primary</field>
+		<field name="arch" type="xml">
+			<dashboard>
+				<view type="graph" ref="adm.grade_student_count_graph_view"/>
+			</dashboard>
+		</field>
+	</record>
+
+	<record id="grade_level_student_count_report_view_search" model="ir.ui.view">
+	    <field name="name">grade.level.student.count.report.view.search</field>
+	    <field name="model">grade.level.student.count.report</field>
+	    <field name="arch" type="xml">
+	        <search>
+	            <field name="next_grade_level_id"/>
+	        </search>
+	    </field>
+	</record>
+
+	<record id="adm_grade_student_count_action_dashboard" model="ir.actions.act_window">	
+		<field name="name">Grade Level Student Count</field>
+		<field name="res_model">grade.level.student.count.report</field>
+		<field name="view_mode">dashboard,pivot,graph,tree,form,search</field>
+	</record>
+
+	<record id="adm_grade_student_count_dashboard_dashboard" model="ir.actions.act_window.view">
+		<field name="sequence" eval="1"/>
+		<field name="view_mode">dashboard</field>
+		<field name="view_id" ref="adm_grade_student_count_dashboard_view"/>
+		<field name="act_window_id" ref="adm_grade_student_count_action_dashboard"/>
+	</record>
+
+    <menuitem id="adm_menu_reporting_grade_level" name="Grade Student Count" sequence="15"
+        parent="adm.adm_menu_reporting" action="adm_grade_student_count_action_dashboard"/>
+
+</odoo>

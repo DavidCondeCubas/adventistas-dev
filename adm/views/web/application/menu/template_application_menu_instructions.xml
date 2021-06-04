@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="adm.template_application_menu_instructions">
+        <t t-call="adm.template_application_page_commons">
+            <t t-set="skip_sent_message" t-value="True"/>
+            <t t-set="title">Application</t>
+            <t t-set="head">
+                <script defer="defer" type="text/javascript" src="/adm/static/src/js/application/menu_progress.js"/>
+                <link rel="stylesheet" href="/adm/static/src/css/form_application.css"/>
+            </t>
+            <div class="oe_struture"/>
+            <div class="oe_struture">
+                <t t-call="adm.template_application_menu"/>
+                <div class="container-fluid d-flex p-4">
+                    <main class="col container">
+                        <section class="card mb-2">
+                            <section class="card-header">
+                                <h1>Information</h1>
+                            </section>
+                            <section class="card-body">
+                                <div class="container">
+                                    <div class="row pt-4 pb-4">
+                                        <div class="col-2">
+                                            <b>Current Status:</b>
+                                        </div>
+                                        <section class="progressbar col">
+                                            <progress value="0"/>
+                                            <ul>
+                                                <t t-set="current" t-value="False"/>
+                                                <t t-foreach="application_status_ids" t-as="status_id">
+                                                    <t t-set="status_name"
+                                                       t-value="status_id.web_alternative_name or status_id.name"/>
+                                                    <t t-if="application_id.status_id == status_id">
+                                                        <t t-set="current" t-value="True"/>
+                                                        <li class="current">
+                                                            <t t-esc="status_name"/>
+                                                        </li>
+                                                    </t>
+                                                    <t t-else="">
+                                                        <t t-if="current">
+                                                            <li t-if="status_id.web_visible">
+                                                                <t t-esc="status_name"/>
+                                                            </li>
+                                                        </t>
+                                                        <t t-else="">
+                                                            <li t-if="status_id.type_id != 'return' and (application_id.status_id.type_id != 'cancelled' or not status_id.hide_if_cancel) and (application_id.status_id.type_id != 'done' or not status_id.hide_if_done)"
+                                                                class="active">
+                                                                <t t-esc="status_name"/>
+                                                            </li>
+                                                        </t>
+                                                    </t>
+                                                </t>
+                                            </ul>
+                                        </section>
+                                    </div>
+
+                                    <h1>The text below is just for testing.<br/>Please, change it as your needs</h1>
+
+                                    <div class="row h2">
+                                        <b>Occaecat</b>
+                                    </div>
+                                    <div class="row h3">
+                                        <b>Unde dolores doloremque dolorem</b>
+                                    </div>
+                                    <div class="row">
+                                        <p>
+                                            Cat ipsum dolor sit amet, laborum, aliquip. Nostrud doloremque, or vel or
+                                            quia cillum, rem magnam. Quam unde, so quisquam. Anim aliquam deserunt but
+                                            beatae. Laboriosam. Beatae illum, officia autem. Anim. Molestiae. Cupidatat
+                                            laborum, incidunt, explicabo. Consequatur aspernatur. Illum adipisci sunt ex
+                                            but consequat laudantium but ea. Nequeporro laboris for laboriosam quasi yet
+                                            eius aute or fugit. Do consectetur, totam amet. Eum incidunt so aliquip
+                                            incidunt. Mollit magni yet aut and amet. Reprehenderit. Eu laudantium for
+                                            consequatur sequi yet laudantium for numquam. Nostrud aspernatur excepteur
+                                            inventore and dolorem, modi for esse. Excepteur omnis and reprehenderit
+                                            aliquam aliqua yet iure but nostrud. Sed esse, natus qui. Dolores lorem.
+                                            Pariatur. Beatae dolores but incidunt, yet non so minima nesciunt or
+                                            inventore. Voluptate excepteur.
+                                        </p>
+                                        <p>
+                                            Sint incididunt. Ut illo. Quis iure proident yet accusantium and veritatis,
+                                            but doloremque. Natus ullam laboriosam, sequi or cillum natus ullamco.
+                                            Excepteur quasi laboriosam nulla exercitation. Eum ab but velitesse.
+                                            Laudantium adipisicing voluptatem iste yet omnis. Explicabo dolore yet
+                                            officia. Incidunt magni nostrud, but consequuntur. Lorem non quisquam.
+                                            Ipsam. Voluptate consequat, or minim, so ab for unde so tempora. Dolorem in
+                                            but fugit. Nesciunt inventore non. Officia ab irure magnam yet commodo.
+                                            Tempora. Minim elit. Vel quia for amet. Incididunt do yet exercitationem yet
+                                            esse. Esse quis dicta or nisi yet consequuntur do vel. Dicta ipsa and ut
+                                            omnis occaecat beatae for ratione. Inventore lorem consequuntur, magni.
+                                            Tempor iste laboris illum or eu nostrud but quis.
+                                        </p>
+                                        <p>
+                                            Do eiusmod yet dolor ipsam nesciunt aute. Eu eum, so illo enim accusantium,
+                                            dolores veritatis. Nostrum quis mollit ab vitae, iste so voluptas. Sit velit
+                                            but magni eu but vitae, and autem. Reprehenderit quam. Velit nemo yet
+                                            excepteur and esse ex. Eos rem dolorem ipsum omnis or minima illum. Modi
+                                            dolor so sit. Eos ipsum for modi vitae or pariatur dolore. Sit accusantium
+                                            for nemo natus so do.
+                                        </p>
+                                        <p>
+                                            Ut nequeporro. Sequi omnis laudantium so illum, suscipit for si. Ipsum
+                                            tempor, or natus dicta. Aperiam laboriosam so veritatis yet nostrum
+                                            laudantium and perspiciatis. Explicabo aute architecto so elit eu. Ab
+                                            adipisci. Eos ipsam eius lorem. Magna eiusmod yet fugiat, corporis or unde
+                                            voluptate but et. Ipsam adipisicing but dolor but perspiciatis but
+                                            architecto so fugit dicta. Cillum. Modi sit or excepteur yet numquam rem
+                                            culpa. Corporis. Irure. Pariatur. Velitesse quasi. Veniam aute but
+                                            consectetur. Inventore exercitation suscipit. Do beatae accusantium for
+                                            velitesse quisquam. Dolores corporis eu or aspernatur. Doloremque
+                                            adipisicing and incididunt but aliquam, sint sequi cupidatat. Consequatur
+                                            iure. Quisquam rem or quae so anim or eos nulla, ratione. Do tempora in and
+                                            vel or qui and voluptate amet. Laboris cillum suscipit.
+                                        </p>
+                                        <p>
+                                            Laboris sint and incidunt or enim for vel magnam for eiusmod. Proident omnis
+                                            mollit dicta, or adipisicing ipsa but dolore. Velit. Dolor mollit but et ex.
+                                            Ea aliqua for laudantium, aliqua or ex for ut est. Ipsam enim. Quis.
+                                            Velitesse nostrum. Autem lorem or dicta commodi for aliquip. Dolore eu, but
+                                            nihil consequatur ex aliquid lorem. Molestiae aut. Adipisci error.
+                                            Incididunt laboris, for quasi, aspernatur accusantium so quae. Quaerat sed.
+                                            Nostrud. Ab. Est modi enim iure. Ipsum ad eum and lorem omnis, dolorem.
+                                            Voluptate pariatur commodo quam. Voluptas adipisci nostrum so reprehenderit
+                                            yet nostrud, iste nequeporro. Numquam adipisicing.
+                                        </p>
+                                        <p>
+                                            Ipsa est non voluptas and aut. Ipsum velit laboris yet vitae deserunt.
+                                            Proident aspernatur or consequatur sit, or laboris for consequat. Ipsum esse
+                                            anim. Eiusmod error. Est ut. Est aliquip dolores for duis. Sint totam so
+                                            velit so adipisicing. Numquam elit and enim quisquam suscipit. Natus ipsam
+                                            iste or occaecat suscipit, for do, sequi. Minima tempor eiusmod so duis.
+                                            Officia commodo, so numquam. Iste quasi iste yet velit officia.
+                                            Exercitationem quisquam so unde illo nostrud voluptas. Ullam voluptate.
+                                            Laborum ea for nesciunt unde. Dolorem culpa and consequat. Vel consequuntur
+                                            and consectetur vitae.
+                                        </p>
+                                    </div>
+                                </div>
+                            </section>
+                        </section>
+                    </main>
+                </div>
+            </div>
+        </t>
+    </template>
+</odoo>

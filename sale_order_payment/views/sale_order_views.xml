@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sale_order_view_form_inherit" model="ir.ui.view">
+        <field name="name">sale.order.view.form.inherit</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//header/button[@name='action_quotation_send']" position="before">
+                <button name="action_sale_order_payment" type="object" class="oe_highlight" 
+                        string="Register Payment" 
+                        attrs="{'invisible': ['|', ('state', 'not in', ['sale','done']), ('invoice_status', '==', 'invoiced')]}" 
+                        options="{}" />
+                <field name="len_reconcilable_payment_ids" invisible="1" readonly="1" />
+                <field name="amount_due_after_reconcile" invisible="1" readonly="1" />
+            </xpath>
+
+            <xpath expr="//sheet/notebook/page[@name='other_information']" position="before">
+                <page string="Reconciled Payments" attrs="{'invisible': [('reconciled_total', '==', 0)]}">
+                    <field name="reconciled_payment_ids" widget="section_and_note_one2many" mode="tree" 
+                        readonly="1">
+                        <tree>
+                            <field name="payment_id" string="Sales Order Payment ID"/>
+                            <field name="amount_reconciled" />
+                            <field name="account_payment_id" />
+                            <field name="date_reconciled" />
+                            <button string="Unreconcile" name="action_unreconcile" type="object" />
+                        </tree>
+                    </field>
+
+                    <group name="note_group" cols="6">
+                        <group class="oe_subtotal_footer oe_right" colspan="2" name="group_reconciled_total">
+                            <div class="oe_subtotal_footer_separator oe_inline o_td_label">
+                                <label for="reconciled_total"/>
+                            </div>
+                            <field name="reconciled_total" nolabel="1" class="oe_subtotal_footer_separator"/>
+                        </group>    
+                    </group>
+                    <div class="oe_clear"/>
+                </page>
+
+                <page string="Reconcilable Payments" 
+                    attrs="{'invisible': ['|', ('len_reconcilable_payment_ids', '==', 0), '|', ('amount_due_after_reconcile', '&lt;=', 0), '|', ('state', 'in', ['draft', 'done', 'cancel'])]}">
+                    <field name="reconcilable_payment_ids" widget="one2many" mode="tree"
+                        context="{'sale_order_id': active_id}" 
+                        readonly="1">
+                        <tree>
+                            <field name="journal_id" string="Journal"/>
+                            <field name="amount_paid" />
+                            <field name="reconcilable_amount" />
+                            <field name="memo" />
+                            <field name="payment_date" />
+                            <button string="Reconcile" name="action_reconcile" type="object"/>
+                            <button string="Cancel" name="action_cancel" type="object" />   
+                        </tree>
+                    </field>
+                    <div class="oe_clear"/>
+                </page>
+            </xpath>
+
+            <xpath expr="//sheet/notebook/page[@name='order_lines']/group[@name='note_group']/group[@name='sale_total']/field[@name='amount_total']" position="after">
+                <field name="reconciled_total" 
+                        string="Less: Total Reconciled Amount"
+                        widget="monetary" 
+                        options="{'currency_field': 'currency_id'}" 
+                        attrs="{'invisible': [('reconciled_total', '=', 0)]}"/>
+
+                <field name="amount_due_after_reconcile" 
+                    string="Total Amount after Reconciliation"
+                    class="oe_subtotal_footer_separator" 
+                    widget="monetary" 
+                    options="{'currency_field': 'currency_id'}" 
+                    attrs="{'invisible': [('reconciled_total', '=', 0)]}"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

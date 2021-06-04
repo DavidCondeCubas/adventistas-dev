@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sale_order_view_form_inherit" model="ir.ui.view">
+        <field name="name">sale.order.view.form.inherit</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form" />
+        <field name="arch" type="xml">
+            <button name="action_sale_order_payment" position="after">
+                <button name="%(sale_order_payment_wallet.action_pay_with_wallet_wizard)d" 
+                        id="sale_order_pay_with_wallet_button"
+                        type="action" 
+                        class="oe_highlight" 
+                        string="Pay With Wallet" 
+                        attrs="{'invisible': ['|', ('state', '!=', 'sale'), ('invoice_status', '==', 'invoiced')]}" 
+                        context="{'default_partner_id': partner_id}"
+                        groups="account.group_account_invoice"
+                        options="{}" />
+            </button>
+            
+            <xpath expr="//field[@name='reconcilable_payment_ids']/tree/field[@name='journal_id']" position="after">
+                <field name="wallet_id" />
+            </xpath>
+
+            <xpath expr="//field[@name='reconciled_payment_ids']/tree/field[@name='date_reconciled']" position="before">
+                <field name="credit_note_id" />
+            </xpath>
+        </field>
+    </record>
+</odoo>

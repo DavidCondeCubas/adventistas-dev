@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sincro_data_base_api_view_tree" model="ir.ui.view">
+        <field name="name">sincro_data_base.api.view.tree</field>
+        <field name="model">sincro_data_base.api</field>
+        <field name="arch" type="xml">
+            <tree string="Application Programming Interface">
+                <field name="name"/>
+                <field name="base_url"/>
+                <field name="header_ids" widget='many2many_tags'/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="sincro_data_base_api_view_form" model="ir.ui.view">
+        <field name="name">sincro_data_base.api.view.form</field>
+        <field name="model">sincro_data_base.api</field>
+        <field name="arch" type="xml">
+            <form string="Application Programming Interface">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="base_url" placeholder="https://sample.com:443"/>
+                        <!--                        <field name="api_key" password="True"/>-->
+                        <field name="header_ids" widget='many2many'>
+                            <tree>
+                                <field name="name"/>
+                            </tree>
+                        </field>
+                    </group>
+                    <notebook>
+                        <page string="Request">
+                            <field name="request_ids" widget="one2many"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

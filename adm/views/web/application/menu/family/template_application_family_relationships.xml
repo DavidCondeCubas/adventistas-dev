@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <template id="template_application_family_members_card">
+        <div t-att-class="not member or 'mt-4'">
+            <section t-attf-class="card #{not member and 'd-none'}"
+                     t-att-id="member or 'template_application_family_members_card'">
+                <t t-if="member">
+                    <input class="form-control" type="hidden"
+                           data-adm-field="id"
+                           t-att-value="member.id"
+                           data-adm-field-type="INTEGER"/>
+                    <input class="form-control" type="hidden"
+                           data-adm-field="family_id"
+                           t-att-value="member.family_id.id"
+                           data-adm-field-type="INTEGER"/>
+                </t>
+                <t t-else="">
+                    <input class="form-control" type="hidden"
+                           data-adm-field="family_id"
+                           t-att-value="application_id.current_user_access_id.family_id.id"
+                           data-adm-field-type="INTEGER"/>
+                    <input class="form-control" type="hidden"
+                               data-adm-field="partner_individual_id"
+                               t-att-value="application_id.partner_id.id"
+                               data-adm-field-type="INTEGER"/>
+                </t>
+
+                <div class="card-header position-relative d-flex justify-content-end">
+                    <button class="btn btn-link d-inline btn-block position-absolute"
+                            style="top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1;"
+                            type="button" data-toggle="collapse"
+                            t-attf-data-target="#memberCollapse_#{member and member.id}">
+                        <!--Full name-->
+                        <t t-if="member">
+                            <t t-esc="member.partner_relation_id.name"/>
+                        </t>
+                        <t t-else="">
+                            New member
+                        </t>
+                    </button>
+                    <button type="button" class="btn btn-primary ml-4 o_adm_hide_if_parent move-relationship"
+                            data-target="#parent_relationship_card_list"
+                            data-toggle-tab="#parents-tab"
+                            data-relation-type="parent"
+                            style="top: 1em; right: 1em; z-index: 10;">Make it parent</button>
+
+                    <button type="button" class="btn btn-secondary ml-4 o_adm_hide_if_sibling move-relationship"
+                            data-target="#sibling_relationship_card_list"
+                            data-toggle-tab="#siblings-tab"
+                            data-relation-type="sibling"
+                            style="top: 1em; right: 1em; z-index: 10;">Make it sibling</button>
+
+                    <button type="button" class="btn btn-danger ml-4 o_adm_hide_if_other move-relationship"
+                            data-target="#other_relationship_card_list"
+                            data-toggle-tab="#others-tab"
+                            data-relation-type="other"
+                            style="top: 1em; right: 1em; z-index: 10;">&#10006;</button>
+
+                    <button type="button"
+                            class="btn btn-danger ml-4 o_adm_hide_if_sibling o_adm_hide_if_parent remove-relationship"
+                            style="top: 1em; right: 1em; z-index: 10;">&#10006;</button>
+                </div>
+                <div class="collapse" t-attf-id="memberCollapse_#{member and member.id}">
+                    <div class="card-body">
+                        <article class="row">
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-8 offset-2 col-md-6 offset-md-3 col-lg-4 offset-lg-4">
+                                        <div class="text-center" data-adm-field="partner_relation_id"
+                                             data-adm-field-type="MANY2ONE">
+
+                                            <t t-if="member and member.partner_relation_id">
+                                                <input class="form-control" type="hidden"
+                                                       data-adm-field="id"
+                                                       t-att-value="member.partner_relation_id.id"
+                                                       data-adm-field-type="INTEGER"/>
+                                            </t>
+
+                                            <img t-attf-src="data:image/*;base64,{{member and member.partner_relation_id.image_1920}}"
+                                                 widget="image"
+                                                 onerror="this.src = '/adm/static/img/contact_photo_placeholder.png';"
+                                                 class="avatar rounded-circle" alt="avatar" width="175"/>
+                                            <h6 class="mt-2 textUpload">Upload a different photo...</h6>
+                                            <input type="file"
+                                                   data-adm-field="image_1920"
+                                                   class="form-control"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <fieldset class="col-12 border">
+                                        <legend class="w-auto">Demographics</legend>
+                                        <section class="row" data-adm-field="partner_relation_id"
+                                                 data-adm-field-type="MANY2ONE">
+                                            <div class="col-12 col-md-4 form-group">
+                                                <label>Last name <span class="text-danger"
+                                                                       t-if="is_required('member_relationship_ids.last_name')">
+                                                    *</span></label>
+                                                <input class="form-control" type="text"
+                                                       t-att-required="is_required('member_relationship_ids.partner_relation_id.last_name')"
+                                                       t-att-value="member and member.partner_relation_id.last_name"
+                                                       data-adm-field="last_name" name="last_name"/>
+                                            </div>
+                                            <div class="col-12 col-md-4 form-group">
+                                                <label>Middle name
+                                                    <span class="text-danger"
+                                                          t-if="is_required('member_relationship_ids.partner_relation_id.middle_name')">
+                                                        *</span>
+                                                </label>
+                                                <input class="form-control" type="text"
+                                                       data-adm-field="middle_name"
+                                                       t-att-required="is_required('member_relationship_ids.partner_relation_id.middle_name')"
+                                                       t-att-value="member and member.partner_relation_id.middle_name"
+                                                       name="first_name"/>
+                                            </div>
+                                            <div class="col-12 col-md-4 form-group">
+                                                <label>First name <span class="text-danger"
+                                                                        t-if="is_required('member_relationship_ids.partner_relation_id.first_name')">
+                                                    *</span></label>
+                                                <input class="form-control" type="text"
+                                                       data-adm-field="first_name"
+                                                       t-att-required="is_required('member_relationship_ids.partner_relation_id.first_name')"
+                                                       t-att-value="member and member.partner_relation_id.first_name"
+                                                       name="first_name"/>
+                                            </div>
+                                            <div class="col-12 col-md-6 form-group">
+                                                <label>Date of birth <span class="text-danger"
+                                                                           t-if="is_required('member_relationship_ids.date_of_birth')">
+                                                    *</span></label>
+                                                <input class="form-control" type="date"
+                                                       t-att-required="is_required('member_relationship_ids.date_of_birth')"
+                                                       t-att-value="member and member.partner_relation_id.date_of_birth"
+                                                       data-adm-field="date_of_birth" name="date_of_birth"/>
+                                            </div>
+
+                                            <div class="col-12 col-md-6 form-group">
+                                                <label>
+                                                    Gender <span class="text-danger"
+                                                                 t-if="is_required('member_relationship_ids.partner_relation_id.gender')">
+                                                    *</span>
+                                                </label>
+
+                                                <select class="form-control" name="gender"
+                                                        t-att-required="is_required('member_relationship_ids.partner_relation_id.gender')"
+                                                        data-adm-field="gender" data-adm-field-type="INTEGER">
+                                                    <option disabled="disabled" selected="selected">- Select a gender
+                                                        -</option>
+                                                    <t t-foreach="gender_ids" t-as="gender_id">
+                                                        <option t-att-selected="member and member.partner_relation_id.gender == gender_id"
+                                                                t-att-value="gender_id.id">
+                                                            <t t-esc="gender_id.name"/>
+                                                        </option>
+                                                    </t>
+                                                </select>
+                                            </div>
+                                            <div class="col-12 col-md-6 form-group">
+                                                <label>
+                                                    Marital status
+                                                    <span class="text-danger"
+                                                          t-if="is_required('member_relationship_ids.partner_relation_id.marital_status_id')">
+                                                        *</span>
+                                                </label>
+                                                <select name="marital_status_id" class="form-control"
+                                                        t-att-required="is_required('member_relationship_ids.partner_relation_id.marital_status_id')"
+                                                        data-adm-field="marital_status_id">
+                                                    <option selected="selected" disabled="disabled">
+                                                        -Select a status-
+                                                    </option>
+                                                    <t t-foreach="SUPER_ENV['school_base.marital_status'].search([])"
+                                                       t-as="marital_status_id">
+                                                        <option t-att-selected="member.partner_relation_id.marital_status_id == marital_status_id"
+                                                                t-att-value="marital_status_id.id">
+                                                            <t t-esc="marital_status_id.name"/>
+                                                        </option>
+                                                    </t>
+                                                </select>
+                                            </div>
+
+                                            <div class="col-12 col-md-6 form-group">
+                                                <label>
+                                                    Email Address
+                                                    <span class="text-danger"
+                                                          t-if="is_required('member_relationship_ids.member_2.email')">
+                                                        *</span>
+                                                </label>
+                                                <input class="form-control" type="email"
+                                                       t-att-required="is_required('member_relationship_ids.member_2.email')"
+                                                       t-att-value="member and member.partner_relation_id.email"
+                                                       data-adm-field="email" name="email"/>
+                                            </div>
+
+                                            <div class="col-12 col-md-6 form-group">
+                                                <label>
+                                                    Work Phone
+                                                    <span class="text-danger"
+                                                          t-if="is_required('member_relationship_ids.member_2.phone')">
+                                                        *</span>
+                                                </label>
+                                                <input class="form-control" type="tel"
+                                                       t-att-required="is_required('member_relationship_ids.member_2.phone')"
+                                                       t-att-value="member and member.partner_relation_id.phone"
+                                                       data-adm-field="phone" name="phone"/>
+                                            </div>
+
+                                            <div class="col-12 col-md-6 form-group">
+                                                <label>
+                                                    Mobile
+                                                    <span class="text-danger"
+                                                          t-if="is_required('member_relationship_ids.member_2.mobile')">
+                                                        *</span>
+                                                </label>
+                                                <input class="form-control" type="tel"
+                                                       t-att-required="is_required('member_relationship_ids.member_2.mobile')"
+                                                       t-att-value="member and member.partner_relation_id.mobile"
+                                                       data-adm-field="mobile" name="mobile"/>
+                                            </div>
+
+                                            <div class="col-12 col-md-6 form-group">
+                                                <label>
+                                                    Job Position
+                                                    <span class="text-danger"
+                                                          t-if="is_required('member_relationship_ids.member_2.function')">
+                                                        *</span>
+                                                </label>
+                                                <input class="form-control" type="text"
+                                                       t-att-required="is_required('member_relationship_ids.member_2.function')"
+                                                       t-att-value="member and member.partner_relation_id.function"
+                                                       data-adm-field="function" name="function"/>
+                                            </div>
+
+                                            <div class="col-12 col-md-6 form-group">
+                                                <label>
+                                                    Job Category
+                                                    <span class="text-danger"
+                                                          t-if="is_required('member_relationship_ids.member_2.employer')">
+                                                        *</span>
+                                                </label>
+                                                <input class="form-control" type="text" disabled="disabled"/>
+                                            </div>
+
+                                            <div class="col-12 col-md-6 form-group">
+                                                <label>
+                                                    Employer
+                                                    <span class="text-danger"
+                                                          t-if="is_required('member_relationship_ids.member_2.employer')">
+                                                        *</span>
+                                                </label>
+                                                <input class="form-control" type="text"
+                                                       t-att-required="is_required('member_relationship_ids.member_2.employer')"
+                                                       t-att-value="member and member.partner_relation_id.employer"
+                                                       data-adm-field="employer" name="employer"/>
+                                            </div>
+                                        </section>
+                                    </fieldset>
+                                    <fieldset class="col-12 border">
+                                        <legend class="w-auto">Relationship to application</legend>
+                                        <section class="row">
+                                            <div class="col-12 col-md-6 form-group">
+                                                <label>Relationship to applicant
+                                                    <span class="text-danger">*</span></label>
+                                                <t t-set="parent_val_list" t-value="['parent', 'father', 'mother']"/>
+                                                <t t-set="sibling_val_list" t-value="['sibling', 'sister', 'brother']"/>
+
+                                                <select class="form-control" data-adm-field="relationship_type_id"
+                                                        data-adm-field-type="INTEGER">
+                                                    <option selected="selected" disabled="disabled">
+                                                        -Select a relation type-
+                                                    </option>
+                                                    <t t-foreach="relationship_types" t-as="relationship_type">
+                                                        <option t-att-selected="member and member.relationship_type_id == relationship_type"
+                                                                t-att-value="relationship_type.id"
+                                                                t-attf-class="{{relationship_type.type not in parent_val_list and 'o_adm_hide_if_parent'}} {{relationship_type.type not in sibling_val_list and 'o_adm_hide_if_sibling'}}">
+                                                            <t t-esc="relationship_type.name"/>
+                                                        </option>
+                                                    </t>
+                                                </select>
+                                            </div>
+
+                                            <div class="col-12 col-md-6 form-group border-left pl-4">
+                                                <div class="row">
+                                                    <strong>Switch if applicable</strong>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-12 col-md-6">
+                                                        <div class="custom-control custom-switch">
+                                                            <input type="checkbox" data-adm-field="custody"
+                                                                   t-att-value="parent and parent.custody"
+                                                                   t-attf-name="custodial_right-#{parent and parent.id}"
+                                                                   t-attf-id="custodial_right-#{parent and parent.id}"
+                                                                   t-att-checked="parent and parent.custody"
+                                                                   data-adm-field-type="BOOLEAN"
+                                                                   class="custom-control-input"/>
+                                                            <label class="custom-control-label"
+                                                                   t-attf-for="custodial_right-#{parent and parent.id}">
+                                                                Custodial rights<span class="text-danger"
+                                                                                      t-if="is_required('parent_relationship_ids.custody')">
+                                                                *</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-md-6">
+                                                        <div class="custom-control custom-switch">
+                                                            <input type="checkbox"
+                                                                   data-adm-field="financial_responsability"
+                                                                   t-att-value="parent and parent.financial_responsability"
+                                                                   t-attf-name="financial_responsability-#{parent and parent.id}"
+                                                                   t-attf-id="financial_responsability-#{parent and parent.id}"
+                                                                   t-att-checked="parent and parent.financial_responsability"
+                                                                   data-adm-field-type="BOOLEAN"
+                                                                   class="custom-control-input"/>
+                                                            <label class="custom-control-label"
+                                                                   t-attf-for="financial_responsability-#{parent and parent.id}">
+                                                                Financial Responsibility
+                                                                <span class="text-danger"
+                                                                      t-if="is_required('parent_relationship_ids.financial_responsability')">
+                                                                    *</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-md-6">
+                                                        <div class="custom-control custom-switch">
+                                                            <input type="checkbox"
+                                                                   data-adm-field="correspondence"
+                                                                   t-att-value="parent and parent.correspondence"
+                                                                   t-attf-name="relation_correspondence-#{parent and parent.id}"
+                                                                   t-attf-id="relation_correspondence-#{parent and parent.id}"
+                                                                   t-att-checked="parent and parent.correspondence"
+                                                                   data-adm-field-type="BOOLEAN"
+                                                                   class="custom-control-input"/>
+                                                            <label class="custom-control-label"
+                                                                   t-attf-for="relation_correspondence-#{parent and parent.id}">
+                                                                Correspondence
+                                                                <span class="text-danger"
+                                                                      t-if="is_required('parent_relationship_ids.correspondence')">
+                                                                    *</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </template>
+
+    <template id="template_application_family_parents_form">
+        <div class="container p-4">
+            <div class="row">
+                <div class="col h1">
+                    Parents
+                </div>
+                <div class="col">
+                    <button type="button"
+                            data-template="#template_application_family_members_card"
+                            data-append-to="#parent_relationship_card_list"
+                            class="add-relationship btn btn-secondary d-block mt-2 ml-auto">
+                        &#10010; Add Member</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col" id="parent_relationship_card_list">
+                    <t t-foreach="application_id.parent_relationship_ids" t-as="member">
+                        <div data-adm-rel="rel">
+                            <t t-call="adm.template_application_family_members_card"/>
+                        </div>
+                    </t>
+                </div>
+            </div>
+        </div>
+    </template>
+    <template id="template_application_family_siblings_form">
+        <div class="container p-4">
+            <div class="row">
+                <div class="col h1">
+                    Siblings
+                </div>
+                <div class="col">
+                    <button type="button"
+                            data-template="#template_application_family_members_card"
+                            data-append-to="#sibling_relationship_card_list"
+                            class="add-relationship btn btn-secondary d-block mt-2 ml-auto">
+                        &#10010; Add Member</button>
+                </div>
+            </div>
+            <div class="col" id="sibling_relationship_card_list">
+                <t t-foreach="application_id.sibling_relationship_ids" t-as="member">
+                    <div data-adm-rel="rel">
+                        <t t-call="adm.template_application_family_members_card"/>
+                    </div>
+                </t>
+            </div>
+        </div>
+    </template>
+    <template id="template_application_family_others_form">
+        <div class="container p-4">
+            <div class="row">
+                <div class="col h1">
+                    Others
+                </div>
+                <div class="col">
+                    <button type="button"
+                            data-template="#template_application_family_members_card"
+                            data-append-to="#other_relationship_card_list"
+                            class="add-relationship btn btn-secondary d-block mt-2 ml-auto">
+                        &#10010; Add Member</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col" id="other_relationship_card_list">
+                    <t t-foreach="application_id.other_relationship_ids" t-as="member">
+                        <div data-adm-rel="rel">
+                            <t t-call="adm.template_application_family_members_card"/>
+                        </div>
+                    </t>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <template id="template_application_family_relationships">
+        <t t-call="adm.template_application_form_commons">
+            <t t-set="title">Family relationships</t>
+            <t t-set="head">
+                <!--<link rel="stylesheet" href="/adm/static/src/css/form_application_id..css"/>-->
+                <link rel="stylesheet" href="/adm/static/src/css/main.css"/>
+                <t t-call-assets="adm.assets_application_relationships" defer_load="True"/>
+            </t>
+
+            <t t-set="url_prev" t-value="'/admission/applications/%s/schools' % application_id.id"/>
+            <t t-set="url_next" t-value="'/admission/applications/%s/family/siblings' % application_id.id"/>
+
+            <!-- Body -->
+            <t t-call="adm.template_application_family_members_card"/>
+            <form data-adm-model-fields="1">
+                <div class="row">
+                    <div class="col">
+                        <ul class="nav nav-tabs" id="family_relationship_tabs" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="parents-tab" data-toggle="tab"
+                                   href="#parents-tab-content"
+                                   role="tab" aria-controls="parents" aria-selected="true">Parents</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="siblings-tab" data-toggle="tab" href="#siblings-tab-content"
+                                   role="tab" aria-controls="siblings" aria-selected="false">Siblings</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="others-tab" data-toggle="tab" href="#others-tab-content"
+                                   role="tab" aria-controls="others" aria-selected="false">Others</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" id="parents-tab-content" role="tabpanel"
+                                 aria-labelledby="parents-tab"
+                                 data-adm-field-type="ONE2MANY"
+                                 data-adm-field="parent_relationship_ids">
+                                <t t-call="adm.template_application_family_parents_form"/>
+                            </div>
+                            <div class="tab-pane fade" id="siblings-tab-content" role="tabpanel"
+                                 aria-labelledby="siblings-tab"
+                                 data-adm-field-type="ONE2MANY"
+                                 data-adm-field="sibling_relationship_ids">
+                                <t t-call="adm.template_application_family_siblings_form"/>
+                            </div>
+                            <div class="tab-pane fade" id="others-tab-content" role="tabpanel"
+                                 aria-labelledby="others-tab"
+                                 data-adm-field-type="ONE2MANY"
+                                 data-adm-field="other_relationship_ids">
+                                <t t-call="adm.template_application_family_others_form"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </t>
+    </template>
+
+</odoo>

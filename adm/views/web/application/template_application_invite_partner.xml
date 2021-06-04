@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <template id="template_application_invite_partner">
+        <t t-call="website.layout">
+            <t t-set="title">Application Invitation</t>
+            <div class="oe_struture"/>
+            <div class="oe_struture">
+                <t t-if="invitation_id.state">
+                    <div class="container">
+                        <div class="row mt-4">
+                            <div class="col">
+                                <div class="alert alert-warning" role="alert">
+                                    This invitation was already solved
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+                <t t-else="">
+                    <t t-set="head">
+                        <t t-call-assets="adm.assets_application_invite_partner" defer_load="True"/>
+                        <meta name="_user_partner_id" t-att-value="application_id.env.user.partner_id.id"/>
+                    </t>
+                    <t t-if="not user.partner_id.sudo().family_ids">
+                        <script>
+                            window.notFamily = true;
+                        </script>
+                    </t>
+                    <form method="POST" class="container" id="invitation_form">
+                        <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                        <input type="hidden" name="state" required="required"/>
+                        <div class="row">
+                            <h1>Hello, <t t-esc="user.partner_id.name"/></h1>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p>
+                                    You have been invited by
+                                    <strong><t t-esc="invitation_id.by_partner_id.name"/></strong>
+                                    in order to complete the application of
+                                    <strong><t t-esc="application_id.name"/></strong>.
+                                </p>
+                                <p>
+                                    Select a family where you belong or create a new one.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <select class="form-control w-50 m-auto"
+                                        id="select_family"
+                                        style="cursor: pointer;"
+                                        name="family_id"
+                                        required="required" readonly="readonly">
+                                    <option disabled="disabled" selected="selected">- Select a family -</option>
+                                    <t t-foreach="user.partner_id.family_ids.sudo()" t-as="family_id">
+                                        <option t-att-value="family_id.id"><t t-esc="family_id.name"/></option>
+                                    </t>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-md p-3 text-center">
+                                <button type="submit" class="btn btn-danger" id="btn_reject_invitation">Reject</button>
+                            </div>
+                            <div class="col-12 col-md p-3 text-center">
+                                <button type="submit" class="btn btn-success" id="btn_accept_invitation">Accept</button>
+                            </div>
+                        </div>
+                    </form>
+                </t>
+            </div>
+
+            <div class="modal fade" id="family_select_modal" tabindex="1">
+                <div class="modal-dialog mw-100 w-75">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Application Family</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&amp;times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Please, select the family that belongs to the applicant:</p>
+                            <div class="o_adm_family_selection d-flex flex-wrap">
+                                <ul class="d-flex flex-wrap m-0 p-0">
+                                    <t t-foreach="user_id.partner_id.family_ids.sudo()"
+                                       t-as="family_id">
+                                        <t t-call="adm.template_application_family_select_item"/>
+                                    </t>
+                                    <li class="o_adm_family_select_item_add m-1 p-0">
+                                        <button type="button" class="h-100 w-100 btn btn-primary"
+                                                data-toggle="modal" data-target="#family_select_modal_create">
+                                            &#10010;</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-primary js_accept_family_modal" type="button">Accept</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="family_select_modal_create" tabindex="2" aria-hidden="true" role="dialog"
+                 aria-labelledby="exampleModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">New Family</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&amp;times;</span>
+                            </button>
+                        </div>
+                        <form>
+                            <div class="modal-body">
+                                <section class="container">
+                                    <!-- Just create a new name -->
+                                    <div class="form-row form-group js_new_family_form">
+                                        <label for="newFamilyName" class="col-form-label col-sm-2">Family Name</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" name="family_name" class="form-control"
+                                                   id="newFamilyName"
+                                                   placeholder="name"/>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary js_save_new_family">Save changes</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </t>
+    </template>
+
+</odoo>

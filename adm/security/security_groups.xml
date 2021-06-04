@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="base.module_category_admission" model="ir.module.category">
+        <field name="name">Admission</field>
+        <field name="description">Admission for students</field>
+        <field name="sequence">12</field>
+    </record>
+
+    <record id="admission_group_user" model="res.groups">
+        <field name="name">User</field>
+        <field name="category_id" ref="base.module_category_admission"/>
+    </record>
+
+    <record id="admission_group_settings" model="res.groups">
+        <field name="name">Settings</field>
+        <field name="category_id" ref="base.module_category_admission"/>
+        <field name="implied_ids" eval="[(4, ref('admission_group_user'))]"/>
+    </record>
+
+    <record id="admission_group_manager" model="res.groups">
+        <field name="name">Manager</field>
+        <field name="implied_ids" eval="[(4, ref('admission_group_settings'))]"/>
+        <field name="category_id" ref="base.module_category_admission"/>
+    </record>
+
+</odoo>

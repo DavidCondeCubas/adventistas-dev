@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <template id="template_application_family_finance_res_item">
+        <tr data-adm-rel="rel"
+            t-att-id="family_res_finance or 'template_application_family_finance_res_item'">
+            <td>
+                <t t-if="family_res_finance">
+                    <input type="hidden" data-adm-field="family_id"
+                           t-att-value="family_res_finance.family_id.id"
+                           data-adm-field-type="INTEGER"/>
+                </t>
+                <t t-else="">
+                    <input type="hidden" data-adm-field="family_id"
+                           t-att-value="application_id.current_user_access_id.family_id.id"
+                           data-adm-field-type="INTEGER"/>
+                </t>
+                <select name="state_id"
+                        t-attf-id="family_res_finance-{{family_res_finance and family_res_finance.id}}"
+                        data-adm-field="category_id"
+                        data-adm-field-type="INTEGER"
+                        t-att-required="is_required('partner_id.family_res_finance_ids.category_id')"
+                        class="form-control">
+                    <option selected="selected" disabled="disabled">-Select a
+                        category-</option>
+                    <t t-foreach="SUPER_ENV['product.category'].search([('active_admission', '=', True)])"
+                       t-as="category">
+                        <option
+                                t-att-selected="family_res_finance and family_res_finance.category_id.id == category.id"
+                                t-att-value="category.id">
+                            <t t-esc="category.name"/>
+                        </option>
+                    </t>
+                </select>
+            </td>
+            <td>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control"
+                           placeholder="0-100"
+                           data-adm-field="percent"
+                           t-att-required="is_required('partner_id.family_res_finance_ids.percent')"
+                           t-att-value="family_res_finance and family_res_finance.percent"
+                           data-adm-field-type="INTEGER"
+                           name="percent"/>
+                    <div class="input-group-append">
+                        <span class="input-group-text">%</span>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <button type="button"
+                        class="btn btn-danger ml-4 js_remove_item"
+                        style="top: 1em; right: 1em; z-index: 10;">&#10006;</button>
+            </td>
+        </tr>
+    </template>
+
+    <template id="template_application_family_finance">
+        <t t-call="adm.template_application_form_commons">
+            <t t-set="title">Family finance</t>
+            <t t-set="head">
+                <t t-call-assets="adm.assets_application_family_finance" defer_load="True"/>
+            </t>
+            <div class="d-none">
+                <table>
+                    <t t-call="adm.template_application_family_finance_res_item"/>
+                </table>
+            </div>
+            <form class="mb-4 justify-content-center align-items-center"
+                  data-adm-model-fields="1">
+                <div class="container-fluid" data-adm-field="partner_id" data-adm-field-type="MANY2ONE">
+                    <input type="hidden" data-adm-field="id" data-adm-field-type="INTEGER"
+                           t-att-value="application_id.partner_id.id"/>
+                    <div class="row" data-adm-field="family_ids" data-adm-field-type="MANY2MANY">
+                        <t t-foreach="application_id.partner_id.family_ids" t-as="family_id">
+                            <div data-adm-rel="rel" class="col-12">
+                                <input type="hidden" data-adm-field="id" data-adm-field-type="INTEGER"
+                                       t-att-value="family_id.id"/>
+                                <t t-if="application_id.current_user_access_id.family_id == family_id">
+                                    <div class="row">
+                                        <t t-set="possible_financial_res_ids" t-value="family_id + family_id.member_ids.filtered_domain([('person_type', '!=', 'student')])"/>
+                                        <div class="col-12 col-md-6 form-group">
+                                            <label>Financial Responsability
+                                                <span class="text-danger"
+                                                      t-if="is_required('family_ids.financial_res_ids')">
+                                                    *</span></label>
+                                            <div t-foreach="possible_financial_res_ids" t-as="res_partner" class="form-check">
+                                                <input class="form-check-input" type="checkbox"
+                                                       data-adm-field="financial_res_ids"
+                                                       data-adm-field-type="MANY2MANY_CHECKBOX"
+                                                       t-att-required="is_required('family_ids.financial_res_ids')"
+                                                       name="financial_res_ids"
+                                                       t-att-value="res_partner.id"
+                                                       t-attf-id="family_ids_financial_res_ids-#{res_partner.id}"
+                                                       t-att-checked="res_partner in family_id.financial_res_ids"/>
+                                                <label class="form-check-label"
+                                                       t-attf-for="family_ids_financial_res_ids-#{res_partner.id}">
+                                                    <t t-esc="res_partner.name"/>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <section class="col-12 col-md form-group">
+                                            <label>
+                                                Invoice Address <span class="text-danger"
+                                                                      t-if="is_required('family_ids.invoice_address_id')">
+                                                *</span>
+                                            </label>
+                                            <select class="form-control"
+                                                    data-adm-field="invoice_address_id"
+                                                    data-adm-field-type="INTEGER"
+                                                    t-att-required="is_required('family_ids.invoice_address_id')"
+                                                    t-att-value="family_id.name"
+                                                    name="name">
+                                                <option disabled="disabled" selected="selected">-Select a
+                                                    partner-</option>
+                                                <t t-foreach="possible_financial_res_ids" t-as="partner">
+                                                    <option t-att-value="partner.id"
+                                                            t-att-selected="partner == family_id.invoice_address_id">
+                                                        <t t-esc="partner.name"/>
+                                                    </option>
+                                                </t>
+                                            </select>
+                                        </section>
+                                    </div>
+                                </t>
+                            </div>
+                        </t>
+                    </div>
+
+                    <!--                    <div class="row">-->
+                    <!--                        <hr class="col-12"/>-->
+                    <!--                        <div class="col-12 h3">-->
+                    <!--                            Finance-->
+                    <!--                        </div>-->
+                    <!--                    </div>-->
+                    <div class="row mt-4">
+                        <table class="table"
+                               data-adm-field="family_res_finance_ids"
+                               data-adm-field-type="ONE2MANY">
+                            <thead>
+                                <tr>
+                                    <th>Category</th>
+                                    <th>Percent</th>
+                                    <th/>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="application_id.partner_id.family_res_finance_ids"
+                                   t-as="family_res_finance">
+                                    <t t-call="adm.template_application_family_finance_res_item"/>
+                                </t>
+                                <tr id="js_add_res_finance_item">
+                                    <td colspan="3">
+                                        <button type="button" class="btn btn-link w-100">Add</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!--Under construction-->
+                    <!--
+                    Luis idea.
+
+                    Intenta basicamente no reinventar la rueda.
+                    El controlador permite añadir basicamente toda la informacion de la familia asi:
+
+                    Haciendo un foreach en las familias del estudiante y solamente mostrando la familia
+                    actual del usuario nos permite no cambiar la cantidad de familias que estan generados
+                    re utilizar el controlador  y ademas filtrar por el usuario que esta ahora mismo en cuestion
+
+                    :P Nos vemos el lunes Luis del mañana. Me cuentas si llego a nevar :'v
+
+                    -->
+                    <!--                            </div>-->
+                </div>
+            </form>
+        </t>
+    </template>
+</odoo>

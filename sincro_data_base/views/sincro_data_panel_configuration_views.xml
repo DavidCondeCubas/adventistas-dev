@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record model="ir.ui.view" id="view_configuration_panel_tree">
+        <field name="name">configuration_panel</field>
+        <field name="model">sincro_data_base.configuration_panel</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="name"/>
+                <field name="field_id"/>
+                <field name="alias_field"/>
+                <field name="parent_id"/>
+                <field name="domain"/>
+                <field name="fields" widget="many2many_tags"/>
+                <field name="sequence" widget="handle"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="sincro_data_base_configuration_panel_view_form" model="ir.ui.view">
+        <field name="name">sincro_data_base.configuration_panel.view.form</field>
+        <field name="model">sincro_data_base.configuration_panel</field>
+        <field name="arch" type="xml">
+            <form string="Configuration Panel">
+                <group>
+                    <field name="name"/>
+                    <field name="field_id"/>
+                    <field name="alias_field"/>
+                    <field name="parent_id"/>
+                    <field name="model_name"/>
+<!--                    <field name="model_field_id" attrs="{'invisible': True}"/>-->
+<!--                    <field name="model_field" attrs="{'invisible': True}"/>-->
+                    <field name="domain" widget="domain" options="{'model': 'model_name', 'in_dialog': True}"/>
+<!--                    <field name="domain" />-->
+                    <field name="fields" widget="one2many"/>
+                </group>
+
+            </form>
+        </field>
+    </record>
+
+</odoo>

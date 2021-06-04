@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="pos_payment_report_view_tree_inherit" model="ir.ui.view">
+        <field name="name">pos.payment.report.view.tree.inherit</field>
+        <field name="model">pos.payment.report</field>
+        <field name="inherit_id" ref="pos_payment_report.pos_payment_report_view_tree" />
+        <field name="arch" type="xml">
+            <field name="payment_id" position="after">
+                <field name="wallet_load_id" widget="many2onebutton" />
+            </field>
+        </field>
+    </record>
+
+    <record id="pos_payment_report_view_search_inherit" model="ir.ui.view">
+        <field name="name">pos.payment.report.view.search.inherit</field>
+        <field name="model">pos.payment.report</field>
+        <field name="inherit_id" ref="pos_payment_report.pos_payment_report_view_search" />
+        <field name="arch" type="xml">
+            <field name="payment_id" position="after">
+                <field name="wallet_load_id"/>
+            </field>
+
+            <filter name="regular_payment" position="after">
+                <filter string="Wallet Load" name="wallet_load" domain="[('payment_type', '=', 'wallet')]" />
+            </filter>
+
+            <group position="inside">
+                <filter string="Wallet Load" name="group_by_wallet_load" domain="[]" context="{'group_by': 'wallet_load_id'}" />
+            </group>
+        </field>
+    </record>
+</odoo>

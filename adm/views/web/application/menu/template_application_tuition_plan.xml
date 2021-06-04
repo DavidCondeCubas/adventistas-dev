@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <template id="adm.template_application_menu_tuition_plan">
+        <t t-call="adm.template_application_form_commons">
+            <t t-set="title">Tuition Plan</t>
+            <t t-set="head">
+            </t>
+
+            <form class="container-fluid" data-adm-model-fields="1">
+                    <div class="row">
+                        <section class="col-12 col-md-4">
+                            <label>
+                                Tuition plan <span class="text-danger" t-if="is_required('application_id.tuition_plan_id')">*</span>
+                            </label>
+                            <select class="form-control"
+                                   name="tuition_plan_id"
+                                   data-adm-field="tuition_plan_id"
+                                   t-att-required="is_required('application_id.tuition_plan_id')">
+                                   <option disabled="disabled" selected="selected">-Select a tuition plan-</option>
+                                <t t-foreach="application_id.available_tuition_plan_ids" t-as="tuition_plan">
+                                    <option t-att-selected="tuition_plan == application_id.tuition_plan_id"
+                                            t-att-value="tuition_plan.id">
+                                        <t t-esc="tuition_plan.name"/>
+                                    </option>
+                                </t>
+                            </select>
+<!--                            <input required="required" class="form-control"-->
+
+<!--                                   t-att-value="application_id.doctor_name"/>-->
+                        </section>
+                </div>
+            </form>
+        </t>
+    </template>
+</odoo>

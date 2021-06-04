@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_application_status_view_tree" model="ir.ui.view">
+        <field name="name">view.application.status.view.tree</field>
+        <field name="model">adm.application.status</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="id"/>
+                <field name="name"/>
+                <field name="sequence" widget="handle"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_application_status_view_form" model="ir.ui.view">
+        <field name="name">view.application.status.view.form</field>
+        <field name="model">adm.application.status</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group colspan="2" col="1">
+                            <field name="name"/>
+                            <field name="description"/>
+                        </group>
+                        <group>
+                            <field name="fold"/>
+                            <field name="mail_template_id"
+                                   context="{'default_model': 'adm.application',
+                                   'default_email_from': '${user.company_id.email | safe}',
+                                   'default_email_to': '${object.message_follower_ids}'}"
+                            />
+                        </group>
+                        <group>
+                            <field name="import_to_facts"/>
+                            <field name="type_id" widget="radio"/>
+                        </group>
+                    </group>
+
+                    <notebook>
+                        <page string="Tasks">
+                            <field name="task_ids">
+                                <tree editable="bottom">
+                                    <field name="name"/>
+                                    <field name="description"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Web">
+                            <group>
+                                <group>
+                                    <field name="web_visible"/>
+                                    <field name="hide_if_done"/>
+                                    <field name="hide_if_cancel"/>
+                                </group>
+                                <group>
+                                    <field name="web_alternative_name"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Others" attrs="{'invisible': [('import_to_facts', '!=', True)]}">
+                            <group>
+                                <group>
+                                    <h3 colspan="2">Current year</h3>
+                                    <field name="current_year_status_to_facts"/>
+                                    <field name="current_year_next_status_to_facts"/>
+                                </group>
+                                <group>
+                                    <h3 colspan="2">Enrollment year</h3>
+                                    <field name="next_years_status_to_facts"/>
+                                    <field name="next_years_next_status_to_facts"/>
+                                </group>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

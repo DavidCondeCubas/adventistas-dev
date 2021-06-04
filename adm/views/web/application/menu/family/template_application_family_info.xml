@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <template id="template_application_family_home_address_card">
+        <section t-attf-class="card #{not home_address and 'd-none'}"
+                 t-att-id="home_address or 'template_application_family_home_addresss_card'">
+            <t t-if="home_address">
+                <input class="form-control" type="hidden"
+                       data-adm-field="id"
+                       t-att-value="home_address.id"
+                       data-adm-field-type="INTEGER"/>
+                <input class="form-control" type="hidden"
+                       data-adm-field="family_id"
+                       t-att-value="home_address.family_id.id"
+                       data-adm-field-type="INTEGER"/>
+            </t>
+            <t t-else="">
+                <input class="form-control" type="hidden"
+                       data-adm-field="family_id"
+                       t-att-value="application_id.current_user_access_id.family_id.id"
+                       data-adm-field-type="INTEGER"/>
+            </t>
+
+            <div class="card-header position-relative d-flex justify-content-end">
+                <button class="btn btn-link d-inline btn-block position-absolute"
+                        style="top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1;"
+                        type="button" data-toggle="collapse"
+                        t-attf-data-target="#home_addressCollapse_#{home_address and home_address.id}">
+                    <t t-if="home_address">
+                        <t t-esc="home_address.name"/>
+                    </t>
+                    <t t-else="">
+                        New home address
+                    </t>
+                </button>
+
+                <button type="button"
+                        class="btn btn-danger ml-4 js_remove_address"
+                        style="top: 1em; right: 1em; z-index: 10;">&#10006;</button>
+            </div>
+            <div class="collapse" t-attf-id="home_addressCollapse_#{home_address and home_address.id}">
+                <div class="card-body">
+                    <article class="container-fluid">
+                        <div class="row">
+                            <section class="col-12 col-md">
+                                <label for="country_id">
+                                    Country <span class="text-danger"
+                                                  t-if="is_required('family_ids.home_address_ids.country_id')">*</span>
+                                </label>
+                                <select  name="country_id"
+                                        data-adm-field="country_id" data-adm-field-type="INTEGER"
+                                        t-att-required="is_required('family_ids.home_address_ids.country_id')"
+                                        class="form-control js_country_select"
+                                         t-attf-data-filter-state="#state_id-{{home_address and home_address.id}}">
+                                    <option selected="selected" disabled="disabled">
+                                        -Select a country-
+                                    </option>
+                                    <t t-foreach="country_ids" t-as="country">
+                                        <option t-att-selected="home_address and home_address.country_id.id == country.id"
+                                                t-att-value="country.id">
+                                            <t t-esc="country.name"/>
+                                        </option>
+                                    </t>
+                                </select>
+                            </section>
+                            <section class="col-12 col-md">
+                                <label for="state_id">
+                                    State
+                                    <span class="text-danger"
+                                          t-if="is_required('family_ids.home_address_ids.state_id')">*</span>
+                                </label>
+                                <select name="state_id" t-attf-id="state_id-{{home_address and home_address.id}}"
+                                        data-adm-field="state_id" data-adm-field-type="INTEGER"
+                                        t-att-required="is_required('family_ids.home_address_ids.state_id')"
+                                        class="form-control" >
+                                    <option selected="selected" disabled="disabled">
+                                        -Select a state-
+                                    </option>
+                                    <t t-foreach="state_ids" t-as="state">
+                                        <option t-att-selected="home_address and home_address.state_id.id == state.id"
+                                                t-att-value="state.id" t-att-data-country-id="state.country_id.id">
+                                            <t t-esc="state.name"/>
+                                        </option>
+                                    </t>
+                                </select>
+                            </section>
+                        </div>
+                        <div class="row mt-3">
+                            <section class="col-12 col-md">
+                                <label>
+                                    City
+                                    <span class="text-danger"
+                                          t-if="is_required('family_ids.home_address_ids.city')">*</span>
+                                </label>
+                                <input class="form-control" type="text"
+                                       data-adm-field="city"
+                                       t-att-required="is_required('family_ids.home_address_ids.city')"
+                                       t-att-value="home_address and home_address.city"
+                                       name="city"/>
+                            </section>
+                            <section class="col-12 col-md">
+                                <label>
+                                    ZIP
+                                    <span class="text-danger"
+                                          t-if="is_required('family_ids.home_address_ids.zip')">*</span>
+                                </label>
+                                <input class="form-control" type="text"
+                                       data-adm-field="zip"
+                                       t-att-required="is_required('family_ids.home_address_ids.zip')"
+                                       t-att-value="home_address and home_address.zip"
+                                       name="zip"/>
+                            </section>
+                        </div>
+                        <div class="row mt-3">
+                            <section class="col-12 col-md">
+                                <label>
+                                    Street
+                                    <span class="text-danger"
+                                          t-if="is_required('family_ids.home_address_ids.street')">*</span>
+                                </label>
+                                <input class="form-control" type="text"
+                                       data-adm-field="street"
+                                       t-att-required="is_required('family_ids.home_address_ids.street')"
+                                       t-att-value="home_address and home_address.street"
+                                       name="street"/>
+                            </section>
+                            <section class="col-12 col-md">
+                                <label>
+                                    Street 2
+                                    <span class="text-danger"
+                                          t-if="is_required('family_ids.home_address_ids.street2')">*</span>
+                                </label>
+                                <input class="form-control" type="text"
+                                       data-adm-field="street2"
+                                       t-att-required="is_required('family_ids.home_address_ids.street2')"
+                                       t-att-value="home_address and home_address.street2"
+                                       name="street2"/>
+                            </section>
+                        </div>
+                        <div class="row mt-3">
+                            <section class="col-12 col-md">
+                                <label>
+                                    Homephone
+                                    <span class="text-danger"
+                                          t-if="is_required('family_ids.home_address_ids.phone')">*</span>
+                                </label>
+                                <input class="form-control" type="text"
+                                       data-adm-field="phone"
+                                       t-att-required="is_required('family_ids.home_address_ids.phonezip')"
+                                       t-att-value="home_address and home_address.phone"
+                                       name="phone"/>
+                            </section>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <template id="template_application_family_info">
+        <t t-call="adm.template_application_form_commons">
+            <t t-set="title">Family info</t>
+            <t t-set="head">
+                <t t-call-assets="adm.assets_application_family_information" defer_load="True"/>
+            </t>
+            <t t-call="adm.template_application_family_home_address_card"/>
+            <form class="mb-4 justify-content-center align-items-center"
+                  data-adm-model-fields="1">
+                <div data-adm-field="partner_id" data-adm-field-type="MANY2ONE">
+                    <input type="hidden" data-adm-field="id" data-adm-field-type="INTEGER" t-att-value="application_id.partner_id.id"/>
+                    <div data-adm-field="family_ids" data-adm-field-type="MANY2MANY">
+                        <div class="container-fluid">
+                            <t t-foreach="application_id.partner_id.family_ids" t-as="family_id">
+                                <div data-adm-rel="rel" class="row">
+                                    <div class="col-12">
+                                        <input type="hidden" data-adm-field="id" data-adm-field-type="INTEGER"
+                                               t-att-value="family_id.id"/>
+                                        <t t-if="application_id.current_user_access_id.family_id == family_id">
+                                            <div class="row">
+                                                <section class="col-12 col-md">
+                                                    <label>
+                                                        Family name
+                                                        <span class="text-danger" t-if="is_required('family_ids.name')">
+                                                            *</span>
+                                                    </label>
+                                                    <input class="form-control" type="text"
+                                                           data-adm-field="name"
+                                                           t-att-required="is_required('family_ids.name')"
+                                                           t-att-value="family_id.name"
+                                                           name="name"/>
+                                                </section>
+                                            </div>
+                                            <div class="row position-relative">
+                                                <hr class="col-12"/>
+                                                <div class="col-8 h3">
+                                                    Family home addresses
+                                                </div>
+                                                <div class="col-4 mb-2">
+                                                    <button type="button" class="js_add_address top btn btn-secondary d-block ml-auto">
+                                                    &#10010; Add Home Address</button>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col" data-adm-field="home_address_ids" data-adm-field-type="MANY2MANY"
+                                                     id="home_address_list">
+                                                    <t t-foreach="family_id.home_address_ids" t-as="home_address">
+                                                        <div data-adm-rel="rel">
+                                                            <t t-call="adm.template_application_family_home_address_card"/>
+                                                        </div>
+                                                    </t>
+                                                </div>
+                                            </div>
+                                        </t>
+                                    </div>
+                                </div>
+                            </t>
+
+
+                            <!--                            <div class="alert alert-warning w-100" role="alert">-->
+                            <!--                                Under construction-->
+                            <!--
+                            Luis idea.
+
+                            Intenta basicamente no reinventar la rueda.
+                            El controlador permite añadir basicamente toda la informacion de la familia asi:
+
+                            Haciendo un foreach en las familias del estudiante y solamente mostrando la familia
+                            actual del usuario nos permite no cambiar la cantidad de familias que estan generados
+                            re utilizar el controlador  y ademas filtrar por el usuario que esta ahora mismo en cuestion
+
+                            :P Nos vemos el lunes Luis del mañana. Me cuentas si llego a nevar :'v
+
+                            -->
+                            <!--                            </div>-->
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </t>
+    </template>
+</odoo>

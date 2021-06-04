@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="template_application_signature_webpage">
+        <t t-call="adm.template_application_form_commons">
+            <t t-set="title">Signature</t>
+            <t t-set="head">
+                <t t-call-assets="adm.assets_application_signature" defer_load="True"/>
+            </t>
+
+            <t t-set="url_prev" t-value="'/admission/applications/%s/document-comun' % application_id.id"/>
+            <t t-set="url_next" t-value="'/admission/applications/%s/photo-permission-grant-signature' % application_id.id"/>
+
+            <!-- Body -->
+            <div id="adm_body"/>
+        </t>
+    </template>
+</odoo>

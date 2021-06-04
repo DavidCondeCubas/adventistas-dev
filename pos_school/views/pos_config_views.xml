@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+
+    <record id="pos_config_view_form_inherit" model="ir.ui.view">
+        <field name="name">pos.config.view.form.inherit.school</field>
+        <field name="model">pos.config</field>
+        <field name="inherit_id" 
+               ref="point_of_sale.pos_config_view_form"/>
+        <field name="arch" type="xml">
+            <sheet position="inside">
+		<h2>School</h2>
+		<div class="row mt16 o_settings_container" id="school_section">
+		    <div class="col-12 col-lg-6 o_setting_box" id="school_code_available">
+			<div class="o_setting_right_pane">
+			    <span class="o_form_label">School codes</span>
+			    <div class="text-muted">
+				School codes available
+			    </div>
+			    <div class="content-group mt16">
+				<field name="available_school_code_ids" invisible="1"/>
+                                <field name="school_code_ids" colspan="4" nolabel="1" 
+                                    domain="[('id', 'in', available_school_code_ids)]"
+                                    widget="many2many_tags" required="1"/>
+			    </div>
+			</div>
+		    </div>
+		</div>
+            </sheet>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,679 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="adm.template_admission_inquiry">
+        <t t-call="website.layout">
+            <!--            <script>-->
+            <!--                function hideDataParents() {-->
+            <!--                $(".hide_parent").toggle();-->
+            <!--                $("#input_family_id").toggle();-->
+
+            <!--                if ($("#checkbox_family_id").prop("checked"))-->
+            <!--                $("#section_parent_2").hide()-->
+
+            <!--                if ($(".hide_parent").css("display") == "none") {-->
+            <!--                $(".hide_parent input").attr("disabled", true);-->
+            <!--                $(".hide_parent select").attr("disabled", true);-->
+            <!--                } else {-->
+            <!--                $(".hide_parent input").attr("disabled", false);-->
+            <!--                $(".hide_parent select").attr("disabled", false);-->
+            <!--                }-->
+
+            <!--                if ($("#input_family_id").css("display") == "none")-->
+            <!--                $(".input_family_id input").attr("disabled", true);-->
+            <!--                else-->
+            <!--                $(".input_family_id input").attr("disabled", false);-->
+
+            <!--                }-->
+            <!--            </script>-->
+
+            <t t-set="title">Admissions</t>
+
+            <t t-set="head_scripts">
+                <t t-call-assets="adm.assets_inquiry" defer_load="True"/>
+            </t>
+            <t t-set="head" t-value="head_scripts + (head or '')"/>
+            <div class="oe_structure"/>
+            <div class="oe_struture">
+                <main class="container p-4">
+                    <form action="/admission/inquiry" method="post"
+                          class="s_website_form form-horizontal container-fluid mt32" enctype="multipart/form-data">
+
+                        <input type="hidden" name="studentsCount" id="studentsCount" value="1"/>
+
+                        <div class="row">
+                            <div class="d-flex col-12 col-md-6 mb-2" id="section_check_family">
+                                <div class="w-100 row">
+                                    <div class="col-4 form-check d-flex align-items-center">
+                                        <!--<input t-if="family_id != -1" checked="checked" type="checkbox" class="form-check-input" id="checkbox_family_id" name="checkbox_family_id" onchange="hideDataParents()"/>-->
+                                        <input t-att-checked="family_id != -1" type="checkbox" class="form-check-input" id="checkbox_family_id" name="checkbox_family_id"/>
+                                        <label class="form-check-label" for="checkbox_family_id" style="padding-top: 5px;">
+                                            Family exists
+                                        </label>
+                                    </div>
+
+                                    <div class="col-4">
+                                        <select id="selFamilyIDType" name="select_family_id_type" class="form-control mr-4 d-none">
+                                            <option value="facts_id">Facts ID</option>
+                                            <option value="odoo_id">Odoo ID</option>
+                                        </select>
+                                    </div>
+ 
+                                    <div class="col-4">
+                                        <input type="number" class="form-control d-none" 
+                                               id="input_family_id" name="input_family_id" placeholder="Family ID" />
+                                    </div>
+                                </div>
+                            </div>
+                            <t t-if="family_name != ''">
+                                <div class="col-12 offset-md-4 col-md-4 mb-2 text-info">
+                                    <label class="form-check-label h1" for="exampleCheck1">Test family</label>
+                                </div>
+                            </t>
+                        </div>
+
+                        <section class="card hide_parent" id="section_parent_1">
+                            <section class="card-header bg-alpha">
+                                <h1 class="text-light">Parent 1</h1>
+                            </section>
+                            <section class="card-body">
+                                <div class="row">
+                                    <div class="form-group col-12 col-md">
+                                        <label for="txtFirstName_1">
+                                            First Name
+                                            <span class="text-danger">*</span>
+                                        </label>
+                                        <input type="text" class="form-control checkDuplicated firstname"
+                                               id="txtFirstName_1" name="txtFirstName_1" placeholder="First Name"
+                                               required="required"/>
+                                    </div>
+                                    <div class="form-group col-12 col-md">
+                                        <label for="txtMiddleName_1">Middle Name</label>
+                                        <input type="text" class="form-control" id="txtMiddleName_1"
+                                               name="txtMiddleName_1" placeholder="Middle Name"/>
+                                    </div>
+                                    <div class="form-group col-12 col-md">
+                                        <label for="txtLastName_1">
+                                            Last Name
+                                            <span class="text-danger">*</span>
+                                        </label>
+                                        <input type="text" class="form-control checkDuplicated lastname"
+                                               id="txtLastName_1" name="txtLastName_1" placeholder="Last Name"
+                                               required="required"/>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="form-group col-12 col-md-4">
+                                        <label for="txtEmail_1">
+                                            Email
+                                            <span class="text-danger">*</span>
+                                        </label>
+                                        <input type="email" class="form-control checkDuplicated email"
+                                               id="txtEmail_1" name="txtEmail_1" placeholder="example@email.com"
+                                               required="required"/>
+                                    </div>
+                                    <div class="form-group col-12 col-md-4">
+                                        <label for="txtCellPhone_1">
+                                            Cell Phone
+                                            <span class="text-danger">*</span>
+                                        </label>
+                                        <input type="tel" required="required"
+                                               class="form-control phone checkDuplicated" id="txtCellPhone_1"
+                                               name="txtCellPhone_1" placeholder="+01 234 56 78 90"
+                                               pattern="\+?[0-9 -]+"/>
+                                    </div>
+                                    <div class="form-group col-12 col-md-4">
+                                        <label for="selCountry_1">
+                                            Country
+                                            <span class="text-danger">*</span>
+                                        </label>
+                                        <select type="text" class="custom-select" id="selCountry_1"
+                                                name="selCountry_1" placeholder="Country" required="required">
+                                            <option selected="selected" value="" hidden="hidden"
+                                                    disabled="disabled">-Select a country-</option>
+                                            <t t-foreach="countries" t-as="country">
+                                                <option t-att-selected="company.country_id.id == country.id"
+                                                        t-att-value="country.id"
+                                                        t-att-data-code="country.code">
+                                                    <t t-esc="country.name"/>
+                                                </option>
+                                            </t>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group col-12 col-md-4">
+                                        <label for="selRelationshipType_1">
+                                            Relation to students
+                                            <span class="text-danger">*</span>
+                                        </label>
+                                        <select type="text" class="custom-select" id="selRelationshipType_1"
+                                                name="selRelationshipType_1" required="required">
+                                            <option selected="selected" hidden="hidden"
+                                                    disabled="disabled">-Select a relationship type-</option>
+                                            <t t-foreach="relationship_types.filtered(lambda r: r.type in ('mother', 'father', 'parent'))" t-as="rel_type">
+                                                <option t-att-value="rel_type.id">
+                                                    <t t-esc="rel_type.name"/>
+                                                </option>
+                                            </t>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-4">
+                                        <div class="custom-control custom-switch">
+                                            <input type="checkbox" class="custom-control-input"
+                                                   id="txtFinancialResponsability_1"
+                                                   name="txtFinancialResponsability_1"/>
+                                            <label class="custom-control-label" for="txtFinancialResponsability_1">
+                                                Financial responsability
+                                            </label>
+                                        </div>
+                                        <div class="custom-control custom-switch">
+                                            <input type="checkbox" class="custom-control-input" id="txtInvoiceAddress_1"
+                                                   name="txtInvoiceAddress_1"/>
+                                            <label class="custom-control-label" for="txtInvoiceAddress_1">
+                                                Invoicing/billing address
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </section>
+
+                        <button type="button" class="btn btn-warning mt-2 hide_parent" id="showSecondParent">
+                            Show/Hide Second Parent
+                        </button>
+
+                        <section class="card mt-2 hide_parent" id="section_parent_2">
+                            <section class="card-header bg-alpha">
+                                <h1 class="text-light">Parent 2</h1>
+                            </section>
+                            <section class="card-body">
+                                <div class="row">
+                                    <div class="form-group col-12 col-md">
+                                        <label for="txtFirstName_2">
+                                            First Name
+                                            <span class="text-danger">*</span>
+                                        </label>
+                                        <input type="text" class="form-control checkDuplicated firstname"
+                                               id="txtFirstName_2" name="txtFirstName_2" placeholder="First Name"
+                                               required="required"/>
+                                    </div>
+                                    <div class="form-group col-12 col-md">
+                                        <label for="txtMiddleName_2">Middle Name</label>
+                                        <input type="text" class="form-control" id="txtMiddleName_2"
+                                               name="txtMiddleName_2" placeholder="Middle Name"/>
+                                    </div>
+                                    <div class="form-group col-12 col-md">
+                                        <label for="txtLastName_2">
+                                            Last Name
+                                            <span class="text-danger">*</span>
+                                        </label>
+                                        <input type="text" class="form-control checkDuplicated lastname"
+                                               id="txtLastName_2" name="txtLastName_2" placeholder="Last Name"
+                                               required="required"/>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="form-group col-12 col-md-4">
+                                        <label for="txtEmail_2">
+                                            Email
+                                            <span class="text-danger">*</span>
+                                        </label>
+                                        <input type="email" class="form-control checkDuplicated email"
+                                               id="txtEmail_2" name="txtEmail_2" placeholder="example@email.com"
+                                               required="required"/>
+                                    </div>
+
+                                    <div class="form-group col-12 col-md-4">
+                                        <label for="txtCellPhone_2">
+                                            Cell Phone
+                                            <span class="text-danger">*</span>
+                                        </label>
+                                        <input type="tel" required="required"
+                                               class="form-control checkDuplicated phone" id="txtCellPhone_2"
+                                               name="txtCellPhone_2" placeholder="+01 234 56 78 90"
+                                               pattern="\+?[0-9 -]+"/>
+                                    </div>
+                                    <div class="form-group col-12 col-md-4">
+                                        <label for="selCountry_2">
+                                            Country
+                                            <span class="text-danger">*</span>
+                                        </label>
+                                        <select type="text" class="custom-select" id="selCountry_2"
+                                                name="selCountry_2" placeholder="Country" required="required">
+                                            <option selected="selected" value="" hidden="hidden"
+                                                    disabled="disabled">-Select a country-</option>
+                                            <t t-foreach="countries" t-as="country">
+                                                <option t-att-selected="company.country_id.id == country.id"
+                                                        t-att-value="country.id"
+                                                        t-att-data-code="country.code">
+                                                    <t t-esc="country.name"/>
+                                                </option>
+                                            </t>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-12 col-md-4">
+                                        <label for="selRelationshipType_2">
+                                            Relation to students
+                                            <span class="text-danger">*</span>
+                                        </label>
+                                        <select type="text" class="custom-select" id="selRelationshipType_2"
+                                                name="selRelationshipType_2" required="required">
+                                            <option selected="selected" hidden="hidden"
+                                                    disabled="disabled">-Select a relationship type-</option>
+                                            <t t-foreach="relationship_types" t-as="rel_type">
+                                                <option t-att-value="rel_type.id">
+                                                    <t t-esc="rel_type.name"/>
+                                                </option>
+                                            </t>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-4">
+                                        <div class="custom-control custom-switch">
+                                            <input type="checkbox" class="custom-control-input"
+                                                   id="txtFinancialResponsability_2"
+                                                   name="txtFinancialResponsability_2"/>
+                                            <label class="custom-control-label" for="txtFinancialResponsability_2">
+                                                Financial responsability
+                                            </label>
+                                        </div>
+                                        <div class="custom-control custom-switch">
+                                            <input type="checkbox" class="custom-control-input" id="txtInvoiceAddress_2"
+                                                   name="txtInvoiceAddress_2"/>
+                                            <label class="custom-control-label" for="txtInvoiceAddress_2">
+                                                Invoicing/billing address
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </section>
+                        <!-- Family Address -->
+                        <section class="card mt-2 hide_parent">
+                            <section class="card-header bg-alpha">
+                                <h1 class="text-light">Family Address Information</h1>
+                            </section>
+                            <section class="card-body">
+                                <div class="row">
+                                    <div class="form-group col-12 col-md-6">
+                                        <label for="selCountry">
+                                            Country
+                                            <span class="text-danger">*</span>
+                                        </label>
+                                        <select type="text" class="custom-select" id="selCountry"
+                                                name="selCountry" placeholder="Country" required="required">
+                                            <option selected="selected" value="" hidden="hidden" disabled="disabled">
+                                                -Select a country-</option>
+                                            <t t-foreach="countries" t-as="country">
+                                                <option t-att-value="country.id"
+                                                        t-att-data-code="country.code">
+                                                    <t t-esc="country.name"/>
+                                                </option>
+                                            </t>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-12 col-md-6">
+                                        <label for="selState">State</label>
+                                        <select class="form-control" id="selState" name="selState">
+                                            <option selected="selected" value="" hidden="hidden" disabled="disabled">
+                                                -Select a state-</option>
+                                            <t t-foreach="states" t-as="state">
+                                                <option t-att-value="state.id" t-field="state.name"
+                                                        t-att-data-country="state.country_id.id"/>
+                                            </t>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="form-group col-12 col-md">
+                                        <label for="txtCity">
+                                            City
+                                            <span class="text-danger">*</span>
+                                        </label>
+                                        <input type="text" class="form-control" id="txtCity" name="txtCity"
+                                               placeholder="City" required="required"/>
+                                    </div>
+                                    <div class="form-group col-12 col-md">
+                                        <label for="txtZip">
+                                            Zip
+                                            <span class="text-danger">*</span>
+                                        </label>
+                                        <input type="text" class="form-control" id="txtZip" name="txtZip" maxlength="10"
+                                               placeholder="Zip" required="required"/>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="form-group col-12 col-md">
+                                        <label for="txtStreetAddress">
+                                            Street Address
+                                            <span class="text-danger">
+                                                *
+                                            </span>
+                                        </label>
+                                        <input type="text" class="form-control" id="txtStreetAddress"
+                                               name="txtStreetAddress" placeholder="Street Address"
+                                               required="required"/>
+                                    </div>
+                                    <div class="form-group col-12 col-md">
+                                        <label for="txtStreetAddress2">
+                                            Street Address 2
+                                        </label>
+                                        <input type="text" class="form-control" id="txtStreetAddress2"
+                                               name="txtStreetAddress2" placeholder="Street Address 2"/>
+                                    </div>
+                                </div>
+                            </section>
+                        </section>
+                        <!--                        General Information-->
+                        <section class="card mt-2 hide_parent">
+                            <section class="card-header bg-alpha">
+                                <h1 class="text-light">General Information</h1>
+                            </section>
+                            <section class="card-body">
+                                <div class="row">
+                                    <div class="form-group col-12 col-md-6">
+                                        <label for="selSource">
+                                            How did you find out about?
+                                            <span class="text-danger">*</span>
+                                        </label>
+                                        <select type="text" class="custom-select" id="selSource" name="selSource"
+                                                placeholder="Source" required="required">
+                                            <option selected="selected" value="" hidden="hidden" disabled="disabled">
+                                                -Select a source-</option>
+                                            <t t-foreach="sources" t-as="source">
+                                                <option t-att-value="source.id" t-att-data-other="source.other">
+                                                    <t t-esc="source.name"/>
+                                                </option>
+                                            </t>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-12 col-md">
+                                        <label for="txtRelatedNames">
+                                            Do you know someone in the school?
+                                        </label>
+                                        <input type="text" class="form-control" id="txtRelatedNames"
+                                               name="txtRelatedNames" placeholder="Person 1, Person 2, Person 3, ..."/>
+                                    </div>
+                                </div>
+                                <div class="row d-none" id="contOtherSource">
+                                    <div class="form-group col-12 col-md-6">
+                                        <label for="txtOtherSource">
+                                            Other
+                                        </label>
+                                        <input type="text" class="form-control d-flex" id="txtOtherSource"
+                                               name="txtOtherSource" placeholder="Other..."/>
+                                    </div>
+                                </div>
+                            </section>
+                        </section>
+                        <section class="card mt-2">
+                            <section class="card-header bg-alpha">
+                                <h1 class="text-light">Students</h1>
+                            </section>
+                            <section class="card-body">
+                                <ul class="nav nav-tabs" id="studentsNavbar" role="tablist">
+                                    <li class="nav-item" id="student1-tab-li">
+                                        <a class="nav-link active student" id="student1-tab" data-toggle="tab"
+                                           href="#student1" role="tab" aria-controls="student1" aria-selected="true">
+                                            Student 1
+                                        </a>
+                                    </li>
+                                    <li class="nav-item" id="add-tab-li">
+                                        <a class="nav-link" id="add-tab" role="tab"
+                                           style="background: #dee2e6; cursor: pointer">
+                                            <i class="fa fa-plus"/>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content pt-3" id="studentsTabContent">
+                                    <div class="tab-pane fade show active" id="student1" role="tabpanel"
+                                         aria-labelledby="student1-tab">
+
+                                        <div class="row">
+                                            <div class="form-group col">
+                                                <label for="txtStudent1FirstName">
+                                                    First Name
+                                                    <span class="text-danger">*</span>
+                                                </label>
+                                                <input type="text" class="form-control" id="txtStudent1FirstName"
+                                                       name="txtStudentFirstName" placeholder="First Name"
+                                                       required="required"/>
+                                            </div>
+                                            <div class="form-group col">
+                                                <label for="txtStudent1MiddleName">Middle Name</label>
+                                                <input type="text" class="form-control" id="txtStudent1MiddleName"
+                                                       name="txtStudentMiddleName" placeholder="Middle Name"/>
+                                            </div>
+                                            <div class="form-group col-12 col-md">
+                                                <label for="txtStudent1LastName">
+                                                    Last Name
+                                                    <span class="text-danger">*</span>
+                                                </label>
+                                                <input type="text" class="form-control" id="txtStudent1LastName"
+                                                       name="txtStudentLastName" placeholder="Last Name"
+                                                       required="required"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="form-group col">
+                                                <label for="txtStudent1Birthday">
+                                                    Birthday
+                                                    <span class="text-danger">*</span>
+                                                </label>
+                                                <input type="date" class="form-control" id="txtStudent1Birthday"
+                                                       name="txtStudentBirthday" required="required"/>
+                                            </div>
+                                            <div class="form-group col">
+                                                <label for="selStudent1Gender">Gender</label>
+                                                <select class="custom-select" id="selStudent1Gender"
+                                                        name="selStudentGender">
+                                                    <t t-foreach="gender" t-as="gender_item">
+                                                        <option t-att-value="gender_item.id">
+                                                            <t t-esc="gender_item.name"/>
+                                                        </option>
+                                                    </t>
+                                                    <!--                                                    <option value="gender_male">Male</option>-->
+                                                    <!--                                                    <option value="gender_female">Female</option>-->
+                                                </select>
+                                            </div>
+                                            <div class="form-group col">
+                                                <label for="sel_std_native_language">Native Language</label>
+
+                                                <select id="selStudent1Nativelanguage" name="selStudentNativelanguage"
+                                                        class="form-control" required="required">
+                                                    <option value="">Select a language
+                                                    </option>
+                                                    <t t-foreach="adm_languages" t-as="language">
+                                                        <option t-att-value="language.id">
+                                                            <t t-esc="language.name"/>
+                                                        </option>
+                                                    </t>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group col">
+                                                <label for="selStudent1SchoolCode">
+                                                    School code
+                                                    <span class="text-danger">*</span>
+                                                </label>
+                                                <select class="custom-select selStudentSchoolCode"
+                                                        id="selStudent1SchoolCode"
+                                                        name="selStudentSchoolCode" required="required">
+                                                    <option value="-1" selected="true" disabled="disabled">-Select a
+                                                        School code-
+                                                    </option>
+                                                    <t t-foreach="grade_levels.mapped('school_code_id')"
+                                                       t-as="school_code">
+                                                        <option t-att-value="school_code.id"
+                                                                t-att-data-school_code="school_code.id">
+                                                            <t t-esc="school_code.description"/>
+                                                        </option>
+                                                    </t>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col">
+                                                <label for="selStudent1SchoolYear">
+                                                    School Year
+                                                    <span class="text-danger">*</span>
+                                                </label>
+                                                <select class="custom-select" id="selStudent1SchoolYear"
+                                                        name="selStudentSchoolYear" required="required">
+                                                    <option selected="selected" value="" hidden="hidden"
+                                                            disabled="disabled">-Select a school year-</option>
+                                                    <t t-foreach="school_years" t-as="school_year">
+                                                        <option t-att-value="school_year.id"
+                                                                t-att-data-schoolid="school_year.school_code_id.id">
+                                                            <t t-esc="school_year.name"/>
+                                                        </option>
+                                                    </t>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col">
+                                                <label for="selStudent1InterestGradeLevel">
+                                                    Grade Level of interest
+                                                    <span class="text-danger">*</span>
+                                                </label>
+                                                <select required="required" class="custom-select"
+                                                        id="selStudent1InterestGradeLevel"
+                                                        name="selStudentInterestGradeLevel">
+                                                    <option selected="selected" value="" hidden="hidden"
+                                                            disabled="disabled">-Select a grade level-</option>
+                                                    <t t-foreach="grade_levels" t-as="grade_level">
+                                                        <option t-att-value="grade_level.id"
+                                                                t-att-data-school-code="grade_level.school_code_id.id">
+                                                            <t t-esc="grade_level.name"/>
+                                                        </option>
+                                                    </t>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <!--                            Extras-->
+                                        <div class="row">
+                                            <div class="form-group col ">
+                                                <div class="custom-control custom-switch">
+                                                    <input type="checkbox" class="custom-control-input"
+                                                           id="txtStudent1FromEnglishSchool"
+                                                           name="txtStudent1FromEnglishSchool"/>
+                                                    <label class="custom-control-label"
+                                                           for="txtStudent1FromEnglishSchool">
+                                                        Currently attends school in English?
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col">
+                                                <label>Extra Services</label>
+                                                <div t-foreach="services" t-as="service">
+                                                    <input type="checkbox" class="txtStudent1ExtraServices"
+                                                           name="txtStudentExtraServices"
+                                                           t-attf-id="extraservice-{{service.id}}"
+                                                           t-att-value="service.id"/>
+                                                    <label t-attf-for="extraservice-{{service.id}}">
+                                                        <t t-esc="service.name"/>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group col">
+                                                <label for="fileStudent1Photo">
+                                                    Student Photo
+                                                </label>
+                                                <input type="file" accept="image/*" class="form-control"
+                                                       name="fileStudent1Photo" id="fileStudent1Photo"
+                                                       multiple="multiple"/>
+                                            </div>
+                                            <div class="form-group col">
+                                                <label for="fileStudent1BirthCert">
+                                                    Birth Certificate
+                                                </label>
+                                                <input type="file" class="form-control" name="fileStudent1BirthCert"
+                                                       id="fileStudent1BirthCert" multiple="multiple"/>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group col">
+                                                <label for="fileStudent1ReportCard">
+                                                    Most Recent Report Card (If applicable)
+                                                </label>
+                                                <input type="file" class="form-control" name="fileStudent1ReportCard"
+                                                       id="fileStudent1ReportCard" multiple="multiple"/>
+                                            </div>
+                                            <div class="form-group col">
+                                                <label for="fileStudent1ImmunizationRecord">Copy of Immunization
+                                                    Record
+                                                </label>
+                                                <input type="file" class="form-control"
+                                                       name="fileStudent1ImmunizationRecord"
+                                                       id="fileStudent1ImmunizationRecord" multiple="multiple"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </section>
+
+                        <section class="card mt-2">
+                            <section class="card-header bg-alpha">
+                                <h1 class="text-light">Message / Question</h1>
+                            </section>
+                            <section class="card-body">
+                                <textarea class="form-control" name="message"/>
+                            </section>
+                        </section>
+
+                        <div class="row justify-content-center m-3">
+                            <button type="submit" class="btn btn-primary btn-lg">Submit inquiry</button>
+                        </div>
+                    </form>
+                </main>
+            </div>
+            <div class="modal" id="modalError">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <!-- Modal Header -->
+                        <div class="modal-header card-header bg-alpha">
+                            <h4 class="modal-title">Issues</h4>
+                            <button type="button" class="close" data-dismiss="modal">X</button>
+                        </div>
+                        <!-- Modal body -->
+                        <div class="modal-body" id="bodyMessageIssue">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="adm.template_inquiry_sent">
+        <t t-call="website.layout">
+            <t t-set="title">Inquiry Sent</t>
+            <div class="oe_structure"/>
+            <div class="oe_struture">
+                <main class="container p-4 text-center">
+                    <section class="card card-body">
+                        <p>
+                            <h2>
+                                <em>
+                                    Thank you for sending your information to this school. A member of
+                                    our
+                                    admissions team
+                                    will be in
+                                    touch with you shortly.
+                                </em>
+                            </h2>
+                        </p>
+                    </section>
+                </main>
+            </div>
+        </t>
+    </template>
+</odoo>

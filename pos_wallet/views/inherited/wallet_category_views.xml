@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="wallet_category_tree_inherit" model="ir.ui.view" >
+        <field name="name">pos.wallet.category.tree.inherit</field>
+        <field name="model">wallet.category</field>
+        <field name="inherit_id" ref="wallet.wallet_category_tree"/>
+        <field name="arch" type="xml">
+            <field name="product_id" position="after">
+                <field name="pos_payment_method_id" groups="base.group_no_one" />
+            </field>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <template id="adm.template_application_additional_questions_form">
+        <section class="container-fluid" id="school_forms"/>
+    </template>
+
+    <template id="adm.template_application_additional_questions_webpage">
+
+        <t t-call="adm.template_application_form_commons">
+            <t t-set="head">
+                <t t-call-assets="adm.assets_application_additional_questions" defer_load="True"/>
+                <!--<link rel="stylesheet" href="/adm/static/src/css/form_application_id.id.css"/>-->
+            </t>
+            <t t-set="title">Additional Questions</t>
+            <t t-set="url_prev" t-value="'/admission/applications/%s/parent-questionnaire' % application_id.id"/>
+            <t t-set="url_next" t-value="'/admission/applications/%s/medical-info' % application_id.id"/>
+
+            <form data-adm-model-fields="1">
+                <t t-call="adm.template_application_additional_questions_form"/>
+            </form>
+        </t>
+    </template>
+</odoo>

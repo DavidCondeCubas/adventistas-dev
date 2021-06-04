@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="adm_application_page_view_form" model="ir.ui.view">
+        <field name="name">adm.application.page.view.form</field>
+        <field name="model">adm.application.page</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="url"/>
+                            <field name="website_id"/>
+                            <field name="view_template_id"/>
+                            <field name="internal_reference"/>
+                        </group>
+                        <group>
+                            <field name="previous_page_id"/>
+                            <field name="next_page_id"/>
+                        </group>
+                        <group colspan="2">
+                            <field name="child_ids"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="adm_application_page_view_tree" model="ir.ui.view">
+        <field name="name">adm.application.page.view.tree</field>
+        <field name="model">adm.application.page</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+                <field name="url" />
+                <field name="website_id" />
+                <field name="internal_reference" />
+                <field name="previous_page_id" />
+                <field name="next_page_id" />
+                <field name="child_ids" widget="many2many_tags" />
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_application_page">
+        <field name="name">Application Page</field>
+        <field name="res_model">adm.application.page</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="adm_menu_application_pages"
+        parent="adm_menu_configurations" name="Application pages"
+        action="action_application_page" />
+
+</odoo>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    
+    <template id="template_admission_inquiry" name="advenstistas.custom.inquiry.form" inherit_id="adm.template_admission_inquiry">
+        
+        <xpath expr="//section[hasclass('card', 'mt-2')][1]/section[hasclass('card-body')][1]/div[hasclass('row')][1]" position="before">
+            <div class="row">
+                <div class="form-group col-12 col-md">
+                    <label for="txtFamilyName">Family name</label>
+                    <input type="text" class="form-control" id="txtFamilyName" name="txtFamilyName" placeholder="Family name"/>
+                </div>
+            </div>
+            
+        </xpath>
+        
+    </template>
+    
+</odoo>

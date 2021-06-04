@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sincro_data_base_mapped_view_tree" model="ir.ui.view">
+        <field name="name">sincro_data_base.mapped.view.tree</field>
+        <field name="model">sincro_data_base.mapped</field>
+        <field name="arch" type="xml">
+
+            <tree create='0' delete="0" editable="bottom" string="Mapped fields"
+                  decoration-info="json_key == 'static_value'" decoration-warning="is_field_required == True">
+                <field name="model_id" invisible="1"/>
+                <field name="is_default" invisible="1"/>
+                <field name="server_id" invisible="1"/>
+
+                <field name="json_key" attrs="{'readonly':[('is_default','=',True)]}"/>
+                <field name="conditional_value" attrs="{'readonly':[('json_key','=','static_value')]}"
+                       string="Conditional value"/>
+                <field name="default_value" string="Default value"/>
+                <field name="concat_value" attrs="{'readonly':[('json_key','=','static_value')]}"
+                       string="Concat value"/>
+                <field name="field_id" domain="[('model_id','=',model_id)]"/>
+                <field name="field_model_id" invisible="1" />
+                <field name="key_field_id" attrs="{'readonly':[('field_model_id','=',False)]}"
+                       domain="[('model','=',field_model_id)]"/>
+                <field name="is_force_overwrite" string="Overwrite" attrs="{'checked':[('is_active','=',True)]}"/>
+                <field name="is_an_img_from_url" string="URL Img" attrs="{'checked':[('is_active','=',True)]}"/>
+                <field name="is_field_required" invisible="1"/>
+                <field name="is_active" string="Sync"/>
+            </tree>
+        </field>
+    </record>
+
+</odoo>

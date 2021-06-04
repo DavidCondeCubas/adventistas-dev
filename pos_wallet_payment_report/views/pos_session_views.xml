@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="pos_wallet_view_pos_session_form_inherit" model="ir.ui.view">
+        <field name="name">pos.wallet.view.pos.session.form.inherit</field>
+        <field name="model">pos.session</field>
+        <field name="inherit_id" ref="pos_wallet.view_pos_session_form"/>
+        <field name="arch" type="xml">
+            <button name='%(pos_wallet.action_pos_wallet_wallet_load_tree)d' position="attributes">
+                <attribute name="invisible">1</attribute>
+            </button>
+        </field>
+    </record>
+</odoo>

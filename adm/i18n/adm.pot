@@ -1,0 +1,4041 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* adm
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-09 14:16+0000\n"
+"PO-Revision-Date: 2021-03-09 14:16+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_admission_inquiry
+msgid "+01 234 56 78 90"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_invite_partner
+msgid "- Select a family -"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_admission_inquiry
+msgid ""
+"-Select a\n"
+"                                                        grade level-"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_admission_inquiry
+#: model_terms:ir.ui.view,arch_db:adm.template_application_create_application
+#: model_terms:ir.ui.view,arch_db:adm.template_application_student_info
+msgid "-Select a country-"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_student_info
+msgid "-Select a state-"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_menu_instructions
+msgid "<b>Current Status:</b>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_menu_instructions
+msgid "<b>Occaecat</b>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.report_internal
+msgid "<b>PROCESO Y DOCUMENTOS DE ESTUDIANTES NUEVOS DE PRE-ESCOLAR</b>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_menu_instructions
+msgid "<b>Unde dolores doloremque dolorem</b>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_inquiry_sent
+msgid ""
+"<em>\n"
+"                                    Thank you for sending your information to this school. A member of\n"
+"                                    our\n"
+"                                    admissions team\n"
+"                                    will be in\n"
+"                                    touch with you shortly.\n"
+"                                </em>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.adm_application_view_kanban
+#: model_terms:ir.ui.view,arch_db:adm.adm_inquiry_view_kanban
+msgid "<i class=\"fa fa-comments\" role=\"img\" aria-label=\"Unread messages\"/>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_family_select_create
+#: model_terms:ir.ui.view,arch_db:adm.template_application_family_select_modal
+#: model_terms:ir.ui.view,arch_db:adm.template_application_invite_partner
+msgid "<span aria-hidden=\"true\">&amp;times;</span>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.report_custom
+msgid ""
+"<span class=\"col-12 lblSignature text-right\" style=\"padding-right: 93.5px;\">\n"
+"                                <strong>Parent Signature</strong>\n"
+"                            </span>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.report_default
+msgid ""
+"<span class=\"col-12 lblSignature text-right\" style=\"padding-right: "
+"93.5px;\"><strong>Parent Signature</strong></span>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.report_custom
+#: model_terms:ir.ui.view,arch_db:adm.report_default
+msgid "<span class=\"ml-1\" type=\"text\">No</span>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.report_custom
+#: model_terms:ir.ui.view,arch_db:adm.report_default
+msgid "<span class=\"ml-1\" type=\"text\">Yes</span>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_student_info
+msgid "<span class=\"sr-only\">Loading...</span>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_form_commons
+msgid ""
+"<span class=\"text-muted mb-2\">Please, make sure you save the "
+"changes</span>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.report_custom
+msgid ""
+"<span id=\"primary-color\">\n"
+"                                    color primario\n"
+"                                </span>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.report_default
+msgid ""
+"<span id=\"primary-color\">\n"
+"                                color primario\n"
+"                            </span>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_page_commons
+msgid ""
+"<span role=\"img\" aria-label=\"Loading...\" title=\"Loading...\" "
+"style=\"font-size: 10vw;\" class=\"fa fa-spinner fa-spin fa-2x m-auto\"/>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_admission_application_list
+msgid "<span style=\"font-size: 62px;\">Applications List</span>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.report_internal
+msgid "<span>Nivel</span>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.my_credit_limit_wizard
+msgid ""
+"<span>The following customer is about or exceeded their credit limit. This operation needs an\n"
+"                        Authorized Employee to approve the sale order:</span>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.report_custom
+#: model_terms:ir.ui.view,arch_db:adm.report_default
+msgid "<strong>Academic Information</strong>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.report_custom
+#: model_terms:ir.ui.view,arch_db:adm.report_default
+msgid "<strong>Address:</strong>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.report_custom
+#: model_terms:ir.ui.view,arch_db:adm.report_default
+msgid "<strong>Allergies</strong>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.report_custom
+#: model_terms:ir.ui.view,arch_db:adm.report_default
+msgid "<strong>Birth City:</strong>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.report_custom
+#: model_terms:ir.ui.view,arch_db:adm.report_default
+msgid "<strong>Birth Country:</strong>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.report_custom
+#: model_terms:ir.ui.view,arch_db:adm.report_default
+msgid "<strong>City:</strong>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.report_custom
+#: model_terms:ir.ui.view,arch_db:adm.report_default
+msgid "<strong>Comment:</strong>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.report_custom
+#: model_terms:ir.ui.view,arch_db:adm.report_default
+msgid "<strong>Conditions</strong>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.report_custom
+#: model_terms:ir.ui.view,arch_db:adm.report_default
+msgid "<strong>Country:</strong>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.report_custom
+#: model_terms:ir.ui.view,arch_db:adm.report_default
+msgid "<strong>Date of Birth:</strong>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.report_custom
+#: model_terms:ir.ui.view,arch_db:adm.report_default
+msgid "<strong>Doctor Direction:</strong>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.report_custom
+#: model_terms:ir.ui.view,arch_db:adm.report_default
+msgid "<strong>Doctor Name:</strong>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.report_custom
+#: model_terms:ir.ui.view,arch_db:adm.report_default
+msgid "<strong>Doctor Phone:</strong>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.report_custom
+#: model_terms:ir.ui.view,arch_db:adm.report_default
+msgid "<strong>Email:</strong>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.report_custom
+#: model_terms:ir.ui.view,arch_db:adm.report_default
+msgid "<strong>Emergency Contact:</strong>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.report_custom
+#: model_terms:ir.ui.view,arch_db:adm.report_default
+msgid "<strong>Family Information</strong>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.report_custom
+#: model_terms:ir.ui.view,arch_db:adm.report_default
+msgid "<strong>First Name:</strong>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.report_custom
+#: model_terms:ir.ui.view,arch_db:adm.report_default
+msgid "<strong>Grade Level:</strong>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.adm_application_view_kanban
+#: model_terms:ir.ui.view,arch_db:adm.adm_inquiry_view_kanban
+msgid "<strong>Grade level</strong>:"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.report_custom
+#: model_terms:ir.ui.view,arch_db:adm.report_default
+msgid "<strong>Home Phone:</strong>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.report_custom
+#: model_terms:ir.ui.view,arch_db:adm.report_default
+msgid "<strong>Homephone:</strong>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.report_custom
+#: model_terms:ir.ui.view,arch_db:adm.report_default
+msgid "<strong>House Address Information</strong>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.report_custom
+#: model_terms:ir.ui.view,arch_db:adm.report_default
+msgid "<strong>House:</strong>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.report_custom
+#: model_terms:ir.ui.view,arch_db:adm.report_default
+msgid "<strong>Identification:</strong>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.report_default
+msgid "<strong>Languages</strong>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.report_custom
+#: model_terms:ir.ui.view,arch_db:adm.report_default
+msgid "<strong>Last Name:</strong>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.report_default
+msgid "<strong>Level:</strong>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.report_custom
+#: model_terms:ir.ui.view,arch_db:adm.report_default
+msgid "<strong>Marital Status:</strong>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.report_custom
+#: model_terms:ir.ui.view,arch_db:adm.report_default
+msgid "<strong>Medical Information</strong>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.report_custom
+#: model_terms:ir.ui.view,arch_db:adm.report_default
+msgid "<strong>Medications</strong>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.report_custom
+#: model_terms:ir.ui.view,arch_db:adm.report_default
+msgid "<strong>Middle Name:</strong>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.report_custom
+#: model_terms:ir.ui.view,arch_db:adm.report_default
+msgid "<strong>Mobile:</strong>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.report_custom
+#: model_terms:ir.ui.view,arch_db:adm.report_default
+msgid "<strong>Name:</strong>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.report_custom
+#: model_terms:ir.ui.view,arch_db:adm.report_default
+msgid "<strong>Nationality:</strong>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.report_custom
+#: model_terms:ir.ui.view,arch_db:adm.report_default
+msgid "<strong>Occupation:</strong>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.report_custom
+#: model_terms:ir.ui.view,arch_db:adm.report_default
+msgid "<strong>Office Address:</strong>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.report_custom
+#: model_terms:ir.ui.view,arch_db:adm.report_default
+msgid "<strong>Office Phone:</strong>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.report_custom
+#: model_terms:ir.ui.view,arch_db:adm.report_default
+msgid "<strong>Parental Responsability:</strong>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.report_custom
+#: model_terms:ir.ui.view,arch_db:adm.report_default
+msgid "<strong>Permission to Treat:</strong>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.report_custom
+#: model_terms:ir.ui.view,arch_db:adm.report_default
+msgid "<strong>Personal Information</strong>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.report_custom
+#: model_terms:ir.ui.view,arch_db:adm.report_default
+msgid "<strong>Phone:</strong>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.report_custom
+#: model_terms:ir.ui.view,arch_db:adm.report_default
+msgid "<strong>School Address:</strong>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.adm_application_view_kanban
+#: model_terms:ir.ui.view,arch_db:adm.adm_inquiry_view_kanban
+msgid "<strong>Started at</strong>:"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.report_custom
+#: model_terms:ir.ui.view,arch_db:adm.report_default
+msgid "<strong>State:</strong>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.report_custom
+#: model_terms:ir.ui.view,arch_db:adm.report_default
+msgid "<strong>Street:</strong>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.report_custom
+#: model_terms:ir.ui.view,arch_db:adm.report_default
+msgid "<strong>Zip:</strong>"
+msgstr ""
+
+#. module: adm
+#: model:mail.template,body_html:adm.email_template_data_inquiry_accepted
+msgid ""
+"<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                <tr>\n"
+"                    <td valign=\"top\">\n"
+"                        Congratulation, but you are already in application process!\n"
+"                    </td>\n"
+"                </tr>\n"
+"            </table>\n"
+"        "
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_family_select_create
+msgid ""
+"A mail will be sent to the email below confirming its participation in\n"
+"                                        the application flow."
+msgstr ""
+
+#. module: adm
+#: model:ir.model,name:adm.model_adm_activity_report
+msgid "ADM Activity Analysis"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.adm_application_view_form
+msgid "Academic"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_menu
+#: model_terms:ir.ui.view,arch_db:adm.template_application_schools_information_webpage
+msgid "Academic Information"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_family_select_modal
+#: model_terms:ir.ui.view,arch_db:adm.template_application_invite_partner
+msgid "Accept"
+msgstr ""
+
+#. module: adm
+#: code:addons/adm/models/application/admission_application.py:0
+#: model:ir.model.fields.selection,name:adm.selection__adm_application_invitation__state__accepted
+#, python-format
+msgid "Accepted"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application_invitation__access_family_id
+msgid "Access Family"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_family_select_create
+msgid "Access name"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__access_warning
+msgid "Access warning"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__message_needaction
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: adm
+#: model:ir.model,name:adm.model_ir_actions_act_window_view
+msgid "Action Window View"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_school_base_grade_level__active_admissions
+msgid "Active Admissions"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_school_base_school_year__active_admissions
+msgid "Active admissions"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__activity_ids
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry__activity_ids
+#: model:ir.ui.menu,name:adm.adm_activity_report_menu
+msgid "Activities"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.adm_activity_report_view_graph
+#: model_terms:ir.ui.view,arch_db:adm.adm_activity_report_view_pivot
+#: model_terms:ir.ui.view,arch_db:adm.adm_activity_report_view_search
+msgid "Activities Analysis"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.adm_activity_report_view_search
+msgid "Activity"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_activity_report__body
+msgid "Activity Description"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__activity_exception_decoration
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__activity_state
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_activity_report__mail_activity_type_id
+#: model_terms:ir.ui.view,arch_db:adm.adm_activity_report_view_search
+msgid "Activity Type"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_additional_questions_webpage
+msgid "Additional Questions"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_student_info
+msgid "Additional info"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_schools_information_form
+msgid "Address"
+msgstr ""
+
+#. module: adm
+#: model:ir.model,name:adm.model_adm_degree_program
+msgid "Adm Degree program"
+msgstr ""
+
+#. module: adm
+#: model:ir.model,name:adm.model_adm_language
+msgid "Adm Language"
+msgstr ""
+
+#. module: adm
+#: model:ir.model,name:adm.model_adm_language_level
+msgid "Adm Language skill"
+msgstr ""
+
+#. module: adm
+#: model:ir.model,name:adm.model_adm_language_skill_type
+msgid "Adm Language skill type"
+msgstr ""
+
+#. module: adm
+#: model:ir.model,name:adm.model_adm_medical_allergy
+msgid "Adm Medical Allergy"
+msgstr ""
+
+#. module: adm
+#: model:ir.model,name:adm.model_adm_medical_condition
+msgid "Adm Medical condition"
+msgstr ""
+
+#. module: adm
+#: model:ir.model,name:adm.model_adm_medical_medication
+msgid "Adm Medical medication"
+msgstr ""
+
+#. module: adm
+#: model:ir.model,name:adm.model_adm_previous_school_description
+msgid "Adm Previous school description"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields.selection,name:adm.selection__ir_actions_act_window_view__view_mode__adm_tracking_fields
+#: model:ir.model.fields.selection,name:adm.selection__ir_ui_view__type__adm_tracking_fields
+msgid "Adm Tracking Fields"
+msgstr ""
+
+#. module: adm
+#: model:ir.model,name:adm.model_adm_contact_time
+msgid "Adm contact time"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.res_config_settings_view_form
+msgid "Admission"
+msgstr ""
+
+#. module: adm
+#: model:ir.model,name:adm.model_adm_application
+msgid "Admission Application"
+msgstr ""
+
+#. module: adm
+#: model:ir.model,name:adm.model_adm_gender
+msgid "Admission Gender"
+msgstr ""
+
+#. module: adm
+#: model:ir.ui.menu,name:adm.adm_menu
+#: model_terms:ir.ui.view,arch_db:adm.template_admission_inquiry
+msgid "Admissions"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields.selection,name:adm.selection__adm_application__first_level_language__advanced
+#: model:ir.model.fields.selection,name:adm.selection__adm_application__second_level_language__advanced
+#: model:ir.model.fields.selection,name:adm.selection__adm_application__third_level_language__advanced
+msgid "Advanced"
+msgstr ""
+
+#. module: adm
+#: code:addons/adm/models/application/admission_application.py:0
+#, python-format
+msgid "All task are not completed"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__medical_allergies_ids
+#: model_terms:ir.ui.view,arch_db:adm.adm_application_view_form
+msgid "Allergies"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.report_custom
+#: model_terms:ir.ui.view,arch_db:adm.report_default
+msgid "Allergy Name"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application_status__web_alternative_name
+msgid "Alternative name for web"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields.selection,name:adm.selection__adm_application_sibling__alumni_state__alumni
+msgid "Alumni"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application_sibling__alumni_state
+msgid "Alumni or currently Enrolled Students"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application_sibling__alumnus_enrolled_name
+msgid "Alumnus Enrolled Name"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application_sibling__alumnus_enrolled_1
+msgid "Alumnus/Enrolled 1"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application_question__answer
+msgid "Answer"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__image
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry__image
+msgid "Applicant´s Photo"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_previous_school_description__extracurricular_interests
+msgid "Applicant’s extracurricular interests"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.adm_activity_report_view_search
+msgid "Applicatiom"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_activity_report__application_id
+#: model:ir.model.fields,field_description:adm.field_adm_application_history_status__application_id
+#: model:ir.model.fields,field_description:adm.field_adm_application_invitation__application_id
+#: model:ir.model.fields,field_description:adm.field_adm_application_language__application_id
+#: model:ir.model.fields,field_description:adm.field_adm_application_other_contacts__application_id
+#: model:ir.model.fields,field_description:adm.field_adm_application_sibling__application_id
+#: model:ir.model.fields,field_description:adm.field_adm_application_user_access__application_id
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry__application_id
+#: model:ir.model.fields,field_description:adm.field_adm_previous_school_description__application_id
+#: model:ir.model.fields,field_description:adm.field_download_application_attachments__application_ids
+#: model:ir.model.fields,field_description:adm.field_res_partner__application_id
+#: model:ir.model.fields,field_description:adm.field_res_users__application_id
+#: model:ir.model.fields,field_description:adm.field_res_users__application_ids
+#: model:ir.ui.menu,name:adm.adm_menu_application
+#: model_terms:ir.ui.view,arch_db:adm.res_config_settings_view_form
+#: model_terms:ir.ui.view,arch_db:adm.template_application_create_application
+#: model_terms:ir.ui.view,arch_db:adm.template_application_menu_instructions
+#: model_terms:ir.ui.view,arch_db:adm.website_menuitem_application
+msgid "Application"
+msgstr ""
+
+#. module: adm
+#: model:ir.actions.act_window,name:adm.action_application_download_file
+msgid "Application Download"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_family_select_modal
+#: model_terms:ir.ui.view,arch_db:adm.template_application_invite_partner
+msgid "Application Family"
+msgstr ""
+
+#. module: adm
+#: model:ir.model,name:adm.model_adm_application_history_status
+msgid "Application Historiy Status"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_invite_partner
+msgid "Application Invitation"
+msgstr ""
+
+#. module: adm
+#: model:ir.actions.act_window,name:adm.action_application_page
+msgid "Application Page"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_ir_attachment__application_passport_id
+msgid "Application Passport"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_ir_attachment__application_residency_id
+msgid "Application Residency"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_menu_progress
+msgid "Application Review"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_res_partner__application_sibling_ids
+#: model:ir.model.fields,field_description:adm.field_res_users__application_sibling_ids
+msgid "Application Sibling"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields.selection,name:adm.selection__adm_application_status__type_id__started
+msgid "Application Started"
+msgstr ""
+
+#. module: adm
+#: model:ir.actions.act_window,name:adm.action_application_status
+#: model:ir.ui.menu,name:adm.adm_menu_application_status
+msgid "Application Status"
+msgstr ""
+
+#. module: adm
+#: model:ir.model,name:adm.model_adm_application_task
+msgid "Application Task"
+msgstr ""
+
+#. module: adm
+#: code:addons/adm/models/application/admission_application.py:0
+#, python-format
+msgid "Application cancelled"
+msgstr ""
+
+#. module: adm
+#: code:addons/adm/models/application/admission_application.py:0
+#, python-format
+msgid "Application completed"
+msgstr ""
+
+#. module: adm
+#: code:addons/adm/models/application/admission_application.py:0
+#, python-format
+msgid "Application created in [%s] status"
+msgstr ""
+
+#. module: adm
+#: model:ir.model,name:adm.model_adm_application_invitation
+msgid "Application invitation"
+msgstr ""
+
+#. module: adm
+#: model:ir.model,name:adm.model_adm_application_language
+msgid "Application language"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_res_config_settings__adm_application_optional_field_ids
+msgid "Application optional fields"
+msgstr ""
+
+#. module: adm
+#: model:ir.model,name:adm.model_adm_application_other_contacts
+msgid "Application other contacts"
+msgstr ""
+
+#. module: adm
+#: model:ir.model,name:adm.model_adm_application_page
+msgid "Application page"
+msgstr ""
+
+#. module: adm
+#: model:ir.ui.menu,name:adm.adm_menu_application_pages
+msgid "Application pages"
+msgstr ""
+
+#. module: adm
+#: model:ir.model,name:adm.model_adm_application_question
+msgid "Application question"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_res_config_settings__adm_application_required_field_ids
+msgid "Application required fields"
+msgstr ""
+
+#. module: adm
+#: model:ir.model,name:adm.model_adm_application_sibling
+msgid "Application sibling"
+msgstr ""
+
+#. module: adm
+#: model:ir.model,name:adm.model_adm_application_status
+msgid "Application status"
+msgstr ""
+
+#. module: adm
+#: model:ir.model,name:adm.model_adm_application_user_access
+msgid "Application user access"
+msgstr ""
+
+#. module: adm
+#: code:addons/adm/report/grade_level_student_count_report.py:0
+#: model:ir.actions.act_window,name:adm.action_application
+#: model_terms:ir.ui.view,arch_db:adm.portal_my_home_adm
+#, python-format
+msgid "Applications"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__applying_semester
+msgid "Applying semester"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__are_stage_task_complete
+msgid "Are all task complete"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_activity_report__author_id
+#: model_terms:ir.ui.view,arch_db:adm.adm_activity_report_view_search
+msgid "Assigned To"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__user_id
+msgid "Assigned to"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_medical_condition
+msgid "Asthma"
+msgstr ""
+
+#. module: adm
+#: model:ir.model,name:adm.model_ir_attachment
+msgid "Attachment"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__message_attachment_count
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__attachment_ids
+msgid "Attachments"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_medical_condition
+msgid ""
+"Attention Deficit\n"
+"                                Disorder/Hyperactive"
+msgstr ""
+
+#. module: adm
+#. openerp-web
+#: code:addons/adm/static/src/js/backend/report/grade_level_student_count_report.js:0
+#, python-format
+msgid "Available"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__bac_grade
+msgid "BAC Grade"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields.selection,name:adm.selection__adm_application__first_level_language__beginner
+#: model:ir.model.fields.selection,name:adm.selection__adm_application__second_level_language__beginner
+#: model:ir.model.fields.selection,name:adm.selection__adm_application__third_level_language__beginner
+msgid "Beginner"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__birth_city
+msgid "Birth City"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__birth_country
+msgid "Birth Country"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_admission_inquiry
+msgid ""
+"Birthday\n"
+"                                                    <span class=\"text-danger\">*</span>"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__blood_type
+msgid "Blood Type"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__cv_id
+msgid "C.V"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.adm_application_view_form
+#: model_terms:ir.ui.view,arch_db:adm.adm_inquiry_view_form
+msgid "CANCEL"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_admission_application_list
+msgid "CREATE NEW APPLICATION:"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.download_application_attachments_view_form
+#: model_terms:ir.ui.view,arch_db:adm.my_credit_limit_wizard
+msgid "Cancel"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields.selection,name:adm.selection__adm_application_status__type_id__cancelled
+#: model:ir.model.fields.selection,name:adm.selection__adm_inquiry_status__type_id__cancelled
+msgid "Cancelled"
+msgstr ""
+
+#. module: adm
+#: code:addons/adm/report/grade_level_student_count_report.py:0
+#, python-format
+msgid "Capacity"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_menu_instructions
+msgid ""
+"Cat ipsum dolor sit amet, laborum, aliquip. Nostrud doloremque, or vel or\n"
+"                                            quia cillum, rem magnam. Quam unde, so quisquam. Anim aliquam deserunt but\n"
+"                                            beatae. Laboriosam. Beatae illum, officia autem. Anim. Molestiae. Cupidatat\n"
+"                                            laborum, incidunt, explicabo. Consequatur aspernatur. Illum adipisci sunt ex\n"
+"                                            but consequat laudantium but ea. Nequeporro laboris for laboriosam quasi yet\n"
+"                                            eius aute or fugit. Do consectetur, totam amet. Eum incidunt so aliquip\n"
+"                                            incidunt. Mollit magni yet aut and amet. Reprehenderit. Eu laudantium for\n"
+"                                            consequatur sequi yet laudantium for numquam. Nostrud aspernatur excepteur\n"
+"                                            inventore and dolorem, modi for esse. Excepteur omnis and reprehenderit\n"
+"                                            aliquam aliqua yet iure but nostrud. Sed esse, natus qui. Dolores lorem.\n"
+"                                            Pariatur. Beatae dolores but incidunt, yet non so minima nesciunt or\n"
+"                                            inventore. Voluptate excepteur."
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_admission_inquiry
+msgid ""
+"Cell Phone\n"
+"                                                <span class=\"text-danger\">*</span>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_create_application
+#: model_terms:ir.ui.view,arch_db:adm.template_application_student_info
+msgid "Change"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_family_select_create
+msgid "Check if it has access"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_fields_settings__child_ids
+msgid "Childs"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__citizenship
+#: model:ir.model.fields,field_description:adm.field_res_partner__citizenship
+#: model:ir.model.fields,field_description:adm.field_res_users__citizenship
+msgid "Citizenship"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__city
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry__city
+#: model:ir.model.fields,field_description:adm.field_adm_previous_school_description__city
+msgid "City"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_student_info
+msgid "City:"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_create_application
+msgid ""
+"City:\n"
+"                                                            <span class=\"text-danger\"> *</span>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_family_select_create
+#: model_terms:ir.ui.view,arch_db:adm.template_application_family_select_modal
+#: model_terms:ir.ui.view,arch_db:adm.template_application_invite_partner
+#: model_terms:ir.ui.view,arch_db:adm.template_application_menu
+msgid "Close"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.adm_application_view_tracking
+msgid "Collapse all"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_medical_allergy__comment
+#: model:ir.model.fields,field_description:adm.field_adm_medical_condition__comment
+#: model:ir.model.fields,field_description:adm.field_adm_medical_medication__comment
+#: model_terms:ir.ui.view,arch_db:adm.template_application_medical_Medication
+#: model_terms:ir.ui.view,arch_db:adm.template_application_medical_condition
+msgid "Comment"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry__community_street_address
+msgid "Community residence address"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_admission_inquiry
+msgid ""
+"Community residence address (Community name / Phone/ Reference)\n"
+"                                                <span class=\"text-danger\">\n"
+"                                                    *\n"
+"                                                </span>"
+msgstr ""
+
+#. module: adm
+#: model:ir.model,name:adm.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.adm_activity_report_view_search
+msgid "Completed Last 365 Days"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_activity_report__date
+#: model_terms:ir.ui.view,arch_db:adm.adm_activity_report_view_search
+msgid "Completion Date"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_admission_inquiry
+msgid "Conde family"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.report_custom
+#: model_terms:ir.ui.view,arch_db:adm.report_default
+msgid "Condition name"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__medical_conditions_ids
+#: model_terms:ir.ui.view,arch_db:adm.adm_application_view_form
+msgid "Conditions"
+msgstr ""
+
+#. module: adm
+#: model:ir.model,name:adm.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: adm
+#: model:ir.ui.menu,name:adm.adm_menu_configurations
+msgid "Configurations"
+msgstr ""
+
+#. module: adm
+#: model:ir.model,name:adm.model_res_partner
+#: model:ir.model.fields,field_description:adm.field_adm_application__partner_id
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry__partner_id
+#: model_terms:ir.ui.view,arch_db:adm.adm_inquiry_view_form
+msgid "Contact"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application_other_contacts__contact_identification
+msgid "Contact Identification"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application_other_contacts__contact_name
+msgid "Contact Name"
+msgstr ""
+
+#. module: adm
+#: model:ir.actions.act_window,name:adm.action_contact_time
+msgid "Contact time"
+msgstr ""
+
+#. module: adm
+#: model:ir.ui.menu,name:adm.adm_menu_contact_time
+msgid "Contact times"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application_invitation__mail_body
+msgid "Contents"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__country_id
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry__country_id
+#: model:ir.model.fields,field_description:adm.field_adm_previous_school_description__country_id
+#: model_terms:ir.ui.view,arch_db:adm.template_admission_inquiry
+#: model_terms:ir.ui.view,arch_db:adm.template_application_create_application
+#: model_terms:ir.ui.view,arch_db:adm.template_application_student_info
+msgid "Country"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_create_application
+msgid ""
+"Country\n"
+"                                                            <span class=\"text-danger\">*</span>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_admission_inquiry
+msgid ""
+"Country\n"
+"                                                <span class=\"text-danger\">*</span>"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__create_uid
+#: model:ir.model.fields,field_description:adm.field_adm_application_history_status__create_uid
+#: model:ir.model.fields,field_description:adm.field_adm_application_invitation__create_uid
+#: model:ir.model.fields,field_description:adm.field_adm_application_language__create_uid
+#: model:ir.model.fields,field_description:adm.field_adm_application_other_contacts__create_uid
+#: model:ir.model.fields,field_description:adm.field_adm_application_page__create_uid
+#: model:ir.model.fields,field_description:adm.field_adm_application_question__create_uid
+#: model:ir.model.fields,field_description:adm.field_adm_application_sibling__create_uid
+#: model:ir.model.fields,field_description:adm.field_adm_application_status__create_uid
+#: model:ir.model.fields,field_description:adm.field_adm_application_task__create_uid
+#: model:ir.model.fields,field_description:adm.field_adm_application_user_access__create_uid
+#: model:ir.model.fields,field_description:adm.field_adm_contact_time__create_uid
+#: model:ir.model.fields,field_description:adm.field_adm_degree_program__create_uid
+#: model:ir.model.fields,field_description:adm.field_adm_fields_settings__create_uid
+#: model:ir.model.fields,field_description:adm.field_adm_gender__create_uid
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry__create_uid
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry_language__create_uid
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry_status__create_uid
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry_status_type__create_uid
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry_task__create_uid
+#: model:ir.model.fields,field_description:adm.field_adm_language__create_uid
+#: model:ir.model.fields,field_description:adm.field_adm_language_level__create_uid
+#: model:ir.model.fields,field_description:adm.field_adm_language_skill_type__create_uid
+#: model:ir.model.fields,field_description:adm.field_adm_medical_allergy__create_uid
+#: model:ir.model.fields,field_description:adm.field_adm_medical_condition__create_uid
+#: model:ir.model.fields,field_description:adm.field_adm_medical_medication__create_uid
+#: model:ir.model.fields,field_description:adm.field_adm_previous_school_description__create_uid
+#: model:ir.model.fields,field_description:adm.field_download_application_attachments__create_uid
+#: model:ir.model.fields,field_description:adm.field_sale_control_limit_wizard__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__create_date
+#: model:ir.model.fields,field_description:adm.field_adm_application_history_status__create_date
+#: model:ir.model.fields,field_description:adm.field_adm_application_invitation__create_date
+#: model:ir.model.fields,field_description:adm.field_adm_application_language__create_date
+#: model:ir.model.fields,field_description:adm.field_adm_application_other_contacts__create_date
+#: model:ir.model.fields,field_description:adm.field_adm_application_page__create_date
+#: model:ir.model.fields,field_description:adm.field_adm_application_question__create_date
+#: model:ir.model.fields,field_description:adm.field_adm_application_sibling__create_date
+#: model:ir.model.fields,field_description:adm.field_adm_application_status__create_date
+#: model:ir.model.fields,field_description:adm.field_adm_application_task__create_date
+#: model:ir.model.fields,field_description:adm.field_adm_application_user_access__create_date
+#: model:ir.model.fields,field_description:adm.field_adm_contact_time__create_date
+#: model:ir.model.fields,field_description:adm.field_adm_degree_program__create_date
+#: model:ir.model.fields,field_description:adm.field_adm_fields_settings__create_date
+#: model:ir.model.fields,field_description:adm.field_adm_gender__create_date
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry__create_date
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry_language__create_date
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry_status__create_date
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry_status_type__create_date
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry_task__create_date
+#: model:ir.model.fields,field_description:adm.field_adm_language__create_date
+#: model:ir.model.fields,field_description:adm.field_adm_language_level__create_date
+#: model:ir.model.fields,field_description:adm.field_adm_language_skill_type__create_date
+#: model:ir.model.fields,field_description:adm.field_adm_medical_allergy__create_date
+#: model:ir.model.fields,field_description:adm.field_adm_medical_condition__create_date
+#: model:ir.model.fields,field_description:adm.field_adm_medical_medication__create_date
+#: model:ir.model.fields,field_description:adm.field_adm_previous_school_description__create_date
+#: model:ir.model.fields,field_description:adm.field_download_application_attachments__create_date
+#: model:ir.model.fields,field_description:adm.field_sale_control_limit_wizard__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__cumulative_grades
+msgid "Cumulative Grade"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry__current_grade_level_id
+msgid "Current Grade Level"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_admission_inquiry
+msgid ""
+"Current Grade Level\n"
+"                                                    <span class=\"text-danger\">*</span>"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__current_school
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry__current_school
+msgid "Current School"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__current_school_address
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry__current_school_address
+msgid "Current School Address"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.adm_application_view_search
+msgid "Current School Year"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__current_user_access_id
+msgid "Current User Access"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_res_partner__school
+#: model:ir.model.fields,field_description:adm.field_res_users__school
+msgid "Current school"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__is_current_school_year
+#: model:ir.model.fields,field_description:adm.field_res_config_settings__adm_current_school_year
+msgid "Current school year"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application_status__current_year_status_to_facts
+#: model:ir.model.fields,field_description:adm.field_adm_application_status__next_years_status_to_facts
+msgid "Current status to FACTS"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.view_application_status_view_form
+msgid "Current year"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields.selection,name:adm.selection__adm_application_sibling__alumni_state__currently_enrolled
+msgid "Currently Enrolled"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.adm_application_view_form
+msgid "Custodials"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__custodial_relationship_ids
+msgid "Custody contacts"
+msgstr ""
+
+#. module: adm
+#: model:ir.ui.menu,name:adm.adm_custom_menu
+msgid "Custom"
+msgstr ""
+
+#. module: adm
+#: code:addons/adm/models/admission_inquiry.py:0
+#: code:addons/adm/models/application/admission_application.py:0
+#, python-format
+msgid "Custom Email Luis"
+msgstr ""
+
+#. module: adm
+#: model:ir.actions.report,name:adm.report_application_custom
+msgid "Custom Report"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application_status__partner_id
+msgid "Customer"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,help:adm.field_adm_application__access_url
+msgid "Customer Portal URL"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_create_application
+msgid ""
+"Date of Birth (ddmmyyyy):\n"
+"                                                            <span class=\"text-danger\"> *</span>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_student_info
+msgid "Date of Birth:"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__date_of_birth
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry__date_of_birth
+#: model_terms:ir.ui.view,arch_db:adm.template_application_family_other_relationship_form
+#: model_terms:ir.ui.view,arch_db:adm.template_application_siblings_form
+msgid "Date of birth"
+msgstr ""
+
+#. module: adm
+#: model:ir.actions.report,name:adm.report_application_default
+msgid "Default Report"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_res_partner__degree
+#: model:ir.model.fields,field_description:adm.field_res_users__degree
+msgid "Degree"
+msgstr ""
+
+#. module: adm
+#: model:ir.actions.act_window,name:adm.action_degree_program
+msgid "Degree Program"
+msgstr ""
+
+#. module: adm
+#: model:ir.ui.menu,name:adm.adm_menu_degree_program
+msgid "Degree programs"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.adm_application_view_kanban
+#: model_terms:ir.ui.view,arch_db:adm.adm_inquiry_view_kanban
+msgid "Delete"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_family_other_relationship_form
+#: model_terms:ir.ui.view,arch_db:adm.template_application_siblings_form
+msgid "Demographics"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application_status__description
+#: model:ir.model.fields,field_description:adm.field_adm_application_task__description
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry_status__description
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry_task__description
+msgid "Description"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_medical_condition
+msgid "Diabetes"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_activity_report__display_name
+#: model:ir.model.fields,field_description:adm.field_adm_application__display_name
+#: model:ir.model.fields,field_description:adm.field_adm_application_history_status__display_name
+#: model:ir.model.fields,field_description:adm.field_adm_application_invitation__display_name
+#: model:ir.model.fields,field_description:adm.field_adm_application_language__display_name
+#: model:ir.model.fields,field_description:adm.field_adm_application_other_contacts__display_name
+#: model:ir.model.fields,field_description:adm.field_adm_application_page__display_name
+#: model:ir.model.fields,field_description:adm.field_adm_application_question__display_name
+#: model:ir.model.fields,field_description:adm.field_adm_application_sibling__display_name
+#: model:ir.model.fields,field_description:adm.field_adm_application_status__display_name
+#: model:ir.model.fields,field_description:adm.field_adm_application_task__display_name
+#: model:ir.model.fields,field_description:adm.field_adm_application_user_access__display_name
+#: model:ir.model.fields,field_description:adm.field_adm_contact_time__display_name
+#: model:ir.model.fields,field_description:adm.field_adm_degree_program__display_name
+#: model:ir.model.fields,field_description:adm.field_adm_fields_settings__display_name
+#: model:ir.model.fields,field_description:adm.field_adm_gender__display_name
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry__display_name
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry_language__display_name
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry_status__display_name
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry_status_type__display_name
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry_task__display_name
+#: model:ir.model.fields,field_description:adm.field_adm_language__display_name
+#: model:ir.model.fields,field_description:adm.field_adm_language_level__display_name
+#: model:ir.model.fields,field_description:adm.field_adm_language_skill_type__display_name
+#: model:ir.model.fields,field_description:adm.field_adm_medical_allergy__display_name
+#: model:ir.model.fields,field_description:adm.field_adm_medical_condition__display_name
+#: model:ir.model.fields,field_description:adm.field_adm_medical_medication__display_name
+#: model:ir.model.fields,field_description:adm.field_adm_previous_school_description__display_name
+#: model:ir.model.fields,field_description:adm.field_download_application_attachments__display_name
+#: model:ir.model.fields,field_description:adm.field_grade_level_student_count_report__display_name
+#: model:ir.model.fields,field_description:adm.field_sale_control_limit_wizard__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields.selection,name:adm.selection__res_partner__marital_status__divorced
+msgid "Divorced"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_menu_instructions
+msgid ""
+"Do eiusmod yet dolor ipsam nesciunt aute. Eu eum, so illo enim accusantium,\n"
+"                                            dolores veritatis. Nostrum quis mollit ab vitae, iste so voluptas. Sit velit\n"
+"                                            but magni eu but vitae, and autem. Reprehenderit quam. Velit nemo yet\n"
+"                                            excepteur and esse ex. Eos rem dolorem ipsum omnis or minima illum. Modi\n"
+"                                            dolor so sit. Eos ipsum for modi vitae or pariatur dolore. Sit accusantium\n"
+"                                            for nemo natus so do."
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__doctor_address
+msgid "Doctor Direction"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_menu_medical_info
+msgid "Doctor Name"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__doctor_name
+msgid "Doctor name"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__doctor_phone
+#: model_terms:ir.ui.view,arch_db:adm.template_application_menu_medical_info
+msgid "Doctor phone"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_student_info
+msgid "Documentation"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.report_internal
+msgid "Documentos recibidos:"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.adm_application_view_form
+#: model_terms:ir.ui.view,arch_db:adm.template_application_menu
+msgid "Documents"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_fields_settings__domain
+msgid "Domain filter"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields.selection,name:adm.selection__adm_application_status__type_id__done
+#: model:ir.model.fields.selection,name:adm.selection__adm_inquiry_status__type_id__done
+#: model_terms:ir.ui.view,arch_db:adm.adm_activity_report_view_search
+msgid "Done"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.download_application_attachments_view_form
+msgid "Download"
+msgstr ""
+
+#. module: adm
+#: model:ir.model,name:adm.model_download_application_attachments
+msgid "Download Application attachments"
+msgstr ""
+
+#. module: adm
+#: model:ir.actions.act_window,name:adm.download_application_attachments_action
+msgid "Download application attachments"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.adm_application_view_kanban
+#: model_terms:ir.ui.view,arch_db:adm.adm_inquiry_view_kanban
+msgid "Dropdown menu"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application_sibling__age
+msgid "Edad"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.adm_application_view_kanban
+#: model_terms:ir.ui.view,arch_db:adm.adm_inquiry_view_kanban
+msgid "Edit"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_res_partner__education
+#: model:ir.model.fields,field_description:adm.field_res_users__education
+msgid "Education"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields.selection,name:adm.selection__adm_application__first_level_language__elementary
+#: model:ir.model.fields.selection,name:adm.selection__adm_application__second_level_language__elementary
+#: model:ir.model.fields.selection,name:adm.selection__adm_application__third_level_language__elementary
+msgid "Elementary"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__email
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry__email
+#: model_terms:ir.ui.view,arch_db:adm.adm_inquiry_view_form
+#: model_terms:ir.ui.view,arch_db:adm.template_application_family_select_create
+msgid "Email"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_admission_inquiry
+msgid ""
+"Email\n"
+"                                                <span class=\"text-danger\">*</span>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.adm_application_view_form
+msgid "Email Address"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application_status__mail_template_id
+msgid "Email Template"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_create_application
+msgid "Email of Applicant (if applicable):"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_medical_condition
+msgid "Emotional concerns"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__emotional_support
+msgid "Emotional support"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__emotional_support_desc
+msgid "Emotional support description"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_schools_information_form
+msgid "End Date"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.adm_application_view_search
+msgid "Enrollment School Year"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__is_enrollment_school_year
+msgid "Enrollment school year"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.view_application_status_view_form
+msgid "Enrollment year"
+msgstr ""
+
+#. module: adm
+#: code:addons/adm/controllers/application/admission_application_controller.py:0
+#: code:addons/adm/controllers/application/admission_application_controller.py:0
+#, python-format
+msgid "Ensure to copy the url as you get it"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application_status__existed_user_email_template
+msgid "Existed user Accepted Admission"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.adm_application_view_tracking
+msgid "Expand all"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.adm_application_view_form
+#: model_terms:ir.ui.view,arch_db:adm.adm_inquiry_view_form
+msgid "FORCE BACK STATUS"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.adm_application_view_form
+#: model_terms:ir.ui.view,arch_db:adm.adm_inquiry_view_form
+msgid "FORCE NEXT STATUS"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__family_id
+#: model_terms:ir.ui.view,arch_db:adm.adm_application_view_form
+#: model_terms:ir.ui.view,arch_db:adm.template_application_menu
+msgid "Family"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_admission_inquiry
+msgid "Family ID"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_family_other_relationships
+msgid "Family Members"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_family_select_create
+#: model_terms:ir.ui.view,arch_db:adm.template_application_invite_partner
+msgid "Family Name"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_admission_inquiry
+msgid "Family exists"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_family_other_relationship_form
+#: model_terms:ir.ui.view,arch_db:adm.template_application_siblings_form
+msgid "Family name"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__father_name
+msgid "Father name"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_fields_settings__field_id
+#: model_terms:ir.ui.view,arch_db:adm.adm_application_view_tracking_field_table
+msgid "Field"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_fields_settings__name
+msgid "Field Name"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__fields_completed
+msgid "Fields completed"
+msgstr ""
+
+#. module: adm
+#: model:ir.model,name:adm.model_adm_fields_settings
+msgid "Fields settings"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_form_commons
+msgid "Fields with (*) are mandatory"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_download_application_attachments__file_compressed_ids
+msgid "File Compressed"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_menu
+msgid "Finance"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_family_select_create
+msgid "Financial"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__finish_datetime
+msgid "Finish Datetime"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__finish_timeline
+msgid "Finish Timeline"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_res_partner__first_language
+#: model:ir.model.fields,field_description:adm.field_res_users__first_language
+#: model_terms:ir.ui.view,arch_db:adm.report_default
+msgid "First Language"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__first_name
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry__first_name
+#: model_terms:ir.ui.view,arch_db:adm.template_admission_inquiry
+#: model_terms:ir.ui.view,arch_db:adm.template_application_student_info
+msgid "First Name"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_create_application
+msgid ""
+"First Name\n"
+"                                                                    <span class=\"text-danger\"> *</span>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_admission_inquiry
+msgid ""
+"First Name\n"
+"                                                    <span class=\"text-danger\">*</span>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_admission_inquiry
+msgid ""
+"First Name\n"
+"                                                <span class=\"text-danger\">*</span>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_family_other_relationship_form
+#: model_terms:ir.ui.view,arch_db:adm.template_application_siblings_form
+msgid "First name"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields.selection,name:adm.selection__adm_application__first_level_language__fluent
+#: model:ir.model.fields.selection,name:adm.selection__adm_application__second_level_language__fluent
+#: model:ir.model.fields.selection,name:adm.selection__adm_application__third_level_language__fluent
+msgid "Fluent"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application_status__fold
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry_status__fold
+msgid "Fold"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__message_follower_ids
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__message_channel_ids
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__message_partner_ids
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,help:adm.field_adm_fields_settings__parent_relational_model
+#: model:ir.model.fields,help:adm.field_adm_fields_settings__relational_model
+msgid "For relationship fields, the technical name of the target model"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_medical_condition
+msgid "Frequent Headaches"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_medical_condition
+msgid "Frequent ear infections"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_previous_school_description__from_date
+msgid "From Date"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_contact_time__from_time
+msgid "From Time"
+msgstr ""
+
+#. module: adm
+#: code:addons/adm/models/application/admission_application.py:0
+#, python-format
+msgid "From [%s] to [%s] status"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.adm_application_view_form
+msgid "GENERATE INTERNAL REPORT"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__gpa
+msgid "GPA"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__gender
+#: model:ir.model.fields,field_description:adm.field_adm_gender__name
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry__gender
+#: model:ir.model.fields,field_description:adm.field_res_partner__gender
+#: model:ir.model.fields,field_description:adm.field_res_users__gender
+msgid "Gender"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_student_info
+msgid "Gender:"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_create_application
+msgid ""
+"Gender:\n"
+"                                                            <span class=\"text-danger\"> *</span>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_menu
+msgid "General info"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_medical_condition
+msgid "Glasses/contact lens"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.adm_application_view_tracking
+msgid "Go to application"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_previous_school_description__grade_completed
+msgid "Grade Current or Completed"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__grade_level
+#: model:ir.model.fields,field_description:adm.field_adm_application_sibling__grade_level_id
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry__grade_level_id
+msgid "Grade Level"
+msgstr ""
+
+#. module: adm
+#: model:ir.actions.act_window,name:adm.adm_grade_student_count_action_dashboard
+msgid "Grade Level Student Count"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_create_application
+#: model_terms:ir.ui.view,arch_db:adm.template_application_student_info
+msgid "Grade Level:"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_create_application
+msgid ""
+"Grade Level:\n"
+"                                                            <span class=\"text-danger\"> *</span>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_schools_information_form
+msgid "Grade Levels"
+msgstr ""
+
+#. module: adm
+#: model:ir.ui.menu,name:adm.adm_menu_reporting_grade_level
+msgid "Grade Student Count"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__grade_transcript_id
+msgid "Grade transcript"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__grade_level_inquiry
+msgid "GradeLevel"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.adm_activity_report_view_search
+msgid "Group By"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.adm_application_view_form
+#: model_terms:ir.ui.view,arch_db:adm.template_application_menu
+#: model_terms:ir.ui.view,arch_db:adm.template_application_menu_medical_info
+msgid "Health"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_medical_condition
+msgid "Heart Problems"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_invite_partner
+msgid "Hello,"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application_status__hide_if_cancel
+msgid "Hide if cancelled"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application_status__hide_if_done
+msgid "Hide if done"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_create_application
+msgid ""
+"Home Address:\n"
+"                                                            <span class=\"text-danger\"> *</span>"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_res_partner__home_phone
+#: model:ir.model.fields,field_description:adm.field_res_users__home_phone
+msgid "Home Phone"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_create_application
+msgid ""
+"Home Telephone:\n"
+"                                                            <span class=\"text-danger\"> *</span>"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__home_phone
+msgid "Home phone"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__hospital
+#: model_terms:ir.ui.view,arch_db:adm.template_application_menu_medical_info
+msgid "Hospital"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__hospital_address
+msgid "Hospital Address"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.report_custom
+#: model_terms:ir.ui.view,arch_db:adm.report_default
+msgid "House Address type"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_family_select_create
+msgid "I don't belong to this family"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_activity_report__id
+#: model:ir.model.fields,field_description:adm.field_adm_application__id
+#: model:ir.model.fields,field_description:adm.field_adm_application_history_status__id
+#: model:ir.model.fields,field_description:adm.field_adm_application_invitation__id
+#: model:ir.model.fields,field_description:adm.field_adm_application_language__id
+#: model:ir.model.fields,field_description:adm.field_adm_application_other_contacts__id
+#: model:ir.model.fields,field_description:adm.field_adm_application_page__id
+#: model:ir.model.fields,field_description:adm.field_adm_application_question__id
+#: model:ir.model.fields,field_description:adm.field_adm_application_sibling__id
+#: model:ir.model.fields,field_description:adm.field_adm_application_status__id
+#: model:ir.model.fields,field_description:adm.field_adm_application_task__id
+#: model:ir.model.fields,field_description:adm.field_adm_application_user_access__id
+#: model:ir.model.fields,field_description:adm.field_adm_contact_time__id
+#: model:ir.model.fields,field_description:adm.field_adm_degree_program__id
+#: model:ir.model.fields,field_description:adm.field_adm_fields_settings__id
+#: model:ir.model.fields,field_description:adm.field_adm_gender__id
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry__id
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry_language__id
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry_status__id
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry_status_type__id
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry_task__id
+#: model:ir.model.fields,field_description:adm.field_adm_language__id
+#: model:ir.model.fields,field_description:adm.field_adm_language_level__id
+#: model:ir.model.fields,field_description:adm.field_adm_language_skill_type__id
+#: model:ir.model.fields,field_description:adm.field_adm_medical_allergy__id
+#: model:ir.model.fields,field_description:adm.field_adm_medical_condition__id
+#: model:ir.model.fields,field_description:adm.field_adm_medical_medication__id
+#: model:ir.model.fields,field_description:adm.field_adm_previous_school_description__id
+#: model:ir.model.fields,field_description:adm.field_download_application_attachments__id
+#: model:ir.model.fields,field_description:adm.field_grade_level_student_count_report__id
+#: model:ir.model.fields,field_description:adm.field_sale_control_limit_wizard__id
+msgid "ID"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_student_info
+msgid "ID number:"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__iep_education
+msgid "IEP Education"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__isp_community_reference_1
+msgid "ISP Community Reference #1"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__isp_community_reference_2
+msgid "ISP Community Reference #2"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__activity_exception_icon
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,help:adm.field_adm_application__activity_exception_icon
+#: model:ir.model.fields,help:adm.field_adm_inquiry__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__identification
+#: model:ir.model.fields,field_description:adm.field_res_partner__identification
+#: model:ir.model.fields,field_description:adm.field_res_users__identification
+msgid "Identification"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,help:adm.field_adm_application__message_needaction
+#: model:ir.model.fields,help:adm.field_adm_application__message_unread
+#: model:ir.model.fields,help:adm.field_adm_inquiry__message_needaction
+#: model:ir.model.fields,help:adm.field_adm_inquiry__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,help:adm.field_adm_application__message_has_error
+#: model:ir.model.fields,help:adm.field_adm_application__message_has_sms_error
+#: model:ir.model.fields,help:adm.field_adm_inquiry__message_has_error
+#: model:ir.model.fields,help:adm.field_adm_inquiry__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,help:adm.field_adm_application_status__mail_template_id
+msgid ""
+"If set an email will be sent to the customer when the application reaches "
+"this status"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields.selection,name:adm.selection__adm_application__applying_semester__immediate
+msgid "Immediate"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__implicated_family_ids
+msgid "Implicated families"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields.selection,name:adm.selection__adm_application_status__type_id__import_completed
+msgid "Import Completed"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application_status__import_to_facts
+msgid "Import To Facts"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_menu
+#: model_terms:ir.ui.view,arch_db:adm.template_application_menu_instructions
+msgid "Information"
+msgstr ""
+
+#. module: adm
+#: code:addons/adm/report/grade_level_student_count_report.py:0
+#: model:ir.actions.act_window,name:adm.action_inquiry
+#, python-format
+msgid "Inquiries"
+msgstr ""
+
+#. module: adm
+#: model:ir.model,name:adm.model_adm_inquiry
+#: model:ir.model.fields,field_description:adm.field_adm_application__inquiry_id
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry_language__inquiry_id
+#: model:ir.model.fields,field_description:adm.field_ir_attachment__inquiry_id
+#: model:ir.model.fields,field_description:adm.field_res_partner__inquiry_id
+#: model:ir.model.fields,field_description:adm.field_res_users__inquiry_id
+#: model:ir.ui.menu,name:adm.adm_menu_inquiry
+#: model:website.menu,name:adm.website_menu_adm_inquiry
+msgid "Inquiry"
+msgstr ""
+
+#. module: adm
+#: model:ir.model,name:adm.model_adm_inquiry_language
+msgid "Inquiry Language"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_inquiry_sent
+msgid "Inquiry Sent"
+msgstr ""
+
+#. module: adm
+#: model:ir.actions.act_window,name:adm.action_status
+#: model:ir.model,name:adm.model_adm_inquiry_status
+#: model:ir.ui.menu,name:adm.adm_menu_status
+msgid "Inquiry Status"
+msgstr ""
+
+#. module: adm
+#: model:ir.model,name:adm.model_adm_inquiry_status_type
+msgid "Inquiry Status Type"
+msgstr ""
+
+#. module: adm
+#: model:ir.model,name:adm.model_adm_inquiry_task
+msgid "Inquiry Task"
+msgstr ""
+
+#. module: adm
+#: code:addons/adm/models/admission_inquiry.py:0
+#, python-format
+msgid "Inquiry cancelled"
+msgstr ""
+
+#. module: adm
+#: code:addons/adm/models/admission_inquiry.py:0
+#, python-format
+msgid "Inquiry completed"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields.selection,name:adm.selection__adm_application__first_level_language__intermediate
+#: model:ir.model.fields.selection,name:adm.selection__adm_application__second_level_language__intermediate
+#: model:ir.model.fields.selection,name:adm.selection__adm_application__third_level_language__intermediate
+msgid "Intermediate"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application_page__internal_reference
+msgid "Internal Reference"
+msgstr ""
+
+#. module: adm
+#: model:ir.actions.report,name:adm.report_internal_custom
+msgid "Internal Report"
+msgstr ""
+
+#. module: adm
+#: code:addons/adm/controllers/application/admission_application_controller.py:0
+#, python-format
+msgid "Invitation already solved"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application_invitation__invited_user_id
+msgid "Invited User"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application_invitation__by_partner_id
+msgid "Invited by"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_sale_control_limit_wizard__invoice_amount
+msgid "Invoice Amount"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_menu_instructions
+msgid ""
+"Ipsa est non voluptas and aut. Ipsum velit laboris yet vitae deserunt.\n"
+"                                            Proident aspernatur or consequatur sit, or laboris for consequat. Ipsum esse\n"
+"                                            anim. Eiusmod error. Est ut. Est aliquip dolores for duis. Sint totam so\n"
+"                                            velit so adipisicing. Numquam elit and enim quisquam suscipit. Natus ipsam\n"
+"                                            iste or occaecat suscipit, for do, sequi. Minima tempor eiusmod so duis.\n"
+"                                            Officia commodo, so numquam. Iste quasi iste yet velit officia.\n"
+"                                            Exercitationem quisquam so unde illo nostrud voluptas. Ullam voluptate.\n"
+"                                            Laborum ea for nesciunt unde. Dolorem culpa and consequat. Vel consequuntur\n"
+"                                            and consectetur vitae."
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__message_is_follower
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_res_partner__is_in_application
+#: model:ir.model.fields,field_description:adm.field_res_users__is_in_application
+msgid "Is in Application?"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_admission_inquiry
+msgid "Issues"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_medical_condition
+msgid "Kidney/urinary problems"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_menu_instructions
+msgid ""
+"Laboris sint and incidunt or enim for vel magnam for eiusmod. Proident omnis\n"
+"                                            mollit dicta, or adipisicing ipsa but dolore. Velit. Dolor mollit but et ex.\n"
+"                                            Ea aliqua for laudantium, aliqua or ex for ut est. Ipsam enim. Quis.\n"
+"                                            Velitesse nostrum. Autem lorem or dicta commodi for aliquip. Dolore eu, but\n"
+"                                            nihil consequatur ex aliquid lorem. Molestiae aut. Adipisci error.\n"
+"                                            Incididunt laboris, for quasi, aspernatur accusantium so quae. Quaerat sed.\n"
+"                                            Nostrud. Ab. Est modi enim iure. Ipsum ad eum and lorem omnis, dolorem.\n"
+"                                            Voluptate pariatur commodo quam. Voluptas adipisci nostrum so reprehenderit\n"
+"                                            yet nostrud, iste nequeporro. Numquam adipisicing."
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application_language__language_id
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry_language__language_id
+msgid "Language"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application_language__language_level_id
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry_language__language_level_id
+msgid "Language Level"
+msgstr ""
+
+#. module: adm
+#: model:ir.actions.act_window,name:adm.action_language_level
+msgid "Language Levels"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__language_spoken
+msgid "Language Spoken"
+msgstr ""
+
+#. module: adm
+#: model:ir.ui.menu,name:adm.adm_menu_language_level
+msgid "Language levels"
+msgstr ""
+
+#. module: adm
+#: model:ir.actions.act_window,name:adm.action_language
+#: model:ir.model.fields,field_description:adm.field_adm_application__language_ids
+#: model:ir.ui.menu,name:adm.adm_menu_language
+msgid "Languages"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_activity_report____last_update
+#: model:ir.model.fields,field_description:adm.field_adm_application____last_update
+#: model:ir.model.fields,field_description:adm.field_adm_application_history_status____last_update
+#: model:ir.model.fields,field_description:adm.field_adm_application_invitation____last_update
+#: model:ir.model.fields,field_description:adm.field_adm_application_language____last_update
+#: model:ir.model.fields,field_description:adm.field_adm_application_other_contacts____last_update
+#: model:ir.model.fields,field_description:adm.field_adm_application_page____last_update
+#: model:ir.model.fields,field_description:adm.field_adm_application_question____last_update
+#: model:ir.model.fields,field_description:adm.field_adm_application_sibling____last_update
+#: model:ir.model.fields,field_description:adm.field_adm_application_status____last_update
+#: model:ir.model.fields,field_description:adm.field_adm_application_task____last_update
+#: model:ir.model.fields,field_description:adm.field_adm_application_user_access____last_update
+#: model:ir.model.fields,field_description:adm.field_adm_contact_time____last_update
+#: model:ir.model.fields,field_description:adm.field_adm_degree_program____last_update
+#: model:ir.model.fields,field_description:adm.field_adm_fields_settings____last_update
+#: model:ir.model.fields,field_description:adm.field_adm_gender____last_update
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry____last_update
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry_language____last_update
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry_status____last_update
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry_status_type____last_update
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry_task____last_update
+#: model:ir.model.fields,field_description:adm.field_adm_language____last_update
+#: model:ir.model.fields,field_description:adm.field_adm_language_level____last_update
+#: model:ir.model.fields,field_description:adm.field_adm_language_skill_type____last_update
+#: model:ir.model.fields,field_description:adm.field_adm_medical_allergy____last_update
+#: model:ir.model.fields,field_description:adm.field_adm_medical_condition____last_update
+#: model:ir.model.fields,field_description:adm.field_adm_medical_medication____last_update
+#: model:ir.model.fields,field_description:adm.field_adm_previous_school_description____last_update
+#: model:ir.model.fields,field_description:adm.field_download_application_attachments____last_update
+#: model:ir.model.fields,field_description:adm.field_grade_level_student_count_report____last_update
+#: model:ir.model.fields,field_description:adm.field_sale_control_limit_wizard____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__last_name
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry__last_name
+#: model_terms:ir.ui.view,arch_db:adm.template_admission_inquiry
+#: model_terms:ir.ui.view,arch_db:adm.template_application_student_info
+msgid "Last Name"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_create_application
+msgid ""
+"Last Name\n"
+"                                                                    <span class=\"text-danger\"> *</span>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_admission_inquiry
+msgid ""
+"Last Name\n"
+"                                                    <span class=\"text-danger\">*</span>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_admission_inquiry
+msgid ""
+"Last Name\n"
+"                                                <span class=\"text-danger\">*</span>"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__last_time_submitted
+msgid "Last Time Submitted"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__write_uid
+#: model:ir.model.fields,field_description:adm.field_adm_application_history_status__write_uid
+#: model:ir.model.fields,field_description:adm.field_adm_application_invitation__write_uid
+#: model:ir.model.fields,field_description:adm.field_adm_application_language__write_uid
+#: model:ir.model.fields,field_description:adm.field_adm_application_other_contacts__write_uid
+#: model:ir.model.fields,field_description:adm.field_adm_application_page__write_uid
+#: model:ir.model.fields,field_description:adm.field_adm_application_question__write_uid
+#: model:ir.model.fields,field_description:adm.field_adm_application_sibling__write_uid
+#: model:ir.model.fields,field_description:adm.field_adm_application_status__write_uid
+#: model:ir.model.fields,field_description:adm.field_adm_application_task__write_uid
+#: model:ir.model.fields,field_description:adm.field_adm_application_user_access__write_uid
+#: model:ir.model.fields,field_description:adm.field_adm_contact_time__write_uid
+#: model:ir.model.fields,field_description:adm.field_adm_degree_program__write_uid
+#: model:ir.model.fields,field_description:adm.field_adm_fields_settings__write_uid
+#: model:ir.model.fields,field_description:adm.field_adm_gender__write_uid
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry__write_uid
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry_language__write_uid
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry_status__write_uid
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry_status_type__write_uid
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry_task__write_uid
+#: model:ir.model.fields,field_description:adm.field_adm_language__write_uid
+#: model:ir.model.fields,field_description:adm.field_adm_language_level__write_uid
+#: model:ir.model.fields,field_description:adm.field_adm_language_skill_type__write_uid
+#: model:ir.model.fields,field_description:adm.field_adm_medical_allergy__write_uid
+#: model:ir.model.fields,field_description:adm.field_adm_medical_condition__write_uid
+#: model:ir.model.fields,field_description:adm.field_adm_medical_medication__write_uid
+#: model:ir.model.fields,field_description:adm.field_adm_previous_school_description__write_uid
+#: model:ir.model.fields,field_description:adm.field_download_application_attachments__write_uid
+#: model:ir.model.fields,field_description:adm.field_sale_control_limit_wizard__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__write_date
+#: model:ir.model.fields,field_description:adm.field_adm_application_history_status__write_date
+#: model:ir.model.fields,field_description:adm.field_adm_application_invitation__write_date
+#: model:ir.model.fields,field_description:adm.field_adm_application_language__write_date
+#: model:ir.model.fields,field_description:adm.field_adm_application_other_contacts__write_date
+#: model:ir.model.fields,field_description:adm.field_adm_application_page__write_date
+#: model:ir.model.fields,field_description:adm.field_adm_application_question__write_date
+#: model:ir.model.fields,field_description:adm.field_adm_application_sibling__write_date
+#: model:ir.model.fields,field_description:adm.field_adm_application_status__write_date
+#: model:ir.model.fields,field_description:adm.field_adm_application_task__write_date
+#: model:ir.model.fields,field_description:adm.field_adm_application_user_access__write_date
+#: model:ir.model.fields,field_description:adm.field_adm_contact_time__write_date
+#: model:ir.model.fields,field_description:adm.field_adm_degree_program__write_date
+#: model:ir.model.fields,field_description:adm.field_adm_fields_settings__write_date
+#: model:ir.model.fields,field_description:adm.field_adm_gender__write_date
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry__write_date
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry_language__write_date
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry_status__write_date
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry_status_type__write_date
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry_task__write_date
+#: model:ir.model.fields,field_description:adm.field_adm_language__write_date
+#: model:ir.model.fields,field_description:adm.field_adm_language_level__write_date
+#: model:ir.model.fields,field_description:adm.field_adm_language_skill_type__write_date
+#: model:ir.model.fields,field_description:adm.field_adm_medical_allergy__write_date
+#: model:ir.model.fields,field_description:adm.field_adm_medical_condition__write_date
+#: model:ir.model.fields,field_description:adm.field_adm_medical_medication__write_date
+#: model:ir.model.fields,field_description:adm.field_adm_previous_school_description__write_date
+#: model:ir.model.fields,field_description:adm.field_download_application_attachments__write_date
+#: model:ir.model.fields,field_description:adm.field_sale_control_limit_wizard__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__resident_length_of_stay
+msgid "Length of stay"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__letter_of_motivation_id
+msgid "Letter of motivation"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__letters_of_recommendation_id
+msgid "Letter of recommendation"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__first_level_language
+#: model:ir.model.fields,field_description:adm.field_adm_application__second_level_language
+#: model:ir.model.fields,field_description:adm.field_adm_application__third_level_language
+msgid "Level"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_fields_settings__long_name
+msgid "Long Name"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application_invitation__mail_id
+msgid "Mail"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_res_company__mail_inviting_partner_to_application_id
+#: model:ir.model.fields,field_description:adm.field_res_config_settings__adm_mail_inviting_partner_to_application_id
+msgid "Mail Inviting Partner To Application"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application_invitation__mail_template_id
+msgid "Mail Template"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__message_main_attachment_id
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: adm
+#: model:res.groups,name:adm.admission_group_manager
+msgid "Manager"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_res_partner__marital_status
+#: model:ir.model.fields,field_description:adm.field_res_users__marital_status
+msgid "Marital Status"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields.selection,name:adm.selection__res_partner__marital_status__married
+msgid "Married"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_res_partner__medical_allergies_ids
+#: model:ir.model.fields,field_description:adm.field_res_users__medical_allergies_ids
+msgid "Medical Allergies"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_menu_medical_info
+msgid "Medical Conditions"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_res_partner__medical_medications_ids
+#: model:ir.model.fields,field_description:adm.field_res_users__medical_medications_ids
+msgid "Medical Medication"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_menu_medical_info
+msgid "Medical allergies"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_res_partner__medical_conditions_ids
+#: model:ir.model.fields,field_description:adm.field_res_users__medical_conditions_ids
+msgid "Medical conditions"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_menu_medical_info
+msgid "Medication"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.report_custom
+#: model_terms:ir.ui.view,arch_db:adm.report_default
+msgid "Medication Name"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__medical_medications_ids
+#: model_terms:ir.ui.view,arch_db:adm.adm_application_view_form
+msgid "Medications"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_medical_condition
+msgid "Menstrual problems"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_admission_inquiry
+msgid "Message / Question"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__message_has_error
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__message_ids
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__middle_name
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry__middle_name
+#: model_terms:ir.ui.view,arch_db:adm.template_admission_inquiry
+#: model_terms:ir.ui.view,arch_db:adm.template_application_create_application
+#: model_terms:ir.ui.view,arch_db:adm.template_application_student_info
+msgid "Middle Name"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry__congregation_member
+msgid "Miembro de congregación"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__mother_name
+msgid "Mother name"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.adm_application_view_form
+#: model_terms:ir.ui.view,arch_db:adm.adm_inquiry_view_form
+msgid "NEXT STATUS"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__name
+#: model:ir.model.fields,field_description:adm.field_adm_application_page__name
+#: model:ir.model.fields,field_description:adm.field_adm_application_sibling__name
+#: model:ir.model.fields,field_description:adm.field_adm_application_task__name
+#: model:ir.model.fields,field_description:adm.field_adm_contact_time__name
+#: model:ir.model.fields,field_description:adm.field_adm_degree_program__name
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry__name
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry_task__name
+#: model:ir.model.fields,field_description:adm.field_adm_language__name
+#: model:ir.model.fields,field_description:adm.field_adm_language_level__name
+#: model:ir.model.fields,field_description:adm.field_adm_medical_allergy__name
+#: model:ir.model.fields,field_description:adm.field_adm_medical_condition__name
+#: model:ir.model.fields,field_description:adm.field_adm_medical_medication__name
+#: model:ir.model.fields,field_description:adm.field_adm_previous_school_description__name
+#: model_terms:ir.ui.view,arch_db:adm.template_application_medical_Medication
+#: model_terms:ir.ui.view,arch_db:adm.template_application_medical_allergies
+#: model_terms:ir.ui.view,arch_db:adm.template_application_medical_condition
+msgid "Name"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_admission_inquiry
+msgid "Name lastname and contact phone"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_schools_information_form
+msgid "Name of school"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_create_application
+#: model_terms:ir.ui.view,arch_db:adm.template_application_student_info
+msgid "Nationality:"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_medical_condition
+msgid "Neurological Concerns"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_admission_application_list
+msgid "New Application"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_family_select_create
+#: model_terms:ir.ui.view,arch_db:adm.template_application_invite_partner
+msgid "New Family"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_family_other_relationship_form
+msgid "New Member"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_siblings_form
+msgid "New Sibling"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application_status__new_user_email_template
+msgid "New user Accepted Admission"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__activity_date_deadline
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__activity_summary
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__activity_type_id
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application_page__next_page_id
+msgid "Next Page"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.grade_student_count_graph_view
+msgid "Next School Year Remaining Slots"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_grade_level_student_count_report__next_grade_level_id
+msgid "Next Year's Grade Level"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application_status__current_year_next_status_to_facts
+#: model:ir.model.fields,field_description:adm.field_adm_application_status__next_years_next_status_to_facts
+msgid "Next status to FACTS"
+msgstr ""
+
+#. module: adm
+#: code:addons/adm/report/grade_level_student_count_report.py:0
+#, python-format
+msgid "Next year enrolled"
+msgstr ""
+
+#. module: adm
+#: code:addons/adm/models/admission_inquiry.py:0
+#, python-format
+msgid "No Subject"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_student_info
+msgid "No file uploaded"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application_history_status__note
+msgid "Note"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__message_needaction_counter
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__message_has_error_counter
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,help:adm.field_adm_application__message_needaction_counter
+#: model:ir.model.fields,help:adm.field_adm_inquiry__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,help:adm.field_adm_application__message_has_error_counter
+#: model:ir.model.fields,help:adm.field_adm_inquiry__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,help:adm.field_adm_application__message_unread_counter
+#: model:ir.model.fields,help:adm.field_adm_inquiry__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_fields_settings__parent_relational_model
+#: model:ir.model.fields,field_description:adm.field_adm_fields_settings__relational_model
+msgid "Object Relation"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_res_partner__occupation
+#: model:ir.model.fields,field_description:adm.field_res_users__occupation
+msgid "Occupation"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_res_partner__work_address
+#: model:ir.model.fields,field_description:adm.field_res_users__work_address
+msgid "Office Address"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_res_partner__work_phone
+#: model:ir.model.fields,field_description:adm.field_res_users__work_phone
+msgid "Office Phone"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.adm_application_view_tracking
+msgid "Optional fields"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__optional_fields_completed
+msgid "Optional fields completed"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__additional_info_other
+#: model_terms:ir.ui.view,arch_db:adm.template_application_medical_condition
+msgid "Other"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__other_contacts_ids
+msgid "Other Contacts"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_family_submenu
+#: model_terms:ir.ui.view,arch_db:adm.view_application_status_view_form
+msgid "Others"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.adm_application_view_form
+msgid "PRINT"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application_invitation__page_access_ids
+#: model:ir.model.fields,field_description:adm.field_adm_application_user_access__page_access_ids
+msgid "Page Access"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_fields_settings__parent_id
+msgid "Parent"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_admission_inquiry
+msgid "Parent 1"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_admission_inquiry
+msgid "Parent 2"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__parent_passport_upload
+msgid "Parent Passport Upload"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_parent_questionnaire_webpage
+msgid "Parent Questionnaire"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.report_custom
+#: model_terms:ir.ui.view,arch_db:adm.report_default
+msgid "Parent type"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_res_partner__parental_responsability
+#: model:ir.model.fields,field_description:adm.field_res_users__parental_responsability
+msgid "Parental Responsability"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_family_parents
+#: model_terms:ir.ui.view,arch_db:adm.template_application_family_parents_form
+#: model_terms:ir.ui.view,arch_db:adm.template_application_family_submenu
+msgid "Parents"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.adm_application_view_form
+msgid "Parents/Guardian"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application_sibling__partner_id
+#: model:ir.model.fields,field_description:adm.field_adm_medical_allergy__partner_id
+#: model:ir.model.fields,field_description:adm.field_adm_medical_condition__partner_id
+#: model:ir.model.fields,field_description:adm.field_adm_medical_medication__partner_id
+#: model_terms:ir.ui.view,arch_db:adm.adm_application_view_form
+msgid "Partner"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_sale_control_limit_wizard__my_credit_limit
+msgid "Partner Credit Limit"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_student_info
+msgid "Passport"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_student_info
+msgid "Passport Expiration Date"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__passport_file_ids
+msgid "Passport File"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_student_info
+msgid "Passport ID"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_menu
+msgid "Pending Task"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.adm_application_view_kanban
+msgid "Perc."
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields.selection,name:adm.selection__adm_application__resident_status__permanent
+msgid "Permanent"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_menu_medical_info
+msgid "Permision to treat?"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__permission_to_treat
+msgid "Permission To Treat"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__personal_reference_contact_information_1
+msgid "Personal Reference #1 Contact Information:"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__personal_reference_name_1
+msgid "Personal Reference #1 Name"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__personal_reference_contact_information_2
+msgid "Personal Reference #2 Contact Information:"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__personal_reference_name_2
+msgid "Personal Reference #2 Name"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__phone
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry__phone
+msgid "Phone"
+msgstr ""
+
+#. module: adm
+#: model:ir.actions.act_window,name:adm.adm_activity_report_action
+msgid "Pipeline Activities"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_family_select_modal
+#: model_terms:ir.ui.view,arch_db:adm.template_application_invite_partner
+msgid "Please, select the family that belongs to the applicant:"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__access_url
+msgid "Portal Access URL"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__preferred_degree_program
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry__preferred_degree_program
+msgid "Preferred Degree Program"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__contact_time_id
+msgid "Preferred contact time"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application_page__previous_page_id
+msgid "Previous Page"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__previous_school
+#: model:ir.model.fields,field_description:adm.field_adm_application__previous_school_ids
+msgid "Previous School"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__previous_school_address
+msgid "Previous School Address"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__psycho_educational_testing
+msgid "Psycho educational testing"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application_question__question
+msgid "Question"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_previous_school_description__reason_for_leaving
+msgid "Reason For Leaving"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_schools_information_form
+msgid "Reason for Leaving"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_admission_inquiry
+msgid "References"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__regional_exam_grade
+msgid "Regional Grade"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_invite_partner
+msgid "Reject"
+msgstr ""
+
+#. module: adm
+#: code:addons/adm/models/application/admission_application.py:0
+#: model:ir.model.fields.selection,name:adm.selection__adm_application_invitation__state__rejected
+#, python-format
+msgid "Rejected"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__relationship_ids
+msgid "Relationship"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application_sibling__relationship_to_application
+msgid "Relationship To Application"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.adm_application_view_form
+#: model_terms:ir.ui.view,arch_db:adm.template_application_menu
+msgid "Relationships"
+msgstr ""
+
+#. module: adm
+#: model:ir.ui.menu,name:adm.adm_menu_reporting
+msgid "Reporting"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.my_credit_limit_wizard
+msgid "Request Manager to Approve Sale"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.adm_application_view_tracking
+msgid "Required fields"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__required_fields_completed
+msgid "Required fields completed"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__residency_file_ids
+msgid "Residency File"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_student_info
+msgid "Residency Permit"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__residency_permit_id_number
+msgid "Residency Permit Id Number"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__resident_status
+msgid "Resident status"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry__responsible_id
+msgid "Responsible"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__activity_user_id
+#: model:ir.model.fields,field_description:adm.field_adm_application__responsible_user_id
+#: model:ir.model.fields,field_description:adm.field_adm_application__responsible_user_ids
+#: model:ir.model.fields,field_description:adm.field_adm_application__responsible_user_ids
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields.selection,name:adm.selection__adm_application_status__type_id__return
+msgid "Return To Parents"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__check_confidential_info_adm_file
+msgid ""
+"Rights to access confidential information contained in applicant's admission"
+" file."
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__message_has_sms_error
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application_invitation__salt
+msgid "Salt"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_form_commons
+msgid "Save"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_form_commons
+msgid "Save and next"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_form_commons
+msgid "Save and previous"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_family_select_create
+#: model_terms:ir.ui.view,arch_db:adm.template_application_invite_partner
+msgid "Save changes"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_grade_level_student_count_report__school_code_id
+msgid "School Code"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.adm_inquiry_view_form
+msgid "School Information"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_res_partner__school_name
+#: model:ir.model.fields,field_description:adm.field_res_users__school_name
+msgid "School Name"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__school_year
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry__school_year_id
+msgid "School Year"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_create_application
+#: model_terms:ir.ui.view,arch_db:adm.template_application_student_info
+msgid "School Year:"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_create_application
+msgid ""
+"School Year:\n"
+"                                                            <span class=\"text-danger\"> *</span>"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_res_partner__school_grade
+#: model:ir.model.fields,field_description:adm.field_res_users__school_grade
+msgid "School grade"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application_sibling__school
+msgid "School name"
+msgstr ""
+
+#. module: adm
+#: model:ir.model,name:adm.model_school_base_school_year
+msgid "School year"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_schools_information_webpage
+msgid "Schools"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application_invitation__secure_hash
+msgid "Secure Hash"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__access_token
+msgid "Security Token"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_medical_condition
+msgid "Seizure disorder/Epilepsy"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_invite_partner
+msgid "Select a family where you belong or create a new one."
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields.selection,name:adm.selection__adm_application__applying_semester__semester_1
+msgid "Semester 1 (August)"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields.selection,name:adm.selection__adm_application__applying_semester__semester_2
+msgid "Semester 2 (January)"
+msgstr ""
+
+#. module: adm
+#: model:ir.actions.act_window,name:adm.action_application_mass_mail
+msgid "Send email"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_menu
+msgid "Send to School ❯"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application_page__sequence
+#: model:ir.model.fields,field_description:adm.field_adm_application_status__sequence
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry_status__sequence
+msgid "Sequence"
+msgstr ""
+
+#. module: adm
+#: model:res.groups,name:adm.admission_group_settings
+msgid "Settings"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_admission_inquiry
+msgid "Show/Hide Second Parent"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.adm_application_view_form
+msgid "Sibling"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_family_other_relationship_form
+#: model_terms:ir.ui.view,arch_db:adm.template_application_siblings_form
+msgid "Sibling Grade"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__sibling_ids
+#: model_terms:ir.ui.view,arch_db:adm.template_application_family_submenu
+#: model_terms:ir.ui.view,arch_db:adm.template_application_siblings_webpage
+msgid "Siblings"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_res_users__digital_signature
+#: model_terms:ir.ui.view,arch_db:adm.template_application_signature_webpage
+#: model_terms:ir.ui.view,arch_db:adm.view_users_form
+#: model_terms:ir.ui.view,arch_db:adm.view_users_form_simple_modif
+msgid "Signature"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__signature_attach_url
+msgid "Signature Attachment URL"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__signature_date
+msgid "Signature Date"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__signature_person_name
+msgid "Signature Person Name"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__signature_agreements
+msgid "Signature agreements"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields.selection,name:adm.selection__res_partner__marital_status__single
+msgid "Single"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_menu_instructions
+msgid ""
+"Sint incididunt. Ut illo. Quis iure proident yet accusantium and veritatis,\n"
+"                                            but doloremque. Natus ullam laboriosam, sequi or cillum natus ullamco.\n"
+"                                            Excepteur quasi laboriosam nulla exercitation. Eum ab but velitesse.\n"
+"                                            Laudantium adipisicing voluptatem iste yet omnis. Explicabo dolore yet\n"
+"                                            officia. Incidunt magni nostrud, but consequuntur. Lorem non quisquam.\n"
+"                                            Ipsam. Voluptate consequat, or minim, so ab for unde so tempora. Dolorem in\n"
+"                                            but fugit. Nesciunt inventore non. Officia ab irure magnam yet commodo.\n"
+"                                            Tempora. Minim elit. Vel quia for amet. Incididunt do yet exercitationem yet\n"
+"                                            esse. Esse quis dicta or nisi yet consequuntur do vel. Dicta ipsa and ut\n"
+"                                            omnis occaecat beatae for ratione. Inventore lorem consequuntur, magni.\n"
+"                                            Tempor iste laboris illum or eu nostrud but quis."
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__special_education
+msgid "Special Education"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__special_education_desc
+msgid "Special Education Description"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields.selection,name:adm.selection__adm_application_status__type_id__stage
+#: model:ir.model.fields.selection,name:adm.selection__adm_inquiry_status__type_id__stage
+#: model_terms:ir.ui.view,arch_db:adm.adm_activity_report_view_search
+msgid "Stage"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_schools_information_form
+msgid "Start Date"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.adm_application_view_search
+msgid "Started at"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__state_id
+#: model:ir.model.fields,field_description:adm.field_adm_application_invitation__state
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry__state_id
+#: model:ir.model.fields,field_description:adm.field_adm_previous_school_description__state_id
+#: model_terms:ir.ui.view,arch_db:adm.template_application_create_application
+#: model_terms:ir.ui.view,arch_db:adm.template_application_student_info
+msgid "State"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_create_application
+msgid ""
+"State\n"
+"                                                            <span class=\"text-danger\">*</span>"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__state_tasks
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry__state_tasks
+msgid "State task"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_activity_report__status_id
+#: model:ir.model.fields,field_description:adm.field_adm_application__status_id
+#: model:ir.model.fields,field_description:adm.field_adm_application_history_status__status_id
+#: model:ir.model.fields,field_description:adm.field_adm_application_task__status_id
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry__status_id
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry_task__status_id
+#: model_terms:ir.ui.view,arch_db:adm.adm_application_view_search
+msgid "Status"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application_status__task_ids
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry_status__task_ids
+msgid "Status Ids"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application_status__name
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry_status__name
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry_status_type__name
+msgid "Status Name"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__status_type
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry__status_type
+msgid "Status Type"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,help:adm.field_adm_application__activity_state
+#: model:ir.model.fields,help:adm.field_adm_inquiry__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__status_history_ids
+#: model_terms:ir.ui.view,arch_db:adm.adm_application_view_form
+msgid "Status history"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_previous_school_description__street
+msgid "Street"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__street
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry__street
+#: model_terms:ir.ui.view,arch_db:adm.template_admission_inquiry
+msgid "Street Address"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_student_info
+msgid "Street Address:"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.adm_application_view_form
+msgid "Student"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_admission_inquiry
+msgid "Student 1"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_menu_medical_info
+msgid "Student Blood Type"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_grade_level_student_count_report__student_count
+msgid "Student Count"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_grade_level_student_count_report__student_count_type
+msgid "Student Count Type"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_family_select_create
+msgid "Student Info"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_create_application
+#: model_terms:ir.ui.view,arch_db:adm.template_application_menu
+#: model_terms:ir.ui.view,arch_db:adm.template_application_student_info
+msgid "Student Information"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_student_info
+msgid ""
+"Student Name (as it appears on\n"
+"                            passport)"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_grade_level_student_count_report__student_order_type
+msgid "Student Order Type"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_admission_inquiry
+msgid "Students"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_create_application
+msgid "Submit changes"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_admission_inquiry
+msgid "Submit inquiry"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields.selection,name:adm.selection__adm_application_status__type_id__submitted
+msgid "Submitted"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_activity_report__subtype_id
+msgid "Subtype"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__task_ids
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry__task_ids
+msgid "Task"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.adm_application_view_form
+#: model_terms:ir.ui.view,arch_db:adm.adm_inquiry_view_form
+#: model_terms:ir.ui.view,arch_db:adm.view_application_status_view_form
+#: model_terms:ir.ui.view,arch_db:adm.view_inquiry_status_form
+msgid "Tasks"
+msgstr ""
+
+#. module: adm
+#: code:addons/adm/models/application/admission_application.py:0
+#, python-format
+msgid "The Application cancelled"
+msgstr ""
+
+#. module: adm
+#: code:addons/adm/models/application/admission_application.py:0
+#, python-format
+msgid "The Application is already done"
+msgstr ""
+
+#. module: adm
+#: code:addons/adm/models/admission_inquiry.py:0
+#, python-format
+msgid "The Inquiry cancelled"
+msgstr ""
+
+#. module: adm
+#: code:addons/adm/models/admission_inquiry.py:0
+#, python-format
+msgid "The Inquiry is already done"
+msgstr ""
+
+#. module: adm
+#: model:ir.model,name:adm.model_school_base_grade_level
+msgid "The grade level"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.constraint,message:adm.constraint_adm_application_page_adm_page_internal_reference
+msgid "The internal reference should be unique by website"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_page_commons
+msgid "The request has already been sent."
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_menu_instructions
+msgid ""
+"The text below is just for testing.<br/>Please, change it as your needs"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_admission_inquiry
+msgid "This Family ID not exists in the system."
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.adm_application_view_kanban
+msgid ""
+"This bar allows to filter the applications based on scheduled activities."
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.adm_inquiry_view_kanban
+msgid "This bar allows to filter the inquiries based on scheduled activities."
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_invite_partner
+msgid "This invitation was already solved"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application_history_status__timestamp
+msgid "Timestamp"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_res_partner__title
+#: model:ir.model.fields,field_description:adm.field_res_users__title
+msgid "Title"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_previous_school_description__to_date
+msgid "To Date"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_contact_time__to_time
+msgid "To Time"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application_invitation__to_email
+msgid "To email"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_menu
+msgid "Toggle navigation"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_sale_control_limit_wizard__new_balance
+msgid "Total Balance"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__total_fields_completed
+msgid "Total fields completed"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__total_optional_fields_completed
+msgid "Total optional fields completed"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__total_required_fields_completed
+msgid "Total required fields completed"
+msgstr ""
+
+#. module: adm
+#: model:ir.actions.act_window,name:adm.adm_application_view_tracking_action
+#: model:ir.ui.menu,name:adm.adm_tracking_report_menu
+msgid "Tracking"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields.selection,name:adm.selection__adm_application__resident_status__transient
+msgid "Transient"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__grade_level_type
+#: model:ir.model.fields,field_description:adm.field_adm_application_status__type_id
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry_status__type_id
+#: model:ir.model.fields,field_description:adm.field_adm_language_skill_type__name
+#: model_terms:ir.ui.view,arch_db:adm.adm_activity_report_view_search
+msgid "Type"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,help:adm.field_adm_application__activity_exception_decoration
+#: model:ir.model.fields,help:adm.field_adm_inquiry__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__message_unread
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry__message_unread
+#: model_terms:ir.ui.view,arch_db:adm.adm_application_view_kanban
+#: model_terms:ir.ui.view,arch_db:adm.adm_inquiry_view_kanban
+msgid "Unread Messages"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__message_unread_counter
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_menu_upload_file_comun
+msgid "Upload Documents"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_create_application
+#: model_terms:ir.ui.view,arch_db:adm.template_application_family_other_relationship_form
+#: model_terms:ir.ui.view,arch_db:adm.template_application_siblings_form
+#: model_terms:ir.ui.view,arch_db:adm.template_application_student_info
+msgid "Upload a different photo..."
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_create_application
+#: model_terms:ir.ui.view,arch_db:adm.template_application_student_info
+msgid "Upload a student photo."
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_student_info
+msgid "Upload passport"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application_invitation__url
+#: model:ir.model.fields,field_description:adm.field_adm_application_page__url
+msgid "Url"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application_user_access__user_id
+#: model:res.groups,name:adm.admission_group_user
+msgid "User"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__user_access_ids
+msgid "User Access"
+msgstr ""
+
+#. module: adm
+#: model:ir.model,name:adm.model_res_users
+#: model_terms:ir.ui.view,arch_db:adm.adm_application_view_form
+msgid "Users"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_menu_instructions
+msgid ""
+"Ut nequeporro. Sequi omnis laudantium so illum, suscipit for si. Ipsum\n"
+"                                            tempor, or natus dicta. Aperiam laboriosam so veritatis yet nostrum\n"
+"                                            laudantium and perspiciatis. Explicabo aute architecto so elit eu. Ab\n"
+"                                            adipisci. Eos ipsam eius lorem. Magna eiusmod yet fugiat, corporis or unde\n"
+"                                            voluptate but et. Ipsam adipisicing but dolor but perspiciatis but\n"
+"                                            architecto so fugit dicta. Cillum. Modi sit or excepteur yet numquam rem\n"
+"                                            culpa. Corporis. Irure. Pariatur. Velitesse quasi. Veniam aute but\n"
+"                                            consectetur. Inventore exercitation suscipit. Do beatae accusantium for\n"
+"                                            velitesse quisquam. Dolores corporis eu or aspernatur. Doloremque\n"
+"                                            adipisicing and incididunt but aliquam, sint sequi cupidatat. Consequatur\n"
+"                                            iure. Quisquam rem or quae so anim or eos nulla, ratione. Do tempora in and\n"
+"                                            vel or qui and voluptate amet. Laboris cillum suscipit."
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.adm_application_view_tracking_field_table
+msgid "Value"
+msgstr ""
+
+#. module: adm
+#: model:ir.model,name:adm.model_ir_ui_view
+msgid "View"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application_page__view_template_id
+msgid "View Template"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_ir_actions_act_window_view__view_mode
+#: model:ir.model.fields,field_description:adm.field_ir_ui_view__type
+#: model:ir.model.fields,field_description:adm.field_website_page__type
+msgid "View Type"
+msgstr ""
+
+#. module: adm
+#: model:ir.model,name:adm.model_grade_level_student_count_report
+msgid "View object for Reporting Student Count per"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application_status__web_visible
+msgid "Visible on web"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.view_application_status_view_form
+msgid "Web"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application_page__website_id
+msgid "Website"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__website_message_ids
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,help:adm.field_adm_application__website_message_ids
+#: model:ir.model.fields,help:adm.field_adm_inquiry__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_family_select_create
+msgid "Which access has this family in?"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_student_info
+msgid "Which semester are you applying for?"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields.selection,name:adm.selection__res_partner__marital_status__widowed
+msgid "Widowed"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_res_partner__work_email
+#: model:ir.model.fields,field_description:adm.field_res_users__work_email
+msgid "Work email"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application_sibling__years_attended
+msgid "Years Attended"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__number_years_in_english
+msgid "Years in English"
+msgstr ""
+
+#. module: adm
+#: model:mail.template,subject:adm.email_template_data_inquiry_accepted
+msgid "You are now in applicant process"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_invite_partner
+msgid "You have been invited by"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_previous_school_description__zip
+msgid "ZIP"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_create_application
+msgid ""
+"ZIP:\n"
+"                                                            <span class=\"text-danger\"> *</span>"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_admission_inquiry
+msgid "a) Reference Family 1"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry__reference_family_1
+msgid "a) Referencias Familias IAE"
+msgstr ""
+
+#. module: adm
+#: model:ir.actions.act_window,name:adm.adm_settings_action
+msgid "adm.settings"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_create_application
+#: model_terms:ir.ui.view,arch_db:adm.template_application_family_other_relationship_form
+#: model_terms:ir.ui.view,arch_db:adm.template_application_family_select_item
+#: model_terms:ir.ui.view,arch_db:adm.template_application_siblings_form
+#: model_terms:ir.ui.view,arch_db:adm.template_application_student_info
+msgid "avatar"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_admission_inquiry
+msgid "b) Reference Family 2"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry__reference_family_2
+msgid "b) Referencias Familias IAE"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.report_custom
+#: model_terms:ir.ui.view,arch_db:adm.report_default
+msgid "color secundario"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_medical_allergies
+msgid "comment"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_res_partner__date_of_birth
+#: model:ir.model.fields,field_description:adm.field_res_users__date_of_birth
+msgid "date_of_birth"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_family_select_create
+msgid "email@example.com"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_admission_inquiry
+msgid "example@email.com"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_grade_level_student_count_report__grade_level_sequence
+msgid "grade level sequence"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_invite_partner
+msgid "in order to complete the application of"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry__language_ids
+msgid "language"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_family_select_create
+#: model_terms:ir.ui.view,arch_db:adm.template_application_invite_partner
+msgid "name"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_grade_level_student_count_report__res_id
+msgid "related id"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_grade_level_student_count_report__res_model
+msgid "related model"
+msgstr ""
+
+#. module: adm
+#: model:ir.model,name:adm.model_sale_control_limit_wizard
+msgid "sale.control.limit.wizard"
+msgstr ""
+
+#. module: adm
+#: model:ir.model.fields,field_description:adm.field_adm_application__zip
+#: model:ir.model.fields,field_description:adm.field_adm_inquiry__zip
+msgid "zip"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_family_other_relationships
+msgid "✚ Add Member"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_schools_information_webpage
+msgid "✚ Add school"
+msgstr ""
+
+#. module: adm
+#: model_terms:ir.ui.view,arch_db:adm.template_application_siblings_webpage
+msgid "✚ Add sibling"
+msgstr ""

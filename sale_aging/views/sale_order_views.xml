@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sale_order_view_tree" model="ir.ui.view">
+        <field name="name">sale.order.view.tree</field>
+        <field name="model">sale.order</field>
+        <field name="arch" type="xml">
+            <tree string="Sales Aging Tree">
+                <field name="partner_id"/>
+                <field name="name"/>
+                <field name="date_order"/>
+                <field name="computed_invoice_date_due" string="Due Date"/>
+                <field name="amount_30_days" sum="Total 1-30 days"/>
+                <field name="amount_60_days" sum="Total 31-60 days"/>
+                <field name="amount_90_days" sum="Total 61-90 days"/>
+                <field name="amount_120_days" sum="Total 90-120 days"/>
+                <field name="amount_above_120_days" sum="Total more than 120 days"/>
+                <field name="remaining_amount" sum="Total"/>
+                <field name="state" invisible="1"/>
+                <field name="currency_id" invisible="1"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="sale_order_action" model="ir.actions.act_window">
+        <field name="name">Sales Aging</field>
+        <field name="res_model">sale.order</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="sale_order_view_tree"/>
+        <field name="domain">[('state','in',['sale','done']),('remaining_amount','>',0)]</field>
+        <field name="context">{}</field>
+    </record>
+
+    <menuitem
+        id="sale_order_menu"
+        name="Sales Aging"
+        action="sale_order_action"
+        parent="sale.menu_sale_report"
+        sequence="20"/>
+</odoo>

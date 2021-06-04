@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sincro_data_base_parameter_view_tree" model="ir.ui.view">
+        <field name="name">sincro_data_base.parameter.view.tree</field>
+        <field name="model">sincro_data_base.parameter</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="type"/>
+                <field name="constant_value" string="Static value"/>
+                <field name="field_value" string="Dynamic value"/>
+<!--                <field name="sequence" widget="handle"/>-->
+            </tree>
+        </field>
+    </record>
+
+    <record id="sincro_data_base_parameter_view_form" model="ir.ui.view">
+        <field name="name">sincro_data_base.parameter.view.form</field>
+        <field name="model">sincro_data_base.parameter</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group>
+                        <field name="name"/>
+                        <field name="request_id" attrs="{'invisible': True}"/>
+                    </group>
+                    <group>
+                        <field name="type"/>
+<!--                        <field name="model_id"/>-->
+                        <field name="constant_value" attrs="{'invisible': [('type', '!=', 'constant')]}"/>
+                        <field name="field_value" attrs="{'invisible': [('type', '==', 'constant')]}"/>
+                    </group>
+                </group>
+            </form>
+        </field>
+    </record>
+</odoo>

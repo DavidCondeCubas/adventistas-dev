@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="impuestos_plantilla_isv_por_cobrar" model="account.tax.template">
+            <field name="chart_template_id" ref="cuentas_plantilla"/>
+            <field name="name">ISV por Cobrar</field>
+            <field name="description">ISV por Cobrar</field>
+            <field name="amount" eval="15"/>
+            <field name="amount_type">percent</field>
+            <field name="type_tax_use">purchase</field>
+            <field name="price_include" eval="False"/>
+            <field name="tax_group_id" ref="tax_group_iva_15"/>
+             <field name="invoice_repartition_line_ids" eval="[(5,0,0),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'base',
+                }),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'tax',
+                }),
+            ]"/>
+            <field name="refund_repartition_line_ids" eval="[(5, 0, 0),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'base',
+                }),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'tax',
+                }),
+            ]"/>
+        </record>
+
+        <record id="impuestos_plantilla_isv_por_pagar" model="account.tax.template">
+            <field name="chart_template_id" ref="cuentas_plantilla"/>
+            <field name="name">ISV por Pagar</field>
+            <field name="description">ISV por Pagar</field>
+            <field name="amount" eval="15"/>
+            <field name="amount_type">percent</field>
+            <field name="type_tax_use">sale</field>
+            <field name="price_include" eval="False"/>
+            <field name="tax_group_id" ref="tax_group_iva_15"/>
+             <field name="invoice_repartition_line_ids" eval="[(5,0,0),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'base',
+                }),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'tax',
+                }),
+            ]"/>
+            <field name="refund_repartition_line_ids" eval="[(5, 0, 0),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'base',
+                }),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'tax',
+                }),
+            ]"/>
+        </record>
+
+        <record id="impuestos_plantilla_exento" model="account.tax.template">
+            <field name="chart_template_id" ref="cuentas_plantilla"/>
+            <field name="name">Exento</field>
+            <field name="description">Exento</field>
+            <field name="amount" eval="0"/>
+            <field name="amount_type">percent</field>
+            <field name="type_tax_use">sale</field>
+            <field name="price_include" eval="False"/>
+            <field name="tax_group_id" ref="account.tax_group_taxes"/>
+             <field name="invoice_repartition_line_ids" eval="[(5,0,0),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'base',
+                }),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'tax',
+                }),
+            ]"/>
+            <field name="refund_repartition_line_ids" eval="[(5, 0, 0),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'base',
+                }),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'tax',
+                }),
+            ]"/>
+        </record>
+
+        <record id="impuestos_plantilla_exento_compras" model="account.tax.template">
+            <field name="chart_template_id" ref="cuentas_plantilla"/>
+            <field name="name">Exento Compras</field>
+            <field name="description">Exento Compras</field>
+            <field name="amount" eval="0"/>
+            <field name="amount_type">percent</field>
+            <field name="type_tax_use">purchase</field>
+            <field name="price_include" eval="False"/>
+            <field name="tax_group_id" ref="account.tax_group_taxes"/>
+             <field name="invoice_repartition_line_ids" eval="[(5,0,0),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'base',
+                }),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'tax',
+                }),
+            ]"/>
+            <field name="refund_repartition_line_ids" eval="[(5, 0, 0),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'base',
+                }),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'tax',
+                }),
+            ]"/>
+        </record>
+
+        <!-- <function model="account.chart.template" name="try_loading">
+            <value eval="[ref('l10n_adventistas.cuentas_plantilla')]"/>
+        </function> -->
+
+    </data>
+</odoo>

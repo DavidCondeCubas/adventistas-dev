@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <template id="template_application_menu_item">
+        <t t-if="application_page_id.child_ids">
+            <li class="nav-item nav-item-menu dropdown">
+                <a class="nav-link dropdown-toggle" role="button"
+                   href="#" data-toggle="dropdown">
+                    <t t-esc="application_page_id.name"/>
+                </a>
+                <div class="dropdown-menu">
+                    <t t-foreach="application_page_id.child_ids" t-as="page_child_id">
+                        <a t-attf-href="/admission/applications/#{application_id.id}/#{page_child_id.url}"
+                           class="dropdown-item">
+                            <t t-esc="page_child_id.name"/>
+                        </a>
+                    </t>
+                </div>
+            </li>
+        </t>
+        <t t-elif="not application_page_id.parent_id">
+            <li class="nav-item nav-item-menu">
+                <a t-attf-href="/admission/applications/#{application_id.id}/#{application_page_id.url}"
+                   class="nav-link">
+                    <t t-esc="application_page_id.name"/>
+                </a>
+            </li>
+        </t>
+    </template>
+
+    <template id="template_application_menu">
+        <!--        <link rel="stylesheet" href="/adm/static/src/css/menu.css"/>-->
+        <t t-set="page_access_list"
+           t-value="application_id.current_user_access_id.page_access_ids.ids"/>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse text-center" id="application_nav_bar">
+                <ul class="navbar-nav w-100 justify-content-center">
+                    <li class="nav-item nav-item-menu" id="nav-itm-instr">
+                        <a t-attf-href="/admission/applications/#{application_id.id}/"
+                           class="nav-link">
+                            General info
+                        </a>
+                    </li>
+                    <t t-foreach="application_page_ids" t-as="application_page_id">
+                        <t t-if="application_page_id.id in page_access_list"
+                           t-call="adm.template_application_menu_item"/>
+                    </t>
+                </ul>
+            </div>
+        </nav>
+
+        <t t-if="application_id.status_id.type_id =='return' or application_id.status_id.type_id == 'started'">
+            <t t-if="application_id.total_required_fields_completed == 100">
+                <form t-att-action="'/admission/applications/{}/check'.format(application_id.id)" method="post"
+                      enctype="multipart/form-data" id="info-form">
+                    <button class="btn btn-primary btn-lg fixed-bottom ml-auto mr-2 mb-2"
+                            style="left: auto !important;">
+                        Send to School &#10095;</button>
+                </form>
+            </t>
+            <t t-if="showPendingInformation">
+                <div class="modal show modal_shown" tabindex="-1" role="dialog"
+                     style="padding-right: 17px; display: block;" aria-modal="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Pending Task</h5>
+                            </div>
+                            <div class="modal-body">
+                                <div class="alert alert-danger" role="alert">
+                                    <ul>
+
+                                        <t t-foreach="pendingData" t-as="itm">
+                                            <li t-raw="itm"/>
+                                        </t>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal"
+                                        onclick="closeModal()">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    function closeModal(){
+                    $(".modal").modal('show');
+                    $(".modal").modal('hide');
+                    }
+                </script>
+            </t>
+        </t>
+    </template>
+
+    <template id="template_application_family_submenu">
+        <div class="row">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#" role="tab"
+                       aria-controls="home" aria-selected="true">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+                       aria-controls="profile" aria-selected="false">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab"
+                       aria-controls="contact" aria-selected="false">Contact</a>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
+                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+            </div>
+        </div>
+    </template>
+
+</odoo>

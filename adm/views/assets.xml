@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <template id="assets_backend_inherit" name="Adm backend assets" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <script src="/adm/static/src/js/backend/report/tracking_view.js" type="text/javascript" />
+            <script src="/adm/static/src/js/backend/report/grade_level_student_count_report.js" type="text/javascript" />
+        </xpath>
+    </template>
+
+    <template id="assets_application_student_info" name="Assets student info">
+        <script type="text/javascript" src="/adm/static/src/js/application/student_info.js"></script>
+    </template>
+
+    <template id="assets_application_school_info" name="Assets school info">
+        <script type="text/javascript" src="/adm/static/src/js/application/school.js"></script>
+    </template>
+
+    <template id="assets_application_additional_questions" name="Assets additional Questions">
+        <!-- Assets -->
+    </template>
+
+    <template id="assets_application_school_health" name="Assets school health">
+        <script type="text/javascript" src="/adm/static/src/js/application/health.js"></script>
+    </template>
+
+    <template id="assets_application_school_sibling" name="Assets school sibling">
+        <script type="text/javascript" src="/adm/static/src/js/application/sibling.js"></script>
+    </template>
+
+    <template id="assets_application_signature" name="Assets Application Signature">
+        <script type="text/javascript" src="/adm/static/src/js/application/signature_page.js"></script>
+    </template>
+
+    <template id="assets_application_create" name="Assets Application Create">
+        <script type="text/javascript" src="/adm/static/src/js/application/create.js"></script>
+        <link rel="stylesheet" href="/adm/static/src/css/form_application.css"/>
+        <link rel="stylesheet" type="text/scss" href="/adm/static/src/scss/family_select.scss"/>
+    </template>
+
+    <template id="assets_application_invite_partner" name="Assets Invite Application">
+        <script type="text/javascript" src="/adm/static/src/js/application/invite.js"></script>
+        <link rel="stylesheet" type="text/scss" href="/adm/static/src/scss/family_select.scss"/>
+    </template>
+
+    <template id="assets_application_common" name="Assets Application Common">
+        <link rel="stylesheet" type="text/scss" href="/adm/static/src/scss/family_select.scss"/>
+        <link rel="stylesheet" type="text/scss" href="/adm/static/src/scss/family_upload_button.scss"/>
+
+        <script src="https://cdn.jsdelivr.net/npm/signature_pad@2.3.2/dist/signature_pad.js"></script>
+
+        <!-- File pond css -->
+        <link rel="stylesheet" type="text/css" href="https://unpkg.com/filepond/dist/filepond.css"/>
+        <link rel="stylesheet" type="text/css" href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css"/>
+        <link rel="stylesheet" type="text/css" href="https://unpkg.com/filepond-plugin-image-edit/dist/filepond-plugin-image-edit.css"/>
+        <!-- File pond js -->
+        <script src="https://unpkg.com/filepond-plugin-file-validate-type/dist/filepond-plugin-file-validate-type.js"></script>
+        <script src="https://unpkg.com/filepond-plugin-file-validate-type/dist/filepond-plugin-file-validate-type.js"></script>
+        <script src="https://unpkg.com/filepond-plugin-image-exif-orientation/dist/filepond-plugin-image-exif-orientation.js"></script>
+        <script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"></script>
+        <script src="https://unpkg.com/filepond-plugin-image-crop/dist/filepond-plugin-image-crop.js"></script>
+        <script src="https://unpkg.com/filepond-plugin-image-resize/dist/filepond-plugin-image-resize.js"></script>
+        <script src="https://unpkg.com/filepond-plugin-image-transform/dist/filepond-plugin-image-transform.js"></script>
+        <script src="https://unpkg.com/filepond-plugin-image-edit/dist/filepond-plugin-image-edit.js"></script>
+        <script src="https://unpkg.com/filepond-plugin-file-encode/dist/filepond-plugin-file-encode.js"></script>
+        <script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"></script>
+        <script src="https://unpkg.com/filepond/dist/filepond.js"></script>
+
+
+        <!-- add before </body> -->
+        <script type="text/javascript" src="/adm/static/src/js/jquery_fix.js"></script>
+        <script type="text/javascript" src="/adm/static/src/js/application/common.js"></script>
+    </template>
+
+    <template id="assets_application_relationships">
+        <script type="text/javascript" src="/adm/static/src/js/application/family/relationships.js"></script>
+    </template>
+
+    <template id="assets_application_documents">
+        <script type="text/javascript" src="/adm/static/src/js/application/documents.js"></script>
+    </template>
+
+    <template id="assets_application_family_information">
+        <script type="text/javascript" src="/adm/static/src/js/application/family/information.js"></script>
+    </template>
+
+    <template id="assets_application_family_finance">
+        <script type="text/javascript" src="/adm/static/src/js/application/family/finance.js"></script>
+    </template>
+
+    <template id="assets_inquiry">
+        <script type="text/javascript" src="/adm/static/src/js/inquiry/inquiry.js"></script>
+        <link rel="stylesheet" href="/adm/static/src/css/form_application.css"/>
+    </template>
+</odoo>
